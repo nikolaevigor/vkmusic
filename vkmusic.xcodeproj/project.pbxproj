@@ -101,6 +101,7 @@
 		4221E3881BCB12DF003F384F /* vkmusic */ = {
 			isa = PBXGroup;
 			children = (
+				4221E3BC1BCB13CE003F384F /* Domain */,
 				4221E38C1BCB12DF003F384F /* AppDelegate.h */,
 				4221E38D1BCB12DF003F384F /* AppDelegate.m */,
 				4221E38F1BCB12DF003F384F /* ViewController.h */,
@@ -138,6 +139,13 @@
 				4221E3B01BCB12DF003F384F /* Info.plist */,
 			);
 			path = vkmusicUITests;
+			sourceTree = "<group>";
+		};
+		4221E3BC1BCB13CE003F384F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,6 +506,7 @@
 				4221E3B51BCB12DF003F384F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4221E3B61BCB12DF003F384F /* Build configuration list for PBXNativeTarget "vkmusicTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +515,7 @@
 				4221E3B81BCB12DF003F384F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4221E3B91BCB12DF003F384F /* Build configuration list for PBXNativeTarget "vkmusicUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +524,7 @@
 				4221E3BB1BCB12DF003F384F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
