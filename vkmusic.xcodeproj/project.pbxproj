@@ -15,6 +15,15 @@
 		4221E3991BCB12DF003F384F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4221E3971BCB12DF003F384F /* LaunchScreen.storyboard */; };
 		4221E3A41BCB12DF003F384F /* vkmusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3A31BCB12DF003F384F /* vkmusicTests.m */; };
 		4221E3AF1BCB12DF003F384F /* vkmusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3AE1BCB12DF003F384F /* vkmusicUITests.m */; };
+		4221E3BF1BCB148C003F384F /* VKMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3BE1BCB148C003F384F /* VKMNode.m */; settings = {ASSET_TAGS = (); }; };
+		4221E3C01BCB148C003F384F /* VKMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3BE1BCB148C003F384F /* VKMNode.m */; settings = {ASSET_TAGS = (); }; };
+		4221E3C11BCB148C003F384F /* VKMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3BE1BCB148C003F384F /* VKMNode.m */; settings = {ASSET_TAGS = (); }; };
+		4221E3C41BCB14A1003F384F /* VKMMediaNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C31BCB14A1003F384F /* VKMMediaNode.m */; settings = {ASSET_TAGS = (); }; };
+		4221E3C51BCB14A1003F384F /* VKMMediaNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C31BCB14A1003F384F /* VKMMediaNode.m */; settings = {ASSET_TAGS = (); }; };
+		4221E3C61BCB14A1003F384F /* VKMMediaNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C31BCB14A1003F384F /* VKMMediaNode.m */; settings = {ASSET_TAGS = (); }; };
+		4221E3C91BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; settings = {ASSET_TAGS = (); }; };
+		4221E3CA1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; settings = {ASSET_TAGS = (); }; };
+		4221E3CB1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,12 @@
 		4221E3AA1BCB12DF003F384F /* vkmusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vkmusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4221E3AE1BCB12DF003F384F /* vkmusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vkmusicUITests.m; sourceTree = "<group>"; };
 		4221E3B01BCB12DF003F384F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4221E3BD1BCB148C003F384F /* VKMNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMNode.h; sourceTree = "<group>"; };
+		4221E3BE1BCB148C003F384F /* VKMNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMNode.m; sourceTree = "<group>"; };
+		4221E3C21BCB14A1003F384F /* VKMMediaNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMMediaNode.h; sourceTree = "<group>"; };
+		4221E3C31BCB14A1003F384F /* VKMMediaNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMMediaNode.m; sourceTree = "<group>"; };
+		4221E3C71BCB14C3003F384F /* VKMAudioNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNode.h; sourceTree = "<group>"; };
+		4221E3C81BCB14C3003F384F /* VKMAudioNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +159,12 @@
 		4221E3BC1BCB13CE003F384F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				4221E3BD1BCB148C003F384F /* VKMNode.h */,
+				4221E3BE1BCB148C003F384F /* VKMNode.m */,
+				4221E3C21BCB14A1003F384F /* VKMMediaNode.h */,
+				4221E3C31BCB14A1003F384F /* VKMMediaNode.m */,
+				4221E3C71BCB14C3003F384F /* VKMAudioNode.h */,
+				4221E3C81BCB14C3003F384F /* VKMAudioNode.m */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -278,7 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4221E3BF1BCB148C003F384F /* VKMNode.m in Sources */,
 				4221E3911BCB12DF003F384F /* ViewController.m in Sources */,
+				4221E3C41BCB14A1003F384F /* VKMMediaNode.m in Sources */,
+				4221E3C91BCB14C3003F384F /* VKMAudioNode.m in Sources */,
 				4221E38E1BCB12DF003F384F /* AppDelegate.m in Sources */,
 				4221E38B1BCB12DF003F384F /* main.m in Sources */,
 			);
@@ -288,7 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4221E3C51BCB14A1003F384F /* VKMMediaNode.m in Sources */,
+				4221E3C01BCB148C003F384F /* VKMNode.m in Sources */,
 				4221E3A41BCB12DF003F384F /* vkmusicTests.m in Sources */,
+				4221E3CA1BCB14C3003F384F /* VKMAudioNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4221E3C61BCB14A1003F384F /* VKMMediaNode.m in Sources */,
+				4221E3C11BCB148C003F384F /* VKMNode.m in Sources */,
 				4221E3AF1BCB12DF003F384F /* vkmusicUITests.m in Sources */,
+				4221E3CB1BCB14C3003F384F /* VKMAudioNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
