@@ -10,4 +10,17 @@
 
 @implementation VKMNode
 
+- (nonnull instancetype)initWithName:(NSString *)name
+{
+    if ((name.length == 0) || (name == nil)) {
+        [NSException raise:@"Invalid name value" format:@"name of %@ is invalid", name];
+    }
+    if (self = [super init])
+    {
+        self.name = [name copy];
+    }
+    return self;
+}
+
 @end
+

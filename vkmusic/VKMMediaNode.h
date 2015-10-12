@@ -10,10 +10,10 @@
 
 @interface VKMMediaNode : VKMNode
 
-/// Size of the media. Can not be nil.
+// Size of the media. Can not be nil.
 @property (nonatomic, nonnull) NSUInteger *size;
 
-/// Type of the media. Can not be nil.
+// Type of the media. Can not be nil.
 @property (nonatomic, nonnull) NSString *type;
 
 @end

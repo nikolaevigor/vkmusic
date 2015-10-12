@@ -10,11 +10,14 @@
 
 @interface VKMNode : NSObject
 
-/// Name of the node. Its length always more than 0.
+// Name of the node. Its length always more than 0.
 @property (nonatomic, nonnull) NSString *name;
 
-/// @brief The designated initializer. Note that 'init' is a deadly initializer.
-/// @param name Length should be greater than 0.
+// @brief The designated initializer.
+// @param name Length should be greater than 0.
 - (nonnull instancetype)initWithName:(nonnull NSString *)name;
+
+// Forbid using init to prevent initializing without name.
+- (nonnull instancetype)init __attribute__((unavailable("init not available")));
 
 @end

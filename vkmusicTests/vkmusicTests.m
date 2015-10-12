@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "VKMNode.h"
+#import "VKMAudioNode.h"
 
 @interface vkmusicTests : XCTestCase
 
@@ -34,6 +36,31 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+#pragma mark - VKMNode Tests
+
+- (void)testImpossibleToCreateNodeWithoutName {
+    NSString *badName = nil;
+    XCTAssertThrows([[VKMNode alloc] initWithName:badName]);
+    XCTAssertThrows([[VKMNode alloc] initWithName:@""]);
+    
+}
+
+- (void)testImpossibleToChangeNameAfterInitialization {
+    NSMutableString *evilName = [NSMutableString stringWithString:@"123"];
+    VKMNode *node = [[VKMNode alloc] initWithName:evilName];
+    [evilName setString:@""];
+    XCTAssertEqualObjects(node.name, @"123");
+    XCTAssertNotEqual(node.name, @"");
+}
+
+#pragma mark - VKMAudioNode Tests
+
+- (void)testImpossibleToCreateAudioNodeWithoutParams {
+    NSString *badName = nil;
+    XCTAssertThrows([[VKMAudioNode alloc] initWithName:badName Artist:badName]);
+    XCTAssertThrows([[VKMAudioNode alloc] initWithName:@"" Artist:@""]);
 }
 
 @end
