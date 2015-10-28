@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="je6-7P-KhJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pkL-Df-qtD">
+            <objects>
+                <tabBarController id="je6-7P-KhJ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DZr-b2-fzc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4E5-QL-Bss" kind="relationship" relationship="viewControllers" id="VkU-W8-aGA"/>
+                        <segue destination="db6-gN-rkc" kind="relationship" relationship="viewControllers" id="mXF-ag-OGV"/>
+                        <segue destination="aOM-uJ-DDA" kind="relationship" relationship="viewControllers" id="vhC-uM-Nbm"/>
+                        <segue destination="lDZ-pW-T2Z" kind="relationship" relationship="viewControllers" id="iG4-mp-89w"/>
+                        <segue destination="dSL-8R-MkX" kind="relationship" relationship="viewControllers" id="RBd-Vy-jUm"/>
+                        <segue destination="sS5-48-3oh" kind="relationship" relationship="viewControllers" id="px7-ZY-F9O"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVM-Hl-WlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378" y="186"/>
+        </scene>
+        <!--Songs-->
+        <scene sceneID="d7k-lA-VW2">
+            <objects>
+                <viewController id="aOM-uJ-DDA" customClass="VKMSongsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tml-Ag-p7r"/>
+                        <viewControllerLayoutGuide type="bottom" id="ldO-Qs-YtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OME-EX-Uyl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9BC-mz-aF0">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReuseID" rowHeight="50" id="MvW-AY-CMo">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MvW-AY-CMo" id="ScE-3t-Y24">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="dSL-8R-MkX" kind="show" id="Kto-zT-vUY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-9" y="0.0" width="416" height="551"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-9" y="0.0" width="416" height="751"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9BC-mz-aF0"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9BC-mz-aF0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Songs" id="vHd-ue-4qd"/>
+                    <navigationItem key="navigationItem" id="DWJ-G7-WAA">
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="I8k-3g-w4L">
+                            <connections>
+                                <segue destination="GhP-JC-W2t" kind="show" id="cfm-Ba-XuL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="9BC-mz-aF0" id="rAj-6L-4ao"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPU-zL-0cN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="-579"/>
+        </scene>
+        <!--VKMEquController-->
+        <scene sceneID="M10-7k-yLN">
+            <objects>
+                <viewController title="VKMEquController" id="db6-gN-rkc" customClass="VKMEqualizerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a77-Mu-4Dr"/>
+                        <viewControllerLayoutGuide type="bottom" id="DTJ-U5-mzJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eco-a0-ZIn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nLJ-hN-RvB">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="101" width="170" height="31"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="101" width="169" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="lowPassValueChanged:" destination="db6-gN-rkc" eventType="valueChanged" id="cDk-1g-DAU"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low pass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sl2-u4-t9X">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="104" width="78" height="26"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="103" width="78" height="26"/>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PgL-7I-1lH">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="175" width="170" height="31"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="174" width="169" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="highPassValueChanged:" destination="db6-gN-rkc" eventType="valueChanged" id="GKy-iC-pl1"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RYC-Ee-uVh">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="241" width="170" height="31"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="241" width="169" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="peakingValueChanged:" destination="db6-gN-rkc" eventType="valueChanged" id="m99-dH-dDZ"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IZR-ad-smC">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="309" width="170" height="31"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="309" width="169" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="lowShelfValueChanged:" destination="db6-gN-rkc" eventType="valueChanged" id="oYe-5d-gk6"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zJE-as-HbA">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="371" width="170" height="31"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="370" width="169" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="highShelfValueChanged:" destination="db6-gN-rkc" eventType="valueChanged" id="1QU-vn-1N5"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High pass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP7-5v-GsR">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="169" width="78" height="26"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="168" width="78" height="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peaking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5T-Wd-Axv">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="238" width="78" height="26"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="237" width="78" height="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low shelf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVa-26-uvc">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="304" width="78" height="26"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="303" width="78" height="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High shelf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yav-XQ-dZ7">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="371" width="78" height="26"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="370" width="78" height="26"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nLJ-hN-RvB"/>
+                                <exclude reference="Sl2-u4-t9X"/>
+                                <exclude reference="PgL-7I-1lH"/>
+                                <exclude reference="RYC-Ee-uVh"/>
+                                <exclude reference="IZR-ad-smC"/>
+                                <exclude reference="zJE-as-HbA"/>
+                                <exclude reference="TP7-5v-GsR"/>
+                                <exclude reference="C5T-Wd-Axv"/>
+                                <exclude reference="BVa-26-uvc"/>
+                                <exclude reference="Yav-XQ-dZ7"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="nLJ-hN-RvB"/>
+                                <include reference="Sl2-u4-t9X"/>
+                                <include reference="PgL-7I-1lH"/>
+                                <include reference="RYC-Ee-uVh"/>
+                                <include reference="IZR-ad-smC"/>
+                                <include reference="zJE-as-HbA"/>
+                                <include reference="TP7-5v-GsR"/>
+                                <include reference="C5T-Wd-Axv"/>
+                                <include reference="BVa-26-uvc"/>
+                                <include reference="Yav-XQ-dZ7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="EQU" id="LjA-RV-NNQ"/>
+                    <connections>
+                        <outlet property="highPassSlider" destination="PgL-7I-1lH" id="MJ4-5R-NLb"/>
+                        <outlet property="highShelfSlider" destination="zJE-as-HbA" id="QGT-E4-cq9"/>
+                        <outlet property="lowShelfSlider" destination="IZR-ad-smC" id="daz-Ga-MX3"/>
+                        <outlet property="peakingSlider" destination="RYC-Ee-uVh" id="bO9-Ia-bKZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bx-of-LKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="1101"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="DzT-RG-nbh">
+            <objects>
+                <viewController id="sS5-48-3oh" customClass="VKMSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tDk-9v-Nqs"/>
+                        <viewControllerLayoutGuide type="bottom" id="4RG-iW-xFS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iMy-U0-eTf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sfb-aJ-ebj">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReuseID" rowHeight="39" id="jZP-ii-FqH">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jZP-ii-FqH" id="heJ-dL-fqg">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="38"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="78" width="400" height="473"/>
+                                </variation>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="searching..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hu4-pY-mY7">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="searchTextFieldValueChanged:" destination="sS5-48-3oh" eventType="valueChanged" id="Vf8-dO-j28"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="sfb-aJ-ebj"/>
+                                <exclude reference="Hu4-pY-mY7"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="sfb-aJ-ebj"/>
+                                <include reference="Hu4-pY-mY7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" id="0li-gc-pAB"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="Hu4-pY-mY7" id="OJS-a5-Hz7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHd-BE-66W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="643" y="1101"/>
+        </scene>
+        <!--VKMLoginViewController-->
+        <scene sceneID="bvW-wA-S4U">
+            <objects>
+                <viewController title="VKMLoginViewController" id="GhP-JC-W2t" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xyy-3N-jDb"/>
+                        <viewControllerLayoutGuide type="bottom" id="PCL-aa-5kL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d5E-VH-OfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntp-8d-Sh9">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="536"/>
+                                </variation>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ntp-8d-Sh9"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ntp-8d-Sh9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfa-eo-SpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2450" y="-579"/>
+        </scene>
+        <!--VKMSettingsController-->
+        <scene sceneID="r9v-Mz-PKd">
+            <objects>
+                <viewController title="VKMSettingsController" id="lDZ-pW-T2Z" customClass="VKMSettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cmC-qI-Z8Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="o0o-cj-chO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Fn-4u-Bg7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cache all songs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwj-g4-s4m">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="172" width="131" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpT-nE-nf3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Logout"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="332" y="28" width="68" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="lDZ-pW-T2Z" eventType="touchUpInside" id="Vrg-en-92s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-hs-eqM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Delete all songs"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="135" y="386" width="131" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="deletePressed:" destination="lDZ-pW-T2Z" eventType="touchUpInside" id="W8h-Sd-mpI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on EQU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c91-zk-3j5">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="109" width="108" height="28"/>
+                                </variation>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zM-BU-k7X">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="207" y="109" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="equTriggerd:" destination="lDZ-pW-T2Z" eventType="valueChanged" id="3vv-Rb-gXg"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J60-f0-HhY">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="207" y="169" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="cacheTriggered:" destination="lDZ-pW-T2Z" eventType="valueChanged" id="4oZ-Rd-F5Q"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Xwj-g4-s4m"/>
+                                <exclude reference="lpT-nE-nf3"/>
+                                <exclude reference="fj2-hs-eqM"/>
+                                <exclude reference="c91-zk-3j5"/>
+                                <exclude reference="8zM-BU-k7X"/>
+                                <exclude reference="J60-f0-HhY"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Xwj-g4-s4m"/>
+                                <include reference="lpT-nE-nf3"/>
+                                <include reference="fj2-hs-eqM"/>
+                                <include reference="c91-zk-3j5"/>
+                                <include reference="8zM-BU-k7X"/>
+                                <include reference="J60-f0-HhY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="InA-3n-62b"/>
+                    <connections>
+                        <outlet property="cacheTrigger" destination="J60-f0-HhY" id="7Nh-UM-RFN"/>
+                        <outlet property="deleteSongsButton" destination="fj2-hs-eqM" id="3Il-d9-mmN"/>
+                        <outlet property="equTrigger" destination="8zM-BU-k7X" id="3fe-yp-TMb"/>
+                        <outlet property="logoutButton" destination="lpT-nE-nf3" id="KPe-fF-xc2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGZ-03-OZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="1101"/>
+        </scene>
+        <!--VKMPlayerController-->
+        <scene sceneID="eHN-hd-h2U">
+            <objects>
+                <viewController title="VKMPlayerController" id="dSL-8R-MkX" customClass="VKMPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JHa-Je-eaC"/>
+                        <viewControllerLayoutGuide type="bottom" id="SjG-Vh-oYj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jEb-4M-Zaf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlY-Qk-eDg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.57239215730223747" blue="0.47833885199434167" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-34" y="1" width="200" height="300"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playPressed:" destination="dSL-8R-MkX" eventType="touchUpInside" id="l6V-Px-pKB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7v-Hu-3ua">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.90356880494542857" blue="0.49507988354867505" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="&gt;&gt;"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="249" y="299" width="151" height="252"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="200" y="310" width="151" height="242"/>
+                                </variation>
+                                <connections>
+                                    <action selector="nextPressed:" destination="dSL-8R-MkX" eventType="touchUpInside" id="NZ9-3J-rAe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3W-70-ANq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.72282897408122948" blue="0.81509330120632062" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Download"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="299" width="125" height="252"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="88" y="309" width="125" height="243"/>
+                                </variation>
+                                <connections>
+                                    <action selector="downloadPressed:" destination="dSL-8R-MkX" eventType="touchUpInside" id="kLn-ld-A8q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROL-pM-uU6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.75146691414405542" blue="0.5016593809908001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="&lt;&lt;"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="299" width="138" height="252"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-29" y="307" width="138" height="243.5"/>
+                                </variation>
+                                <connections>
+                                    <action selector="previousPressed:" destination="dSL-8R-MkX" eventType="touchUpInside" id="1Fl-nA-9Im"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbQ-K4-BoK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.48365643083937715" blue="0.32700592068222667" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Stop"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="200" y="0.0" width="200" height="299"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="113" y="2" width="200" height="300"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopPressed:" destination="dSL-8R-MkX" eventType="touchUpInside" id="bcn-0H-UUq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GlY-Qk-eDg"/>
+                                <exclude reference="a7v-Hu-3ua"/>
+                                <exclude reference="g3W-70-ANq"/>
+                                <exclude reference="ROL-pM-uU6"/>
+                                <exclude reference="BbQ-K4-BoK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="GlY-Qk-eDg"/>
+                                <include reference="a7v-Hu-3ua"/>
+                                <include reference="g3W-70-ANq"/>
+                                <include reference="ROL-pM-uU6"/>
+                                <include reference="BbQ-K4-BoK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Player" id="fMT-5X-uio"/>
+                    <connections>
+                        <outlet property="downloadButton" destination="g3W-70-ANq" id="KtF-rG-fk5"/>
+                        <outlet property="nextButton" destination="a7v-Hu-3ua" id="LPy-Uc-OwD"/>
+                        <outlet property="playButton" destination="GlY-Qk-eDg" id="rwf-3s-Hng"/>
+                        <outlet property="previousButton" destination="ROL-pM-uU6" id="2HF-tf-5MI"/>
+                        <outlet property="stopButton" destination="BbQ-K4-BoK" id="K8m-1T-osa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X48-yq-TC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="1101"/>
+        </scene>
+        <!--VKMDownloadViewController-->
+        <scene sceneID="vlj-nO-3cG">
+            <objects>
+                <viewController title="VKMDownloadViewController" id="4E5-QL-Bss" customClass="VKMDownloadViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KcY-NK-Odc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nsk-GZ-TeF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jf1-Ql-xr0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="41" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5z7-m7-Hbo">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReuseID" rowHeight="41" id="FJf-4K-Ave">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJf-4K-Ave" id="TGo-BJ-xcX">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="50" width="400" height="506"/>
+                                </variation>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nsn-GB-fkW">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="5z7-m7-Hbo"/>
+                                <exclude reference="Nsn-GB-fkW"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="5z7-m7-Hbo"/>
+                                <include reference="Nsn-GB-fkW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Downloads" id="564-4g-niV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uqq-Eb-YTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-642" y="1101"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kto-zT-vUY"/>
+    </inferredMetricsTieBreakers>
+</document>
