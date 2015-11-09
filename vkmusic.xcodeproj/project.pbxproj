@@ -169,22 +169,11 @@
 		4221E3881BCB12DF003F384F /* vkmusic */ = {
 			isa = PBXGroup;
 			children = (
+				42AEBF2E1BEFA3F800496850 /* Controllers */,
 				4221E3BC1BCB13CE003F384F /* Domain */,
 				4221E38C1BCB12DF003F384F /* AppDelegate.h */,
 				4221E38D1BCB12DF003F384F /* AppDelegate.m */,
 				42DA13EB1BE187330033D115 /* Main.storyboard */,
-				42DA14081BE192AC0033D115 /* VKMDownloadViewController.h */,
-				42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */,
-				42DA14031BE1928B0033D115 /* VKMSongsViewController.h */,
-				42DA14041BE1928B0033D115 /* VKMSongsViewController.m */,
-				42DA13FE1BE190CC0033D115 /* VKMPlayerViewController.h */,
-				42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */,
-				42DA13F91BE18DBA0033D115 /* VKMSettingsViewController.h */,
-				42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */,
-				42DA13F41BE18D010033D115 /* VKMSearchViewController.h */,
-				42DA13F51BE18D010033D115 /* VKMSearchViewController.m */,
-				42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */,
-				42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */,
 				4221E3951BCB12DF003F384F /* Assets.xcassets */,
 				4221E3971BCB12DF003F384F /* LaunchScreen.storyboard */,
 				4221E39A1BCB12DF003F384F /* Info.plist */,
@@ -230,6 +219,25 @@
 				4221E3C81BCB14C3003F384F /* VKMAudioNode.m */,
 			);
 			name = Domain;
+			sourceTree = "<group>";
+		};
+		42AEBF2E1BEFA3F800496850 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				42DA14081BE192AC0033D115 /* VKMDownloadViewController.h */,
+				42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */,
+				42DA14031BE1928B0033D115 /* VKMSongsViewController.h */,
+				42DA14041BE1928B0033D115 /* VKMSongsViewController.m */,
+				42DA13FE1BE190CC0033D115 /* VKMPlayerViewController.h */,
+				42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */,
+				42DA13F91BE18DBA0033D115 /* VKMSettingsViewController.h */,
+				42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */,
+				42DA13F41BE18D010033D115 /* VKMSearchViewController.h */,
+				42DA13F51BE18D010033D115 /* VKMSearchViewController.m */,
+				42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */,
+				42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

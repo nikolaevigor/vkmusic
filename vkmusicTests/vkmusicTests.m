@@ -59,8 +59,8 @@
 
 - (void)testImpossibleToCreateAudioNodeWithoutParams {
     NSString *badName = nil;
-    XCTAssertThrows([[VKMAudioNode alloc] initWithName:badName Artist:badName]);
-    XCTAssertThrows([[VKMAudioNode alloc] initWithName:@"" Artist:@""]);
+    XCTAssertThrows([[VKMAudioNode alloc] initWithName:badName  type:@"mp3" size:5 artist:badName duration:5.0]);
+    XCTAssertThrows([[VKMAudioNode alloc] initWithName:@"" type:@"mp3" size:5 artist:@"" duration:5.0]);
 }
 
 @end

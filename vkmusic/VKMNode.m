@@ -17,7 +17,7 @@
     }
     if (self = [super init])
     {
-        self.name = [name copy];
+        _name = [name copy];
     }
     return self;
 }

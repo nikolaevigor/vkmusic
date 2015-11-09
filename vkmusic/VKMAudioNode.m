@@ -10,32 +10,24 @@
 
 @implementation VKMAudioNode
 
-- (nonnull instancetype)initWithName:(NSString *)name Artist:(NSString *)artist
+- (nonnull instancetype)initWithName:(nonnull NSString *)name
+                                type:(nonnull NSString *)type
+                                size:(NSUInteger)size
+                              artist:(nonnull NSString *)artist
+                            duration:(NSTimeInterval)duration
 {
-    if ((name.length == 0) || (name == nil)) {
-        [NSException raise:@"Invalid name value" format:@"name of %@ is invalid", name];
-    }
-    
     if ((artist.length == 0) || (artist == nil)) {
         [NSException raise:@"Invalid artist value" format:@"name of %@ is invalid", artist];
     }
-    
-    self.name = [name copy];
-    self.artist = [artist copy];
-    
+    if (duration == 0) {
+        [NSException raise:@"Invalid duration value" format:@"name of %ld is invalid", (long)duration];
+    }
+    if (self = [super initWithName:name type:type size:size])
+    {
+        _artist = artist;
+        _duration = duration;
+    }
     return self;
-}
-
-- (void)play{
-    
-}
-
-- (void)pause{
-    
-}
-
-- (void)stop{
-    
 }
 
 @end

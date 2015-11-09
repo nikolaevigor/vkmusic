@@ -10,23 +10,23 @@
 
 @interface VKMAudioNode : VKMMediaNode
 
-// Duration of the audio. Can not be nil.
-@property (nonatomic, nonnull) NSTimeInterval *duration;
+// Duration of the audio. Can not be 0.
+@property (nonatomic) NSTimeInterval duration;
 // Audio ID in vk database.
 @property(readonly, nonatomic) NSUInteger audioId;
 // Owner ID of the audio.
 @property(readonly, nonatomic) NSUInteger ownderId;
 // Artist's name. Can not be nil.
-@property(nonatomic, nonnull) NSString* artist;
+@property(nonatomic, nonnull) NSString *artist;
 
 //@bried designated initializer
-//@param Name and artist can not be 0.
-- (nonnull instancetype)initWithName:(nonnull NSString *)name Artist:(nonnull NSString *)artist;
+- (nonnull instancetype)initWithName:(nonnull NSString *)name
+                                type:(nonnull NSString *)type
+                                size:(NSUInteger)size
+                              artist:(nonnull NSString *)artist
+                            duration:(NSTimeInterval) duration;
 
-- (nonnull instancetype)initWithName:(nonnull NSString *)name __attribute__((unavailable("initWithName: not available")));
-
-- (void)play;
-- (void)pause;
-- (void)stop;
+// Prohibited
+- (nonnull instancetype) initWithName:(nonnull NSString *)name type:(nonnull NSString *)type size:(NSUInteger)size __unavailable;
 
 @end

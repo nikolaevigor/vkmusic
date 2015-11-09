@@ -17,7 +17,9 @@
 // @param name Length should be greater than 0.
 - (nonnull instancetype)initWithName:(nonnull NSString *)name;
 
-// Forbid using init to prevent initializing without name.
-- (nonnull instancetype)init __attribute__((unavailable("init not available")));
+// Prohibited
+- (nonnull instancetype)init __unavailable;
++ (nonnull instancetype)new __unavailable;
+
 
 @end
