@@ -593,9 +593,6 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.57239215730223747" blue="0.47833885199434167" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Play"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-34" y="1" width="200" height="300"/>
                                 </variation>
@@ -608,9 +605,6 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.90356880494542857" blue="0.49507988354867505" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="&gt;&gt;"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="249" y="299" width="151" height="252"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="200" y="310" width="151" height="242"/>
                                 </variation>
@@ -623,9 +617,6 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.72282897408122948" blue="0.81509330120632062" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Download"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="138" y="299" width="125" height="252"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="88" y="309" width="125" height="243"/>
                                 </variation>
@@ -638,9 +629,6 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.75146691414405542" blue="0.5016593809908001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="&lt;&lt;"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="299" width="138" height="252"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-29" y="307" width="138" height="243.5"/>
                                 </variation>
@@ -653,9 +641,6 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.48365643083937715" blue="0.32700592068222667" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Stop"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="200" y="0.0" width="200" height="299"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="113" y="2" width="200" height="300"/>
                                 </variation>
@@ -666,6 +651,37 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g3W-70-ANq" firstAttribute="centerX" secondItem="jEb-4M-Zaf" secondAttribute="centerX" id="1Rs-z2-dXm"/>
+                            <constraint firstItem="g3W-70-ANq" firstAttribute="height" secondItem="ROL-pM-uU6" secondAttribute="height" id="2An-9b-E2j"/>
+                            <constraint firstItem="g3W-70-ANq" firstAttribute="leading" secondItem="ROL-pM-uU6" secondAttribute="trailing" id="4jE-xH-eKL"/>
+                            <constraint firstItem="BbQ-K4-BoK" firstAttribute="top" secondItem="jEb-4M-Zaf" secondAttribute="top" id="7jK-9M-nLH"/>
+                            <constraint firstItem="BbQ-K4-BoK" firstAttribute="leading" secondItem="GlY-Qk-eDg" secondAttribute="trailing" id="OlA-ee-zbA"/>
+                            <constraint firstItem="g3W-70-ANq" firstAttribute="width" secondItem="ROL-pM-uU6" secondAttribute="width" id="QvC-jI-an4"/>
+                            <constraint firstItem="a7v-Hu-3ua" firstAttribute="top" secondItem="BbQ-K4-BoK" secondAttribute="bottom" id="S6r-fv-nIu"/>
+                            <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="GlY-Qk-eDg" secondAttribute="bottom" multiplier="2:1" id="SLp-kH-Ogn"/>
+                            <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="a7v-Hu-3ua" secondAttribute="bottom" multiplier="2:2" id="Wm8-Ls-yfL"/>
+                            <constraint firstItem="GlY-Qk-eDg" firstAttribute="top" secondItem="jEb-4M-Zaf" secondAttribute="top" id="XDQ-bH-GM0"/>
+                            <constraint firstItem="GlY-Qk-eDg" firstAttribute="leading" secondItem="jEb-4M-Zaf" secondAttribute="leading" id="ZdV-Eo-M7Q"/>
+                            <constraint firstItem="BbQ-K4-BoK" firstAttribute="height" secondItem="GlY-Qk-eDg" secondAttribute="height" id="dsR-h2-CNZ"/>
+                            <constraint firstItem="g3W-70-ANq" firstAttribute="top" secondItem="GlY-Qk-eDg" secondAttribute="bottom" id="h03-Xa-XkG"/>
+                            <constraint firstItem="ROL-pM-uU6" firstAttribute="top" secondItem="GlY-Qk-eDg" secondAttribute="bottom" id="iX3-Gs-w9h"/>
+                            <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="g3W-70-ANq" secondAttribute="bottom" multiplier="2:2" id="j81-9W-cb6"/>
+                            <constraint firstItem="a7v-Hu-3ua" firstAttribute="leading" secondItem="g3W-70-ANq" secondAttribute="trailing" id="tfn-8y-2cF"/>
+                            <constraint firstItem="BbQ-K4-BoK" firstAttribute="width" secondItem="GlY-Qk-eDg" secondAttribute="width" id="uBs-oo-R8q">
+                                <variation key="widthClass=compact" constant="-7"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="a7v-Hu-3ua" secondAttribute="trailing" constant="-10" id="v5m-nB-0ux">
+                                <variation key="widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="ROL-pM-uU6" firstAttribute="leading" secondItem="jEb-4M-Zaf" secondAttribute="leadingMargin" constant="-12" id="vF9-Nc-cy8">
+                                <variation key="widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="a7v-Hu-3ua" firstAttribute="width" secondItem="ROL-pM-uU6" secondAttribute="width" id="veY-3k-UZo"/>
+                            <constraint firstItem="a7v-Hu-3ua" firstAttribute="height" secondItem="ROL-pM-uU6" secondAttribute="height" id="wT5-2J-gdQ"/>
+                            <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="ROL-pM-uU6" secondAttribute="bottom" multiplier="2:2" id="wTI-p3-Y41"/>
+                            <constraint firstAttribute="trailing" secondItem="BbQ-K4-BoK" secondAttribute="trailing" id="yqE-1E-A9P"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="GlY-Qk-eDg"/>
@@ -673,6 +689,31 @@
                                 <exclude reference="g3W-70-ANq"/>
                                 <exclude reference="ROL-pM-uU6"/>
                                 <exclude reference="BbQ-K4-BoK"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="XDQ-bH-GM0"/>
+                                <exclude reference="ZdV-Eo-M7Q"/>
+                                <exclude reference="7jK-9M-nLH"/>
+                                <exclude reference="OlA-ee-zbA"/>
+                                <exclude reference="dsR-h2-CNZ"/>
+                                <exclude reference="uBs-oo-R8q"/>
+                                <exclude reference="yqE-1E-A9P"/>
+                                <exclude reference="iX3-Gs-w9h"/>
+                                <exclude reference="vF9-Nc-cy8"/>
+                                <exclude reference="1Rs-z2-dXm"/>
+                                <exclude reference="2An-9b-E2j"/>
+                                <exclude reference="4jE-xH-eKL"/>
+                                <exclude reference="QvC-jI-an4"/>
+                                <exclude reference="h03-Xa-XkG"/>
+                                <exclude reference="S6r-fv-nIu"/>
+                                <exclude reference="tfn-8y-2cF"/>
+                                <exclude reference="v5m-nB-0ux"/>
+                                <exclude reference="veY-3k-UZo"/>
+                                <exclude reference="wT5-2J-gdQ"/>
+                                <exclude reference="SLp-kH-Ogn"/>
+                                <exclude reference="Wm8-Ls-yfL"/>
+                                <exclude reference="j81-9W-cb6"/>
+                                <exclude reference="wTI-p3-Y41"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -682,6 +723,31 @@
                                 <include reference="g3W-70-ANq"/>
                                 <include reference="ROL-pM-uU6"/>
                                 <include reference="BbQ-K4-BoK"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="XDQ-bH-GM0"/>
+                                <include reference="ZdV-Eo-M7Q"/>
+                                <include reference="7jK-9M-nLH"/>
+                                <include reference="OlA-ee-zbA"/>
+                                <include reference="dsR-h2-CNZ"/>
+                                <include reference="uBs-oo-R8q"/>
+                                <include reference="yqE-1E-A9P"/>
+                                <include reference="iX3-Gs-w9h"/>
+                                <include reference="vF9-Nc-cy8"/>
+                                <include reference="1Rs-z2-dXm"/>
+                                <include reference="2An-9b-E2j"/>
+                                <include reference="4jE-xH-eKL"/>
+                                <include reference="QvC-jI-an4"/>
+                                <include reference="h03-Xa-XkG"/>
+                                <include reference="S6r-fv-nIu"/>
+                                <include reference="tfn-8y-2cF"/>
+                                <include reference="v5m-nB-0ux"/>
+                                <include reference="veY-3k-UZo"/>
+                                <include reference="wT5-2J-gdQ"/>
+                                <include reference="SLp-kH-Ogn"/>
+                                <include reference="Wm8-Ls-yfL"/>
+                                <include reference="j81-9W-cb6"/>
+                                <include reference="wTI-p3-Y41"/>
                             </mask>
                         </variation>
                     </view>
