@@ -173,7 +173,6 @@
 				4221E3BC1BCB13CE003F384F /* Domain */,
 				4221E38C1BCB12DF003F384F /* AppDelegate.h */,
 				4221E38D1BCB12DF003F384F /* AppDelegate.m */,
-				42DA13EB1BE187330033D115 /* Main.storyboard */,
 				4221E3951BCB12DF003F384F /* Assets.xcassets */,
 				4221E3971BCB12DF003F384F /* LaunchScreen.storyboard */,
 				4221E39A1BCB12DF003F384F /* Info.plist */,
@@ -236,6 +235,7 @@
 				42DA13F51BE18D010033D115 /* VKMSearchViewController.m */,
 				42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */,
 				42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */,
+				42DA13EB1BE187330033D115 /* Main.storyboard */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
