@@ -9,11 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface VKMEqualizerViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UISlider *lowPassSlider;
-@property (weak, nonatomic) IBOutlet UISlider *highPassSlider;
-@property (weak, nonatomic) IBOutlet UISlider *peakingSlider;
-@property (weak, nonatomic) IBOutlet UISlider *lowShelfSlider;
-@property (weak, nonatomic) IBOutlet UISlider *highShelfSlider;
 
 - (IBAction)lowPassValueChanged:(id)sender;
 - (IBAction)highPassValueChanged:(id)sender;

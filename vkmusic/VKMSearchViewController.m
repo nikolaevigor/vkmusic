@@ -8,7 +8,9 @@
 
 #import "VKMSearchViewController.h"
 
-@interface VKMSearchViewController ()
+@interface VKMSearchViewController () <UITableViewDataSource, UITabBarDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 
 @end
 

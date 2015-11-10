@@ -10,6 +10,12 @@
 
 @interface VKMPlayerViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UIButton *stopButton;
+@property (weak, nonatomic) IBOutlet UIButton *previousButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIButton *downloadButton;
+
 @end
 
 @implementation VKMPlayerViewController

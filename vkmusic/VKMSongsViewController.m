@@ -10,6 +10,8 @@
 
 @interface VKMSongsViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation VKMSongsViewController

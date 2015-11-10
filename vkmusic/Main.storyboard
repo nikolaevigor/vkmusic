@@ -326,6 +326,7 @@
                     <connections>
                         <outlet property="highPassSlider" destination="PgL-7I-1lH" id="MJ4-5R-NLb"/>
                         <outlet property="highShelfSlider" destination="zJE-as-HbA" id="QGT-E4-cq9"/>
+                        <outlet property="lowPassSlider" destination="nLJ-hN-RvB" id="Pjc-hx-9jf"/>
                         <outlet property="lowShelfSlider" destination="IZR-ad-smC" id="daz-Ga-MX3"/>
                         <outlet property="peakingSlider" destination="RYC-Ee-uVh" id="bO9-Ia-bKZ"/>
                     </connections>

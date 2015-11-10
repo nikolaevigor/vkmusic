@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface VKMSongsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

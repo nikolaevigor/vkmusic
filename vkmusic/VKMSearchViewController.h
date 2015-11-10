@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VKMSearchViewController : UIViewController <UITableViewDataSource, UITabBarDelegate>
+@interface VKMSearchViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 - (IBAction)searchTextFieldValueChanged:(id)sender;
 
 @end

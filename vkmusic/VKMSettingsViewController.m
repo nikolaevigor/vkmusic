@@ -10,6 +10,11 @@
 
 @interface VKMSettingsViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+@property (weak, nonatomic) IBOutlet UISwitch *equTrigger;
+@property (weak, nonatomic) IBOutlet UISwitch *cacheTrigger;
+@property (weak, nonatomic) IBOutlet UIButton *deleteSongsButton;
+
 @end
 
 @implementation VKMSettingsViewController
