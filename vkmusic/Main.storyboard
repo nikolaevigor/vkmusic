@@ -460,17 +460,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="40" y="140" width="131" height="21"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-hs-eqM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Delete all songs"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="252" y="229" width="109" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="deletePressed:" destination="lDZ-pW-T2Z" eventType="touchUpInside" id="W8h-Sd-mpI"/>
                                 </connections>
@@ -481,16 +475,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="51" y="63" width="108" height="21"/>
-                                </variation>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zM-BU-k7X">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <animations/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="282" y="61" width="51" height="31"/>
-                                </variation>
                                 <connections>
                                     <action selector="equTriggerd:" destination="lDZ-pW-T2Z" eventType="valueChanged" id="3vv-Rb-gXg"/>
                                 </connections>
@@ -498,9 +486,6 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J60-f0-HhY">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <animations/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="282" y="142" width="51" height="31"/>
-                                </variation>
                                 <connections>
                                     <action selector="cacheTriggered:" destination="lDZ-pW-T2Z" eventType="valueChanged" id="4oZ-Rd-F5Q"/>
                                 </connections>
@@ -509,9 +494,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Logout"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="81" y="229" width="48" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="logoutPressed:" destination="lDZ-pW-T2Z" eventType="touchUpInside" id="Vrg-en-92s"/>
                                 </connections>
@@ -519,6 +501,20 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c91-zk-3j5" firstAttribute="top" secondItem="cmC-qI-Z8Q" secondAttribute="bottom" constant="43" id="0OK-AH-luY"/>
+                            <constraint firstItem="c91-zk-3j5" firstAttribute="leading" secondItem="0Fn-4u-Bg7" secondAttribute="leadingMargin" constant="31" id="9XG-YU-65C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J60-f0-HhY" secondAttribute="trailing" constant="49" id="Chr-J3-GyQ"/>
+                            <constraint firstItem="J60-f0-HhY" firstAttribute="top" secondItem="8zM-BU-k7X" secondAttribute="bottom" constant="50" id="GZY-2j-hfN"/>
+                            <constraint firstItem="lpT-nE-nf3" firstAttribute="leading" secondItem="0Fn-4u-Bg7" secondAttribute="leadingMargin" constant="56" id="JBn-dh-hH0"/>
+                            <constraint firstItem="8zM-BU-k7X" firstAttribute="top" secondItem="cmC-qI-Z8Q" secondAttribute="bottom" constant="41" id="Jsa-hv-XbX"/>
+                            <constraint firstItem="lpT-nE-nf3" firstAttribute="top" secondItem="Xwj-g4-s4m" secondAttribute="bottom" constant="68" id="Smo-bD-Xiw"/>
+                            <constraint firstItem="Xwj-g4-s4m" firstAttribute="leading" secondItem="0Fn-4u-Bg7" secondAttribute="leadingMargin" constant="20" id="YKT-Ka-JW3"/>
+                            <constraint firstItem="Xwj-g4-s4m" firstAttribute="top" secondItem="c91-zk-3j5" secondAttribute="bottom" constant="56" id="gPF-Ok-4Bw"/>
+                            <constraint firstItem="fj2-hs-eqM" firstAttribute="top" secondItem="J60-f0-HhY" secondAttribute="bottom" constant="56" id="iec-VC-7yD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fj2-hs-eqM" secondAttribute="trailing" constant="19" id="vFo-Pq-kop"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8zM-BU-k7X" secondAttribute="trailing" constant="49" id="wPr-Zb-uY6"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Xwj-g4-s4m"/>
@@ -527,6 +523,20 @@
                                 <exclude reference="8zM-BU-k7X"/>
                                 <exclude reference="J60-f0-HhY"/>
                                 <exclude reference="lpT-nE-nf3"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0OK-AH-luY"/>
+                                <exclude reference="9XG-YU-65C"/>
+                                <exclude reference="YKT-Ka-JW3"/>
+                                <exclude reference="gPF-Ok-4Bw"/>
+                                <exclude reference="JBn-dh-hH0"/>
+                                <exclude reference="Smo-bD-Xiw"/>
+                                <exclude reference="Jsa-hv-XbX"/>
+                                <exclude reference="wPr-Zb-uY6"/>
+                                <exclude reference="Chr-J3-GyQ"/>
+                                <exclude reference="GZY-2j-hfN"/>
+                                <exclude reference="iec-VC-7yD"/>
+                                <exclude reference="vFo-Pq-kop"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -537,6 +547,20 @@
                                 <include reference="8zM-BU-k7X"/>
                                 <include reference="J60-f0-HhY"/>
                                 <include reference="lpT-nE-nf3"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0OK-AH-luY"/>
+                                <include reference="9XG-YU-65C"/>
+                                <include reference="YKT-Ka-JW3"/>
+                                <include reference="gPF-Ok-4Bw"/>
+                                <include reference="JBn-dh-hH0"/>
+                                <include reference="Smo-bD-Xiw"/>
+                                <include reference="Jsa-hv-XbX"/>
+                                <include reference="wPr-Zb-uY6"/>
+                                <include reference="Chr-J3-GyQ"/>
+                                <include reference="GZY-2j-hfN"/>
+                                <include reference="iec-VC-7yD"/>
+                                <include reference="vFo-Pq-kop"/>
                             </mask>
                         </variation>
                     </view>
