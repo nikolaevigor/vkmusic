@@ -8,7 +8,7 @@
 
 #import "VKMDownloadViewController.h"
 
-@interface VKMDownloadViewController ()
+@interface VKMDownloadViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 

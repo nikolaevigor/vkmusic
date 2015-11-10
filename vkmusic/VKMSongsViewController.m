@@ -8,7 +8,7 @@
 
 #import "VKMSongsViewController.h"
 
-@interface VKMSongsViewController ()
+@interface VKMSongsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

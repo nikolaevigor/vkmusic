@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VKMDownloadViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface VKMDownloadViewController : UIViewController
 
 @end

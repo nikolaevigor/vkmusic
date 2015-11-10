@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VKMSongsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface VKMSongsViewController : UIViewController
 
 @end
