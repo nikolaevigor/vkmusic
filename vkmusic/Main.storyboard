@@ -690,9 +690,6 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.57239215730000004" blue="0.47833885199999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Play"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="204" height="276"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-34" y="1" width="200" height="300"/>
                                 </variation>
@@ -705,9 +702,6 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.75146691409999999" blue="0.50165938099999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="&lt;&lt;"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="276" width="133" height="275"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-29" y="307" width="138" height="243.5"/>
                                 </variation>
@@ -716,13 +710,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-7A-gWy">
-                                <rect key="frame" x="199" y="276" width="201" height="275"/>
+                                <rect key="frame" x="200" y="276" width="200" height="275"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.72282897410000002" blue="0.81509330120000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Download"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="276" width="134" height="275"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="88" y="309" width="125" height="243"/>
                                 </variation>
@@ -735,9 +726,6 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.48365643079999998" blue="0.32700592070000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Stop"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="204" y="0.0" width="196" height="276"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="113" y="2" width="200" height="300"/>
                                 </variation>
@@ -746,13 +734,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyw-UW-9sK">
-                                <rect key="frame" x="399" y="276" width="201" height="275"/>
+                                <rect key="frame" x="400" y="276" width="200" height="275"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.90356880490000002" blue="0.49507988349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="&gt;&gt;"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="267" y="276" width="133" height="275"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="200" y="310" width="151" height="242"/>
                                 </variation>
@@ -765,20 +750,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xH9-Mg-TMV" firstAttribute="leading" secondItem="jEb-4M-Zaf" secondAttribute="leading" id="21B-xa-JOm"/>
-                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="width" secondItem="xH9-Mg-TMV" secondAttribute="width" constant="1" id="34h-vb-m2r"/>
+                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="width" secondItem="xH9-Mg-TMV" secondAttribute="width" id="34h-vb-m2r"/>
                             <constraint firstItem="ucu-eM-VX8" firstAttribute="leading" secondItem="jEb-4M-Zaf" secondAttribute="leading" id="3LK-E6-dUH"/>
                             <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="Fyw-UW-9sK" secondAttribute="bottom" id="5Eo-ix-CaH"/>
-                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="width" secondItem="xH9-Mg-TMV" secondAttribute="width" constant="1" id="70i-Rr-cpc"/>
-                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="leading" secondItem="UqJ-7A-gWy" secondAttribute="trailing" constant="-1" id="D66-k4-lwo"/>
+                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="width" secondItem="xH9-Mg-TMV" secondAttribute="width" id="70i-Rr-cpc"/>
+                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="leading" secondItem="UqJ-7A-gWy" secondAttribute="trailing" id="D66-k4-lwo"/>
                             <constraint firstItem="ucu-eM-VX8" firstAttribute="top" secondItem="jEb-4M-Zaf" secondAttribute="top" id="Fz5-iN-ecR"/>
                             <constraint firstItem="UqJ-7A-gWy" firstAttribute="height" secondItem="ucu-eM-VX8" secondAttribute="height" id="IZQ-2j-jWr"/>
-                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="leading" secondItem="xH9-Mg-TMV" secondAttribute="trailing" constant="-1" id="Jpy-o1-KU3"/>
+                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="leading" secondItem="xH9-Mg-TMV" secondAttribute="trailing" id="Jpy-o1-KU3"/>
                             <constraint firstItem="xH9-Mg-TMV" firstAttribute="top" secondItem="ucu-eM-VX8" secondAttribute="bottom" id="Kmq-At-jp1"/>
                             <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="xH9-Mg-TMV" secondAttribute="bottom" id="LU3-ho-xfD"/>
                             <constraint firstItem="xH9-Mg-TMV" firstAttribute="height" secondItem="ucu-eM-VX8" secondAttribute="height" id="MaR-hg-0yU"/>
                             <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="UqJ-7A-gWy" secondAttribute="bottom" id="MvZ-de-Y3W"/>
                             <constraint firstAttribute="trailing" secondItem="gRS-cG-a3c" secondAttribute="trailing" id="SaS-he-iai"/>
-                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="height" secondItem="gRS-cG-a3c" secondAttribute="height" constant="-1" id="TDP-iQ-zVv"/>
+                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="height" secondItem="gRS-cG-a3c" secondAttribute="height" id="TDP-iQ-zVv"/>
                             <constraint firstItem="gRS-cG-a3c" firstAttribute="leading" secondItem="ucu-eM-VX8" secondAttribute="trailing" id="ThP-dY-1YR"/>
                             <constraint firstItem="UqJ-7A-gWy" firstAttribute="top" secondItem="ucu-eM-VX8" secondAttribute="bottom" id="eik-tg-iLC"/>
                             <constraint firstAttribute="trailing" secondItem="Fyw-UW-9sK" secondAttribute="trailing" id="iK6-BC-doA"/>
