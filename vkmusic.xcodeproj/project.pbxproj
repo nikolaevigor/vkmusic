@@ -22,6 +22,7 @@
 		4221E3C91BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
 		4221E3CA1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
 		4221E3CB1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
+		42C85F371BFBC775009F6E1D /* libVK-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */; };
 		42DA13EC1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
 		42DA13ED1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
 		42DA13EE1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		4221E3C31BCB14A1003F384F /* VKMMediaNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMMediaNode.m; sourceTree = "<group>"; };
 		4221E3C71BCB14C3003F384F /* VKMAudioNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNode.h; sourceTree = "<group>"; };
 		4221E3C81BCB14C3003F384F /* VKMAudioNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNode.m; sourceTree = "<group>"; };
+		42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libVK-ios-sdk.a"; path = "Pods/../build/Debug-iphoneos/libVK-ios-sdk.a"; sourceTree = "<group>"; };
 		42DA13EB1BE187330033D115 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMEqualizerViewController.h; sourceTree = "<group>"; };
 		42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMEqualizerViewController.m; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C85F371BFBC775009F6E1D /* libVK-ios-sdk.a in Frameworks */,
 				A8DEDC6DCE5D7AD34C3FC74E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +133,7 @@
 		41A9A946192CDB1229D7E139 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */,
 				C2E7E24FAF68311CF6DB86D4 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -210,12 +214,7 @@
 		4221E3BC1BCB13CE003F384F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				4221E3BD1BCB148C003F384F /* VKMNode.h */,
-				4221E3BE1BCB148C003F384F /* VKMNode.m */,
-				4221E3C21BCB14A1003F384F /* VKMMediaNode.h */,
-				4221E3C31BCB14A1003F384F /* VKMMediaNode.m */,
-				4221E3C71BCB14C3003F384F /* VKMAudioNode.h */,
-				4221E3C81BCB14C3003F384F /* VKMAudioNode.m */,
+				42C85F2E1BFB8E26009F6E1D /* Entities */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -238,6 +237,19 @@
 				42DA13EB1BE187330033D115 /* Main.storyboard */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		42C85F2E1BFB8E26009F6E1D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4221E3BD1BCB148C003F384F /* VKMNode.h */,
+				4221E3BE1BCB148C003F384F /* VKMNode.m */,
+				4221E3C21BCB14A1003F384F /* VKMMediaNode.h */,
+				4221E3C31BCB14A1003F384F /* VKMMediaNode.m */,
+				4221E3C71BCB14C3003F384F /* VKMAudioNode.h */,
+				4221E3C81BCB14C3003F384F /* VKMAudioNode.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,6 +599,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = vkmusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = VKM.vkmusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -599,6 +615,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = vkmusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = VKM.vkmusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

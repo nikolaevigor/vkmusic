@@ -78,6 +78,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Cfz-lh-eck" id="D4U-vY-eKE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPU-zL-0cN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -653,6 +656,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="InA-3n-62b"/>
+                    <connections>
+                        <outlet property="cacheTrigger" destination="I2h-NO-ztf" id="gBz-NJ-ZmH"/>
+                        <outlet property="deleteSongsButton" destination="JXB-5W-zg4" id="4sn-v0-8rW"/>
+                        <outlet property="equTrigger" destination="cdO-ub-ByR" id="sXA-Ne-x4N"/>
+                        <outlet property="logoutButton" destination="bjG-cZ-Esq" id="v3O-Fl-aKG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGZ-03-OZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -761,6 +770,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Player" id="fMT-5X-uio"/>
+                    <connections>
+                        <outlet property="downloadButton" destination="UqJ-7A-gWy" id="oXl-bW-QWP"/>
+                        <outlet property="nextButton" destination="Fyw-UW-9sK" id="7xT-pU-eaZ"/>
+                        <outlet property="playButton" destination="ucu-eM-VX8" id="9cH-KI-IMu"/>
+                        <outlet property="previousButton" destination="xH9-Mg-TMV" id="1bV-zq-5Rg"/>
+                        <outlet property="stopButton" destination="gRS-cG-a3c" id="ByI-F1-ePk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X48-yq-TC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,7 +19,7 @@
 // Artist's name. Can not be nil.
 @property(nonatomic, nonnull) NSString *artist;
 
-//@bried designated initializer
+//@brief designated initializer
 - (nonnull instancetype)initWithName:(nonnull NSString *)name
                                 type:(nonnull NSString *)type
                                 size:(NSUInteger)size
