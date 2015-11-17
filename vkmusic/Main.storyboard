@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="je6-7P-KhJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="je6-7P-KhJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -420,7 +420,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="searching..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xM-Tk-lyi">
-                                <rect key="frame" x="0.0" y="19" width="600" height="30"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -429,7 +429,7 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FpU-Ih-Jjo">
-                                <rect key="frame" x="0.0" y="49" width="600" height="502"/>
+                                <rect key="frame" x="0.0" y="50" width="600" height="501"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -452,10 +452,10 @@
                             <constraint firstItem="4RG-iW-xFS" firstAttribute="top" secondItem="FpU-Ih-Jjo" secondAttribute="bottom" id="8nb-7J-cJ0"/>
                             <constraint firstAttribute="trailing" secondItem="2xM-Tk-lyi" secondAttribute="trailing" id="BFE-Mp-mlj"/>
                             <constraint firstItem="FpU-Ih-Jjo" firstAttribute="leading" secondItem="iMy-U0-eTf" secondAttribute="leading" id="Iks-Kh-mEF"/>
-                            <constraint firstItem="2xM-Tk-lyi" firstAttribute="top" secondItem="iMy-U0-eTf" secondAttribute="top" constant="19" id="MgU-Qt-6q2"/>
                             <constraint firstItem="FpU-Ih-Jjo" firstAttribute="top" secondItem="2xM-Tk-lyi" secondAttribute="bottom" id="jqc-Ep-Ptp"/>
                             <constraint firstAttribute="trailing" secondItem="FpU-Ih-Jjo" secondAttribute="trailing" id="pPf-ay-KQZ"/>
                             <constraint firstItem="2xM-Tk-lyi" firstAttribute="leading" secondItem="iMy-U0-eTf" secondAttribute="leading" id="rfA-OD-73o"/>
+                            <constraint firstItem="2xM-Tk-lyi" firstAttribute="top" secondItem="tDk-9v-Nqs" secondAttribute="bottom" id="uRK-Pm-w08"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="0li-gc-pAB"/>
