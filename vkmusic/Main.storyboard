@@ -390,6 +390,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="EQU" id="LjA-RV-NNQ"/>
+                    <connections>
+                        <outlet property="highPassSlider" destination="dL1-M4-DcD" id="vt0-Jf-pFo"/>
+                        <outlet property="highShelfSlider" destination="xtw-hh-IXQ" id="fBl-mx-siH"/>
+                        <outlet property="lowPassSlider" destination="Ccs-OZ-QFf" id="bl5-O5-DMf"/>
+                        <outlet property="lowShelfSlider" destination="ew1-b0-PhJ" id="Vw5-8F-rpS"/>
+                        <outlet property="peakingSlider" destination="8jR-3K-SJy" id="yJf-I7-bqA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bx-of-LKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -447,6 +454,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="0li-gc-pAB"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="2xM-Tk-lyi" id="l2R-k0-Kpv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHd-BE-66W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
