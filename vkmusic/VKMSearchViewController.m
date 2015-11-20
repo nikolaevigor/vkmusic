@@ -8,9 +8,10 @@
 
 #import "VKMSearchViewController.h"
 
-@interface VKMSearchViewController () <UITableViewDataSource, UITabBarDelegate>
+@interface VKMSearchViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -18,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,8 +37,7 @@
 {
     static NSString *const CellID = @"ReuseID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
-    cell.textLabel.text = @"1";
-    NSLog(@"asdasdsad");
+    cell.textLabel.text = @"Song name";
     return cell;
 }
 

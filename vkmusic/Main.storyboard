@@ -456,6 +456,7 @@
                     <tabBarItem key="tabBarItem" title="Search" id="0li-gc-pAB"/>
                     <connections>
                         <outlet property="searchTextField" destination="2xM-Tk-lyi" id="l2R-k0-Kpv"/>
+                        <outlet property="tableView" destination="FpU-Ih-Jjo" id="a1M-qq-OUZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHd-BE-66W" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -841,6 +842,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Downloads" id="564-4g-niV"/>
+                    <connections>
+                        <outlet property="tableView" destination="mYa-UX-201" id="m0A-QQ-ufF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqq-Eb-YTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -27,23 +27,11 @@
 		42DA13ED1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
 		42DA13EE1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
 		42DA13F11BE18A820033D115 /* VKMEqualizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */; };
-		42DA13F21BE18A820033D115 /* VKMEqualizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */; };
-		42DA13F31BE18A820033D115 /* VKMEqualizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */; };
 		42DA13F61BE18D010033D115 /* VKMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13F51BE18D010033D115 /* VKMSearchViewController.m */; };
-		42DA13F71BE18D010033D115 /* VKMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13F51BE18D010033D115 /* VKMSearchViewController.m */; };
-		42DA13F81BE18D010033D115 /* VKMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13F51BE18D010033D115 /* VKMSearchViewController.m */; };
 		42DA13FB1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */; };
-		42DA13FC1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */; };
-		42DA13FD1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */; };
 		42DA14001BE190CC0033D115 /* VKMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */; };
-		42DA14011BE190CC0033D115 /* VKMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */; };
-		42DA14021BE190CC0033D115 /* VKMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */; };
 		42DA14051BE1928B0033D115 /* VKMSongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA14041BE1928B0033D115 /* VKMSongsViewController.m */; };
-		42DA14061BE1928B0033D115 /* VKMSongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA14041BE1928B0033D115 /* VKMSongsViewController.m */; };
-		42DA14071BE1928B0033D115 /* VKMSongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA14041BE1928B0033D115 /* VKMSongsViewController.m */; };
 		42DA140A1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */; };
-		42DA140B1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */; };
-		42DA140C1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */; };
 		A8DEDC6DCE5D7AD34C3FC74E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E7E24FAF68311CF6DB86D4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -454,14 +442,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4221E3C51BCB14A1003F384F /* VKMMediaNode.m in Sources */,
-				42DA13F71BE18D010033D115 /* VKMSearchViewController.m in Sources */,
 				4221E3C01BCB148C003F384F /* VKMNode.m in Sources */,
-				42DA140B1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */,
-				42DA13F21BE18A820033D115 /* VKMEqualizerViewController.m in Sources */,
-				42DA13FC1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */,
 				4221E3A41BCB12DF003F384F /* vkmusicTests.m in Sources */,
-				42DA14061BE1928B0033D115 /* VKMSongsViewController.m in Sources */,
-				42DA14011BE190CC0033D115 /* VKMPlayerViewController.m in Sources */,
 				4221E3CA1BCB14C3003F384F /* VKMAudioNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,14 +453,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4221E3C61BCB14A1003F384F /* VKMMediaNode.m in Sources */,
-				42DA13F81BE18D010033D115 /* VKMSearchViewController.m in Sources */,
 				4221E3C11BCB148C003F384F /* VKMNode.m in Sources */,
-				42DA140C1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */,
-				42DA13F31BE18A820033D115 /* VKMEqualizerViewController.m in Sources */,
-				42DA13FD1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */,
 				4221E3AF1BCB12DF003F384F /* vkmusicUITests.m in Sources */,
-				42DA14071BE1928B0033D115 /* VKMSongsViewController.m in Sources */,
-				42DA14021BE190CC0033D115 /* VKMPlayerViewController.m in Sources */,
 				4221E3CB1BCB14C3003F384F /* VKMAudioNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,10 +575,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = vkmusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = VKM.vkmusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -615,10 +587,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = vkmusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = VKM.vkmusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

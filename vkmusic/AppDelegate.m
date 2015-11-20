@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <VKSdk.h>
 
 @interface AppDelegate ()
 

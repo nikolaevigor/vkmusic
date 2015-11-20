@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,8 +36,7 @@
 {
     static NSString *const CellID = @"ReuseID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
-    cell.textLabel.text = @"1";
-    NSLog(@"asdasdsad");
+    cell.textLabel.text = @"Song name";
     return cell;
 }
 
