@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VKSdk.h"
 
 @interface VKMDownloadViewController : UIViewController
 

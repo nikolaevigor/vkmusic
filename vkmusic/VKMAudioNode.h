@@ -15,7 +15,7 @@
 // Audio ID in vk database.
 @property(readonly, nonatomic) NSUInteger audioId;
 // Owner ID of the audio.
-@property(readonly, nonatomic) NSUInteger ownderId;
+@property(readonly, nonatomic) NSUInteger ownerId;
 // Artist's name. Can not be nil.
 @property(nonatomic, nonnull) NSString *artist;
 
