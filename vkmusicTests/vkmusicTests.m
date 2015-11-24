@@ -63,10 +63,4 @@
     XCTAssertThrows([[VKMAudioNode alloc] initWithName:@"" type:@"mp3" size:5 artist:@"" duration:5.0]);
 }
 
-#pragma mark - VKManager Tests
-
-- (void)testSearchRequests {
-    
-}
-
 @end
