@@ -716,7 +716,7 @@
         <!--VKMDownloadViewController-->
         <scene sceneID="vlj-nO-3cG">
             <objects>
-                <viewController title="VKMDownloadViewController" id="4E5-QL-Bss" customClass="VKMDownloadViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="download" title="VKMDownloadViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4E5-QL-Bss" customClass="VKMDownloadViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KcY-NK-Odc"/>
                         <viewControllerLayoutGuide type="bottom" id="Nsk-GZ-TeF"/>

@@ -8,7 +8,7 @@
 
 #import "VKMDownloadViewController.h"
 
-@interface VKMDownloadViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+@interface VKMDownloadViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, VKSdkDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *searchBox;
@@ -26,8 +26,17 @@
     self.searchBox.delegate = self;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    [VKSdk initializeWithDelegate:self andAppId:@"5152277"];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    if (![VKSdk wakeUpSession])
+    {
+        [VKSdk authorize:@[@"friends", @"audio"]];
+    }
 }
 
 #pragma mark - Text Field Events methods
@@ -67,5 +76,38 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+#pragma mark - VKSdk Delegate methods
+
+- (void)vkSdkShouldPresentViewController:(UIViewController *)controller
+{
+    NSLog(@"Should present view controller");
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)vkSdkNeedCaptchaEnter:(VKError *)captchaError
+{
+    NSLog(@"Need captcha enter");
+}
+
+- (void)vkSdkUserDeniedAccess:(VKError *)authorizationError
+{
+    NSLog(@"User denied access");
+}
+
+- (void)vkSdkTokenHasExpired:(VKAccessToken *)expiredToken
+{
+    NSLog(@"Token expired");
+    VKAccessToken *token = [VKSdk getAccessToken];
+    [VKSdk setAccessToken:token];
+    [token saveTokenToDefaults:@"token"];
+}
+
+- (void)vkSdkReceivedNewToken:(VKAccessToken *)newToken
+{
+    NSLog(@"Received new token");
+    [newToken saveTokenToDefaults:@"token"];
+}
+
 
 @end
