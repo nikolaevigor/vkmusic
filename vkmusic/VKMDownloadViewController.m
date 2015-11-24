@@ -8,41 +8,51 @@
 
 #import "VKMDownloadViewController.h"
 
-@interface VKMDownloadViewController () <UITableViewDataSource, UITableViewDelegate, VKSdkDelegate>
+@interface VKMDownloadViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *searchBox;
+@property (strong, nonatomic) NSMutableArray *results;
 
 @end
 
 @implementation VKMDownloadViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    
-    [VKSdk initializeWithDelegate:self andAppId:@"5152277"];
-    [VKSdk authorize:@[@"friends", @"audio"]];
-    
+    self.searchBox.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
+#pragma mark - Text Field Events methods
+
+- (IBAction)searchBoxEditingDidBegin:(id)sender {
+    self.searchBox.text = @"";
+}
+
+- (IBAction)searchBoxEditingDidEnd:(id)sender {
+    self.results = [VKManager getTitlesForSearchQuery: self.searchBox.text];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View methods
 
 - (NSInteger)tableView:(UITableView*) tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [self.results count];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     static NSString *const CellID = @"ReuseID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
-    cell.textLabel.text = @"Song name";
+    cell.textLabel.text = self.results[indexPath.row];
     return cell;
 }
 
@@ -51,31 +61,11 @@
     
 }
 
-#pragma mark - VKSdk Delegate methods
+#pragma mark - Text Field methods
 
-- (void)vkSdkShouldPresentViewController:(UIViewController *)controller
-{
-    
-}
-
-- (void)vkSdkNeedCaptchaEnter:(VKError *)captchaError
-{
-    
-}
-
-- (void)vkSdkUserDeniedAccess:(VKError *)authorizationError
-{
-    NSLog(@"User denied access");
-}
-
-- (void)vkSdkTokenHasExpired:(VKAccessToken *)expiredToken
-{
-    
-}
-
-- (void)vkSdkReceivedNewToken:(VKAccessToken *)newToken
-{
-    NSLog(@"Received new token");
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

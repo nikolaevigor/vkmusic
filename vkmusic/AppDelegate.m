@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <VKSdkDelegate>
 
 @end
 
@@ -16,6 +16,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [VKSdk initializeWithDelegate:self andAppId:@"5152277"];
+    if ([VKAccessToken tokenFromDefaults:@"token"])
+    {
+        [VKSdk setAccessToken:[VKAccessToken tokenFromDefaults:@"token"]];
+    }
+    else
+    {
+        [VKSdk authorize:@[@"friends", @"audio"]];
+    }
     return YES;
 }
 
@@ -41,6 +50,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - VKSdk setup methods
+
 //iOS 9 workflow
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
     [VKSdk processOpenURL:url fromApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]];
@@ -51,6 +62,37 @@
 {
     [VKSdk processOpenURL:url fromApplication:sourceApplication];
     return YES;
+}
+
+#pragma mark - VKSdk Delegate methods
+
+- (void)vkSdkShouldPresentViewController:(UIViewController *)controller
+{
+    NSLog(@"Should present view controller");
+}
+
+- (void)vkSdkNeedCaptchaEnter:(VKError *)captchaError
+{
+    NSLog(@"Need captcha enter");
+}
+
+- (void)vkSdkUserDeniedAccess:(VKError *)authorizationError
+{
+    NSLog(@"User denied access");
+}
+
+- (void)vkSdkTokenHasExpired:(VKAccessToken *)expiredToken
+{
+    NSLog(@"Token expired");
+    VKAccessToken *token = [VKSdk getAccessToken];
+    [VKSdk setAccessToken:token];
+    [token saveTokenToDefaults:@"token"];
+}
+
+- (void)vkSdkReceivedNewToken:(VKAccessToken *)newToken
+{
+    NSLog(@"Received new token");
+    [newToken saveTokenToDefaults:@"token"];
 }
 
 @end

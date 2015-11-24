@@ -1,10 +1,13 @@
 PODS:
+  - SSKeychain (1.2.3)
   - VK-ios-sdk (1.2.2)
 
 DEPENDENCIES:
+  - SSKeychain
   - VK-ios-sdk
 
 SPEC CHECKSUMS:
+  SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
   VK-ios-sdk: f4b7df0d4e277e06d60fef6dc472be4260eeda6d
 
 COCOAPODS: 0.39.0

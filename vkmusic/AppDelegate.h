@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "VKSdk.h"
+#import "SSKeychain.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

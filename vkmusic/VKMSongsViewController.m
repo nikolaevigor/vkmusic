@@ -1,5 +1,5 @@
 //
-//  VKMSongsViewController.m
+//  VKMSearchViewController.m
 //  vkmusic
 //
 //  Created by Igor Nikolaev on 29/10/15.
@@ -10,6 +10,7 @@
 
 @interface VKMSongsViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -40,4 +41,9 @@
     return cell;
 }
 
+
+
+- (IBAction)searchTextFieldValueChanged:(id)sender {
+    NSLog(@"Value changed for searchBox");
+}
 @end

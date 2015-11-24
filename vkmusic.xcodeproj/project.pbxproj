@@ -22,15 +22,16 @@
 		4221E3C91BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
 		4221E3CA1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
 		4221E3CB1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
+		423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 423BCC901C04FD7900B495D9 /* VKMLayerButton.m */; };
+		4242A7691C04AC9800AF8509 /* VKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4242A7681C04AC9800AF8509 /* VKManager.m */; };
 		42C85F371BFBC775009F6E1D /* libVK-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */; };
 		42DA13EC1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
 		42DA13ED1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
 		42DA13EE1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
 		42DA13F11BE18A820033D115 /* VKMEqualizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */; };
-		42DA13F61BE18D010033D115 /* VKMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13F51BE18D010033D115 /* VKMSearchViewController.m */; };
+		42DA13F61BE18D010033D115 /* VKMSongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13F51BE18D010033D115 /* VKMSongsViewController.m */; };
 		42DA13FB1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */; };
 		42DA14001BE190CC0033D115 /* VKMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */; };
-		42DA14051BE1928B0033D115 /* VKMSongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA14041BE1928B0033D115 /* VKMSongsViewController.m */; };
 		42DA140A1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */; };
 		A8DEDC6DCE5D7AD34C3FC74E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E7E24FAF68311CF6DB86D4 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,8 @@
 /* Begin PBXFileReference section */
 		1C295B23B087D39745DDA61B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		240B660B6D2478B0EAE88D1C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		42171FD51C03C4B8005BFFBD /* libNovocaine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNovocaine.a; path = "Pods/../build/Debug-iphoneos/libNovocaine.a"; sourceTree = "<group>"; };
+		42171FD61C03C4B8005BFFBD /* libNVDSP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNVDSP.a; path = "Pods/../build/Debug-iphoneos/libNVDSP.a"; sourceTree = "<group>"; };
 		4221E3861BCB12DF003F384F /* vkmusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkmusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4221E38A1BCB12DF003F384F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4221E38C1BCB12DF003F384F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,18 +77,20 @@
 		4221E3C31BCB14A1003F384F /* VKMMediaNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMMediaNode.m; sourceTree = "<group>"; };
 		4221E3C71BCB14C3003F384F /* VKMAudioNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNode.h; sourceTree = "<group>"; };
 		4221E3C81BCB14C3003F384F /* VKMAudioNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNode.m; sourceTree = "<group>"; };
+		423BCC8F1C04FD7900B495D9 /* VKMLayerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMLayerButton.h; sourceTree = "<group>"; };
+		423BCC901C04FD7900B495D9 /* VKMLayerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMLayerButton.m; sourceTree = "<group>"; };
+		4242A7671C04AC9800AF8509 /* VKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKManager.h; sourceTree = "<group>"; };
+		4242A7681C04AC9800AF8509 /* VKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKManager.m; sourceTree = "<group>"; };
 		42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libVK-ios-sdk.a"; path = "Pods/../build/Debug-iphoneos/libVK-ios-sdk.a"; sourceTree = "<group>"; };
 		42DA13EB1BE187330033D115 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMEqualizerViewController.h; sourceTree = "<group>"; };
 		42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMEqualizerViewController.m; sourceTree = "<group>"; };
-		42DA13F41BE18D010033D115 /* VKMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMSearchViewController.h; sourceTree = "<group>"; };
-		42DA13F51BE18D010033D115 /* VKMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMSearchViewController.m; sourceTree = "<group>"; };
+		42DA13F41BE18D010033D115 /* VKMSongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMSongsViewController.h; sourceTree = "<group>"; };
+		42DA13F51BE18D010033D115 /* VKMSongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMSongsViewController.m; sourceTree = "<group>"; };
 		42DA13F91BE18DBA0033D115 /* VKMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMSettingsViewController.h; sourceTree = "<group>"; };
 		42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMSettingsViewController.m; sourceTree = "<group>"; };
 		42DA13FE1BE190CC0033D115 /* VKMPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMPlayerViewController.h; sourceTree = "<group>"; };
 		42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMPlayerViewController.m; sourceTree = "<group>"; };
-		42DA14031BE1928B0033D115 /* VKMSongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMSongsViewController.h; sourceTree = "<group>"; };
-		42DA14041BE1928B0033D115 /* VKMSongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMSongsViewController.m; sourceTree = "<group>"; };
 		42DA14081BE192AC0033D115 /* VKMDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMDownloadViewController.h; sourceTree = "<group>"; };
 		42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMDownloadViewController.m; sourceTree = "<group>"; };
 		C2E7E24FAF68311CF6DB86D4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +126,8 @@
 		41A9A946192CDB1229D7E139 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42171FD51C03C4B8005BFFBD /* libNovocaine.a */,
+				42171FD61C03C4B8005BFFBD /* libNVDSP.a */,
 				42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */,
 				C2E7E24FAF68311CF6DB86D4 /* libPods.a */,
 			);
@@ -163,6 +170,10 @@
 			children = (
 				42AEBF2E1BEFA3F800496850 /* Controllers */,
 				4221E3BC1BCB13CE003F384F /* Domain */,
+				4242A7671C04AC9800AF8509 /* VKManager.h */,
+				4242A7681C04AC9800AF8509 /* VKManager.m */,
+				423BCC8F1C04FD7900B495D9 /* VKMLayerButton.h */,
+				423BCC901C04FD7900B495D9 /* VKMLayerButton.m */,
 				4221E38C1BCB12DF003F384F /* AppDelegate.h */,
 				4221E38D1BCB12DF003F384F /* AppDelegate.m */,
 				4221E3951BCB12DF003F384F /* Assets.xcassets */,
@@ -212,14 +223,12 @@
 			children = (
 				42DA14081BE192AC0033D115 /* VKMDownloadViewController.h */,
 				42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */,
-				42DA14031BE1928B0033D115 /* VKMSongsViewController.h */,
-				42DA14041BE1928B0033D115 /* VKMSongsViewController.m */,
 				42DA13FE1BE190CC0033D115 /* VKMPlayerViewController.h */,
 				42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */,
 				42DA13F91BE18DBA0033D115 /* VKMSettingsViewController.h */,
 				42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */,
-				42DA13F41BE18D010033D115 /* VKMSearchViewController.h */,
-				42DA13F51BE18D010033D115 /* VKMSearchViewController.m */,
+				42DA13F41BE18D010033D115 /* VKMSongsViewController.h */,
+				42DA13F51BE18D010033D115 /* VKMSongsViewController.m */,
 				42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */,
 				42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */,
 				42DA13EB1BE187330033D115 /* Main.storyboard */,
@@ -424,13 +433,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42DA14051BE1928B0033D115 /* VKMSongsViewController.m in Sources */,
 				4221E3BF1BCB148C003F384F /* VKMNode.m in Sources */,
+				4242A7691C04AC9800AF8509 /* VKManager.m in Sources */,
 				4221E3C41BCB14A1003F384F /* VKMMediaNode.m in Sources */,
+				423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */,
 				42DA140A1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */,
 				42DA14001BE190CC0033D115 /* VKMPlayerViewController.m in Sources */,
 				4221E3C91BCB14C3003F384F /* VKMAudioNode.m in Sources */,
-				42DA13F61BE18D010033D115 /* VKMSearchViewController.m in Sources */,
+				42DA13F61BE18D010033D115 /* VKMSongsViewController.m in Sources */,
 				42DA13FB1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */,
 				4221E38E1BCB12DF003F384F /* AppDelegate.m in Sources */,
 				42DA13F11BE18A820033D115 /* VKMEqualizerViewController.m in Sources */,

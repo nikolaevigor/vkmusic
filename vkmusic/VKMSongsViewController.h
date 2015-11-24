@@ -1,5 +1,5 @@
 //
-//  VKMSongsViewController.h
+//  VKMSearchViewController.h
 //  vkmusic
 //
 //  Created by Igor Nikolaev on 29/10/15.
@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface VKMSongsViewController : UIViewController
+
+- (IBAction)searchTextFieldValueChanged:(id)sender;
 
 @end
