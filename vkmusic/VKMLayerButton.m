@@ -62,7 +62,7 @@
 {
     // Disable implicit animation
     [CATransaction begin];
-    [CATransaction setDisableActions:YES];
+    [CATransaction setDisableActions:NO];
     
     // Hide/show inverted gradient
     _highlightBackgroundLayer.hidden = !highlighted;

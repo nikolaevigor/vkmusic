@@ -11,6 +11,6 @@
 
 @interface VKManager : NSObject
 
-+ (NSMutableArray *)getTitlesForSearchQuery:(NSString *)query;
++ (void)getTitlesForSearchQuery:(NSString *)query completion:(void (^) (NSMutableArray *))completion;
 
 @end

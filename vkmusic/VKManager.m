@@ -10,19 +10,22 @@
 
 @implementation VKManager
 
-+ (NSMutableArray *)getTitlesForSearchQuery:(NSString *)query
++ (void)getTitlesForSearchQuery:(NSString *)query completion:(void (^) (NSMutableArray *))completion
 {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setObject:query forKey:@"q"];
     NSMutableArray *titles = [[NSMutableArray alloc] init];
     
     VKRequest *searchRequest = [VKApi requestWithMethod:@"audio.search" andParameters:params andHttpMethod:@"GET"];
-    searchRequest.waitUntilDone = YES;
     [searchRequest executeWithResultBlock:^(VKResponse *response) {
         NSArray *items = [response.json objectForKey:@"items"];
-        for (int i=0; i<[items count]; i++)
+        for (id item in items)
         {
-            [titles addObject:[items[i] objectForKey:@"title"]];
+            [titles addObject:[item objectForKey:@"title"]];
+        }
+        if (completion)
+        {
+            completion(titles);
         }
     } errorBlock:^(NSError *error){
         if (error.code != VK_API_ERROR) {
@@ -32,7 +35,6 @@
             NSLog(@"VK error: %@", error);
         }
     }];
-    return titles;
 }
 
 @end

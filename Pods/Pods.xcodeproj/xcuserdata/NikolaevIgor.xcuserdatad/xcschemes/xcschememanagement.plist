@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SSKeychain.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>VK-ios-sdk.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>177E107ED97C80F253163B524EB190BF</key>
+		<key>532AC9C9C8200D8E9D9E2BFFB749C3B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B829DD3C47E082CEE5E8292E44981705</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BA1D9621BB892324137E9118168C8D16</key>
+		<key>A4D00F853016858073F169395B45757E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

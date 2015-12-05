@@ -46,8 +46,8 @@
 }
 
 - (IBAction)searchBoxEditingDidEnd:(id)sender {
-    self.results = [VKManager getTitlesForSearchQuery: self.searchBox.text];
-    [self.tableView reloadData];
+    __block void (^completion) (NSMutableArray *) = ^(NSMutableArray * titles){self.results = titles; [self.tableView reloadData];};
+    [VKManager getTitlesForSearchQuery:self.searchBox.text completion:completion];
 }
 
 #pragma mark - Table View methods
