@@ -52,6 +52,6 @@
 }
 
 - (IBAction)deletePressed:(id)sender {
-    NSLog(@"delete");
+    
 }
 @end

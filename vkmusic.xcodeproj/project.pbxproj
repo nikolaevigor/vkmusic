@@ -24,6 +24,9 @@
 		4221E3CB1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
 		423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 423BCC901C04FD7900B495D9 /* VKMLayerButton.m */; };
 		4242A7691C04AC9800AF8509 /* VKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4242A7681C04AC9800AF8509 /* VKManager.m */; };
+		42787A0C1C14810A005D00BC /* VKMAudioNodeDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */; };
+		42B330701C138A9600779F69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B3306E1C138A9600779F69 /* AVFoundation.framework */; };
+		42B330711C138A9600779F69 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B3306F1C138A9600779F69 /* AVKit.framework */; };
 		42C85F371BFBC775009F6E1D /* libVK-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */; };
 		42DA13EC1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
 		42DA13ED1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
@@ -81,6 +84,10 @@
 		423BCC901C04FD7900B495D9 /* VKMLayerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMLayerButton.m; sourceTree = "<group>"; };
 		4242A7671C04AC9800AF8509 /* VKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKManager.h; sourceTree = "<group>"; };
 		4242A7681C04AC9800AF8509 /* VKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKManager.m; sourceTree = "<group>"; };
+		42787A0A1C14810A005D00BC /* VKMAudioNodeDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNodeDownloader.h; sourceTree = "<group>"; };
+		42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNodeDownloader.m; sourceTree = "<group>"; };
+		42B3306E1C138A9600779F69 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		42B3306F1C138A9600779F69 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libVK-ios-sdk.a"; path = "Pods/../build/Debug-iphoneos/libVK-ios-sdk.a"; sourceTree = "<group>"; };
 		42DA13EB1BE187330033D115 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMEqualizerViewController.h; sourceTree = "<group>"; };
@@ -101,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B330701C138A9600779F69 /* AVFoundation.framework in Frameworks */,
+				42B330711C138A9600779F69 /* AVKit.framework in Frameworks */,
 				42C85F371BFBC775009F6E1D /* libVK-ios-sdk.a in Frameworks */,
 				A8DEDC6DCE5D7AD34C3FC74E /* libPods.a in Frameworks */,
 			);
@@ -126,6 +135,8 @@
 		41A9A946192CDB1229D7E139 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42B3306E1C138A9600779F69 /* AVFoundation.framework */,
+				42B3306F1C138A9600779F69 /* AVKit.framework */,
 				42171FD51C03C4B8005BFFBD /* libNovocaine.a */,
 				42171FD61C03C4B8005BFFBD /* libNVDSP.a */,
 				42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */,
@@ -170,10 +181,7 @@
 			children = (
 				42AEBF2E1BEFA3F800496850 /* Controllers */,
 				4221E3BC1BCB13CE003F384F /* Domain */,
-				4242A7671C04AC9800AF8509 /* VKManager.h */,
-				4242A7681C04AC9800AF8509 /* VKManager.m */,
-				423BCC8F1C04FD7900B495D9 /* VKMLayerButton.h */,
-				423BCC901C04FD7900B495D9 /* VKMLayerButton.m */,
+				42787A0D1C14B648005D00BC /* Infrastructure */,
 				4221E38C1BCB12DF003F384F /* AppDelegate.h */,
 				4221E38D1BCB12DF003F384F /* AppDelegate.m */,
 				4221E3951BCB12DF003F384F /* Assets.xcassets */,
@@ -218,6 +226,17 @@
 			name = Domain;
 			sourceTree = "<group>";
 		};
+		42787A0D1C14B648005D00BC /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				4242A7671C04AC9800AF8509 /* VKManager.h */,
+				4242A7681C04AC9800AF8509 /* VKManager.m */,
+				42787A0A1C14810A005D00BC /* VKMAudioNodeDownloader.h */,
+				42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */,
+			);
+			name = Infrastructure;
+			sourceTree = "<group>";
+		};
 		42AEBF2E1BEFA3F800496850 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +250,8 @@
 				42DA13F51BE18D010033D115 /* VKMSongsViewController.m */,
 				42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */,
 				42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */,
+				423BCC8F1C04FD7900B495D9 /* VKMLayerButton.h */,
+				423BCC901C04FD7900B495D9 /* VKMLayerButton.m */,
 				42DA13EB1BE187330033D115 /* Main.storyboard */,
 			);
 			name = Controllers;
@@ -434,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4221E3BF1BCB148C003F384F /* VKMNode.m in Sources */,
+				42787A0C1C14810A005D00BC /* VKMAudioNodeDownloader.m in Sources */,
 				4242A7691C04AC9800AF8509 /* VKManager.m in Sources */,
 				4221E3C41BCB14A1003F384F /* VKMMediaNode.m in Sources */,
 				423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */,

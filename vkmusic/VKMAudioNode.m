@@ -14,9 +14,13 @@
                                 type:(nonnull NSString *)type
                                 size:(NSUInteger)size
                               artist:(nonnull NSString *)artist
-                            duration:(NSTimeInterval)duration
+                                 url:(nonnull NSString *)url
+                            duration:(NSTimeInterval) duration
 {
     if ((artist.length == 0) || (artist == nil)) {
+        [NSException raise:@"Invalid artist value" format:@"name of %@ is invalid", artist];
+    }
+    if ((url.length == 0) || (url == nil)) {
         [NSException raise:@"Invalid artist value" format:@"name of %@ is invalid", artist];
     }
     if (duration == 0) {
@@ -24,8 +28,11 @@
     }
     if (self = [super initWithName:name type:type size:size])
     {
-        _artist = artist;
+        _artist = [artist copy];
+        _url = [url copy];
         _duration = duration;
+        _path = nil;
+        _isDownloaded = NO;
     }
     return self;
 }

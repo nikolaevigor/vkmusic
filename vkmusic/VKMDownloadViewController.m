@@ -7,12 +7,17 @@
 //
 
 #import "VKMDownloadViewController.h"
+#import "VKSdk.h"
+#import "AFNetworking.h"
+#import "VKManager.h"
+#import "VKMAudioNodeDownloader.h"
 
 @interface VKMDownloadViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, VKSdkDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *searchBox;
-@property (strong, nonatomic) NSMutableArray *results;
+@property (strong, nonatomic) NSArray *tracks;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 
 @end
 
@@ -24,6 +29,9 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.searchBox.delegate = self;
+    
+    [self.progressView setProgress:0];
+    [self.progressView setHidden:YES];
 }
 
 - (void)viewDidLoad
@@ -46,7 +54,7 @@
 }
 
 - (IBAction)searchBoxEditingDidEnd:(id)sender {
-    __block void (^completion) (NSMutableArray *) = ^(NSMutableArray * titles){self.results = titles; [self.tableView reloadData];};
+    __block void (^completion) (NSMutableArray *) = ^(NSMutableArray * tracks){self.tracks = tracks; [self.tableView reloadData];};
     [VKManager getTitlesForSearchQuery:self.searchBox.text completion:completion];
 }
 
@@ -54,20 +62,53 @@
 
 - (NSInteger)tableView:(UITableView*) tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.results count];
+    return [self.tracks count];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
+    VKMAudioNode *node = self.tracks[indexPath.row];
+    
     static NSString *const CellID = @"ReuseID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
-    cell.textLabel.text = self.results[indexPath.row];
+    cell.textLabel.text = [node name];
+    
+    if ([node isDownloaded]) {
+        cell.backgroundColor = [UIColor greenColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    else
+    {
+        cell.backgroundColor = [UIColor whiteColor];
+    }
+    
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    VKMAudioNode *node = (VKMAudioNode *)self.tracks[indexPath.row];
     
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [NSString stringWithFormat:@"%@/%@-%@", [paths objectAtIndex:0], [node artist], [node name]];
+    
+    if (!node.isDownloaded)
+    {
+        [VKMAudioNodeDownloader downloadNode:node
+                                       store:documentsDirectory
+                             withProgressBar:self.progressView
+                                  completion:^void (BOOL result) {
+                                      UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+                                      if (result) {
+                                          cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                                          cell.backgroundColor = [UIColor greenColor];
+                                      }
+                                      else
+                                      {
+                                          cell.backgroundColor = [UIColor whiteColor];
+                                      }
+                                  }];
+    }
 }
 
 #pragma mark - Text Field methods
