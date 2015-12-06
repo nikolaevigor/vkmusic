@@ -29,14 +29,13 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.searchBox.delegate = self;
-    
-    [self.progressView setProgress:0];
-    [self.progressView setHidden:YES];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.progressView setProgress:0];
+    [self.progressView setHidden:YES];
     [VKSdk initializeWithDelegate:self andAppId:@"5152277"];
 }
 
