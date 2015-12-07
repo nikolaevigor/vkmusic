@@ -7,6 +7,8 @@
 //
 
 #import "VKMSettingsViewController.h"
+#import "VKSdk.h"
+#import "VKMFileManager.h"
 
 @interface VKMSettingsViewController ()
 
@@ -24,21 +26,6 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)equTriggerd:(id)sender {
     NSLog(@"equ");
 }
@@ -48,10 +35,11 @@
 }
 
 - (IBAction)logoutPressed:(id)sender {
-    NSLog(@"logout");
+    [VKSdk forceLogout];
 }
 
 - (IBAction)deletePressed:(id)sender {
-    
+    [VKMFileManager deleteAllEntities:@"Track"];
+    [VKMFileManager emptyDocumentsFolder];
 }
 @end

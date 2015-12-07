@@ -44,14 +44,12 @@
 */
 
 - (IBAction)playPressed:(id)sender {
-    /*
     NSArray *documentsPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString  *path = [documentsPath objectAtIndex:0];
     NSArray *songs = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
     NSString *songPath = [NSString stringWithFormat:@"%@/%@", path, songs[3]];
     NSURL *url = [NSURL fileURLWithPath:songPath];
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-    */
     [self.player play];
     
 }

@@ -25,6 +25,14 @@
 		423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 423BCC901C04FD7900B495D9 /* VKMLayerButton.m */; };
 		4242A7691C04AC9800AF8509 /* VKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4242A7681C04AC9800AF8509 /* VKManager.m */; };
 		42787A0C1C14810A005D00BC /* VKMAudioNodeDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */; };
+		42787A101C14C511005D00BC /* VKMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0F1C14C511005D00BC /* VKMFileManager.m */; };
+		429475811C15AFB400690083 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429475801C15AFB400690083 /* CoreData.framework */; };
+		429475841C15B02600690083 /* tracksModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 429475821C15B02600690083 /* tracksModel.xcdatamodeld */; };
+		42AA467A1C15F45E00122352 /* songs.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA46751C15F45E00122352 /* songs.png */; };
+		42AA467B1C15F45E00122352 /* equ.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA46761C15F45E00122352 /* equ.png */; };
+		42AA467C1C15F45E00122352 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA46771C15F45E00122352 /* player.png */; };
+		42AA467D1C15F45E00122352 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA46781C15F45E00122352 /* settings.png */; };
+		42AA467E1C15F45E00122352 /* downloads.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA46791C15F45E00122352 /* downloads.png */; };
 		42B330701C138A9600779F69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B3306E1C138A9600779F69 /* AVFoundation.framework */; };
 		42B330711C138A9600779F69 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B3306F1C138A9600779F69 /* AVKit.framework */; };
 		42C85F371BFBC775009F6E1D /* libVK-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */; };
@@ -86,6 +94,15 @@
 		4242A7681C04AC9800AF8509 /* VKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKManager.m; sourceTree = "<group>"; };
 		42787A0A1C14810A005D00BC /* VKMAudioNodeDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNodeDownloader.h; sourceTree = "<group>"; };
 		42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNodeDownloader.m; sourceTree = "<group>"; };
+		42787A0E1C14C511005D00BC /* VKMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMFileManager.h; sourceTree = "<group>"; };
+		42787A0F1C14C511005D00BC /* VKMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMFileManager.m; sourceTree = "<group>"; };
+		429475801C15AFB400690083 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		429475831C15B02600690083 /* tracksModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tracksModel.xcdatamodel; sourceTree = "<group>"; };
+		42AA46751C15F45E00122352 /* songs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songs.png; sourceTree = "<group>"; };
+		42AA46761C15F45E00122352 /* equ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equ.png; sourceTree = "<group>"; };
+		42AA46771C15F45E00122352 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		42AA46781C15F45E00122352 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		42AA46791C15F45E00122352 /* downloads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downloads.png; sourceTree = "<group>"; };
 		42B3306E1C138A9600779F69 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		42B3306F1C138A9600779F69 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libVK-ios-sdk.a"; path = "Pods/../build/Debug-iphoneos/libVK-ios-sdk.a"; sourceTree = "<group>"; };
@@ -108,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				429475811C15AFB400690083 /* CoreData.framework in Frameworks */,
 				42B330701C138A9600779F69 /* AVFoundation.framework in Frameworks */,
 				42B330711C138A9600779F69 /* AVKit.framework in Frameworks */,
 				42C85F371BFBC775009F6E1D /* libVK-ios-sdk.a in Frameworks */,
@@ -135,6 +153,7 @@
 		41A9A946192CDB1229D7E139 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				429475801C15AFB400690083 /* CoreData.framework */,
 				42B3306E1C138A9600779F69 /* AVFoundation.framework */,
 				42B3306F1C138A9600779F69 /* AVKit.framework */,
 				42171FD51C03C4B8005BFFBD /* libNovocaine.a */,
@@ -184,6 +203,8 @@
 				42787A0D1C14B648005D00BC /* Infrastructure */,
 				4221E38C1BCB12DF003F384F /* AppDelegate.h */,
 				4221E38D1BCB12DF003F384F /* AppDelegate.m */,
+				429475821C15B02600690083 /* tracksModel.xcdatamodeld */,
+				42AA46741C15F3EC00122352 /* Icons */,
 				4221E3951BCB12DF003F384F /* Assets.xcassets */,
 				4221E3971BCB12DF003F384F /* LaunchScreen.storyboard */,
 				4221E39A1BCB12DF003F384F /* Info.plist */,
@@ -233,8 +254,22 @@
 				4242A7681C04AC9800AF8509 /* VKManager.m */,
 				42787A0A1C14810A005D00BC /* VKMAudioNodeDownloader.h */,
 				42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */,
+				42787A0E1C14C511005D00BC /* VKMFileManager.h */,
+				42787A0F1C14C511005D00BC /* VKMFileManager.m */,
 			);
 			name = Infrastructure;
+			sourceTree = "<group>";
+		};
+		42AA46741C15F3EC00122352 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				42AA46751C15F45E00122352 /* songs.png */,
+				42AA46761C15F45E00122352 /* equ.png */,
+				42AA46771C15F45E00122352 /* player.png */,
+				42AA46781C15F45E00122352 /* settings.png */,
+				42AA46791C15F45E00122352 /* downloads.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 		42AEBF2E1BEFA3F800496850 /* Controllers */ = {
@@ -242,14 +277,14 @@
 			children = (
 				42DA14081BE192AC0033D115 /* VKMDownloadViewController.h */,
 				42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */,
-				42DA13FE1BE190CC0033D115 /* VKMPlayerViewController.h */,
-				42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */,
-				42DA13F91BE18DBA0033D115 /* VKMSettingsViewController.h */,
-				42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */,
 				42DA13F41BE18D010033D115 /* VKMSongsViewController.h */,
 				42DA13F51BE18D010033D115 /* VKMSongsViewController.m */,
+				42DA13FE1BE190CC0033D115 /* VKMPlayerViewController.h */,
+				42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */,
 				42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */,
 				42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */,
+				42DA13F91BE18DBA0033D115 /* VKMSettingsViewController.h */,
+				42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */,
 				423BCC8F1C04FD7900B495D9 /* VKMLayerButton.h */,
 				423BCC901C04FD7900B495D9 /* VKMLayerButton.m */,
 				42DA13EB1BE187330033D115 /* Main.storyboard */,
@@ -378,8 +413,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				42DA13EC1BE187330033D115 /* Main.storyboard in Resources */,
+				42AA467D1C15F45E00122352 /* settings.png in Resources */,
 				4221E3991BCB12DF003F384F /* LaunchScreen.storyboard in Resources */,
+				42AA467E1C15F45E00122352 /* downloads.png in Resources */,
+				42AA467C1C15F45E00122352 /* player.png in Resources */,
+				42AA467A1C15F45E00122352 /* songs.png in Resources */,
 				4221E3961BCB12DF003F384F /* Assets.xcassets in Resources */,
+				42AA467B1C15F45E00122352 /* equ.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,9 +498,11 @@
 				42787A0C1C14810A005D00BC /* VKMAudioNodeDownloader.m in Sources */,
 				4242A7691C04AC9800AF8509 /* VKManager.m in Sources */,
 				4221E3C41BCB14A1003F384F /* VKMMediaNode.m in Sources */,
+				42787A101C14C511005D00BC /* VKMFileManager.m in Sources */,
 				423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */,
 				42DA140A1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */,
 				42DA14001BE190CC0033D115 /* VKMPlayerViewController.m in Sources */,
+				429475841C15B02600690083 /* tracksModel.xcdatamodeld in Sources */,
 				4221E3C91BCB14C3003F384F /* VKMAudioNode.m in Sources */,
 				42DA13F61BE18D010033D115 /* VKMSongsViewController.m in Sources */,
 				42DA13FB1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */,
@@ -721,6 +763,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		429475821C15B02600690083 /* tracksModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				429475831C15B02600690083 /* tracksModel.xcdatamodel */,
+			);
+			currentVersion = 429475831C15B02600690083 /* tracksModel.xcdatamodel */;
+			path = tracksModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4221E37E1BCB12DF003F384F /* Project object */;
 }

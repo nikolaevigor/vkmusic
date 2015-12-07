@@ -37,4 +37,18 @@
     return self;
 }
 
+// overwrite setter to always set isDownloaded, if path is setted
+- (void)setPath:(NSString *)path
+{
+    if (path.length != 0 || path != nil) {
+        _isDownloaded = YES;
+        _path = [path copy];
+    }
+    else
+    {
+        _isDownloaded = NO;
+        _path = nil;
+    }
+}
+
 @end

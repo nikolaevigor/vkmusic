@@ -8,6 +8,9 @@
 
 #import "VKMAudioNodeDownloader.h"
 
+#import <CoreData/CoreData.h>
+#import "AppDelegate.h"
+
 @implementation VKMAudioNodeDownloader
 
 + (void)downloadNode:(VKMAudioNode *)node
@@ -24,7 +27,6 @@
     };
     
     [progressBar setHidden:NO];
-    [node setPath:[path copy]];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer.timeoutInterval = 5.0;
@@ -35,6 +37,8 @@
                                           [progressBar setHidden:YES];
                                           [progressBar setProgress:0];
                                           [node setIsDownloaded:YES];
+                                          [node setPath:[path copy]];
+                                          [self saveNode:node toEntity:@"Track"];
                                           completion(YES);
                                       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                           NSLog(@"Error: %@", error);
@@ -45,6 +49,21 @@
     
     [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) { float progress = totalBytesRead / (float)totalBytesExpectedToRead; progressBar.progress = progress;}];
     operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
+}
+
++ (void)saveNode:(VKMAudioNode *)node toEntity:(NSString *)entityName
+{
+    NSManagedObjectContext *mainContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    NSManagedObject *track = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:mainContext];
+    [track setValue:[node name] forKey:@"name"];
+    [track setValue:[node artist] forKey:@"artist"];
+    [track setValue:[NSNumber numberWithDouble:[node duration]] forKey:@"duration"];
+    [track setValue:[node url] forKey:@"url"];
+    [track setValue:[node path] forKey:@"path"];
+    [track setValue:[NSNumber numberWithBool:[node isDownloaded]] forKey:@"isDownloaded"];
+    
+    [mainContext save:nil];
 }
 
 @end

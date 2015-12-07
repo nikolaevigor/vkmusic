@@ -10,6 +10,4 @@
 
 @interface VKMSongsViewController : UIViewController
 
-- (IBAction)searchTextFieldValueChanged:(id)sender;
-
 @end

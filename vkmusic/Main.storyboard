@@ -26,7 +26,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVM-Hl-WlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378" y="186"/>
+            <point key="canvasLocation" x="446" y="146"/>
         </scene>
         <!--VKMEquController-->
         <scene sceneID="M10-7k-yLN">
@@ -331,7 +331,7 @@
                             <constraint firstItem="VzA-yw-OPo" firstAttribute="leading" secondItem="qts-4f-jzS" secondAttribute="trailing" constant="6" id="zCm-2u-9vF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="EQU" id="LjA-RV-NNQ"/>
+                    <tabBarItem key="tabBarItem" title="EQU" image="equ.png" id="LjA-RV-NNQ"/>
                     <connections>
                         <outlet property="highPassSlider" destination="dL1-M4-DcD" id="vt0-Jf-pFo"/>
                         <outlet property="highShelfSlider" destination="xtw-hh-IXQ" id="fBl-mx-siH"/>
@@ -342,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bx-of-LKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-51" y="1101"/>
+            <point key="canvasLocation" x="1261" y="1101"/>
         </scene>
         <!--VKMSongsViewController-->
         <scene sceneID="DzT-RG-nbh">
@@ -362,7 +362,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="searchTextFieldValueChanged:" destination="sS5-48-3oh" eventType="valueChanged" id="INu-92-plE"/>
+                                    <action selector="searchBoxEditingDidBegin:" destination="sS5-48-3oh" eventType="editingDidBegin" id="cKe-WP-83Q"/>
+                                    <action selector="searchBoxEditingDidEnd:" destination="sS5-48-3oh" eventType="editingDidEnd" id="TkQ-9u-8k4"/>
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FpU-Ih-Jjo">
@@ -395,7 +396,7 @@
                             <constraint firstItem="2xM-Tk-lyi" firstAttribute="top" secondItem="tDk-9v-Nqs" secondAttribute="bottom" id="uRK-Pm-w08"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Songs" id="0li-gc-pAB" userLabel="Songs"/>
+                    <tabBarItem key="tabBarItem" title="Songs" image="songs.png" id="0li-gc-pAB" userLabel="Songs"/>
                     <connections>
                         <outlet property="searchTextField" destination="2xM-Tk-lyi" id="l2R-k0-Kpv"/>
                         <outlet property="tableView" destination="FpU-Ih-Jjo" id="a1M-qq-OUZ"/>
@@ -403,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHd-BE-66W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="643" y="1101"/>
+            <point key="canvasLocation" x="-63" y="1101"/>
         </scene>
         <!--VKMSettingsController-->
         <scene sceneID="r9v-Mz-PKd">
@@ -579,7 +580,7 @@
                             <constraint firstItem="yXX-Kc-RL2" firstAttribute="leading" secondItem="bjG-cZ-Esq" secondAttribute="trailing" constant="-4" id="zsE-Vv-PMv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="InA-3n-62b"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings.png" id="InA-3n-62b"/>
                     <connections>
                         <outlet property="cacheTrigger" destination="I2h-NO-ztf" id="gBz-NJ-ZmH"/>
                         <outlet property="deleteSongsButton" destination="JXB-5W-zg4" id="4sn-v0-8rW"/>
@@ -589,7 +590,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGZ-03-OZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1293" y="1101"/>
+            <point key="canvasLocation" x="1923" y="1101"/>
         </scene>
         <!--VKMPlayerController-->
         <scene sceneID="eHN-hd-h2U">
@@ -701,7 +702,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Player" id="fMT-5X-uio"/>
+                    <tabBarItem key="tabBarItem" title="Player" image="player.png" id="fMT-5X-uio"/>
                     <connections>
                         <outlet property="downloadButton" destination="UqJ-7A-gWy" id="oXl-bW-QWP"/>
                         <outlet property="nextButton" destination="Fyw-UW-9sK" id="7xT-pU-eaZ"/>
@@ -712,7 +713,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X48-yq-TC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="1101"/>
+            <point key="canvasLocation" x="601" y="1101"/>
         </scene>
         <!--VKMDownloadViewController-->
         <scene sceneID="vlj-nO-3cG">
@@ -727,7 +728,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pmI-Qv-e0Z">
-                                <rect key="frame" x="0.0" y="548" width="600" height="2"/>
+                                <rect key="frame" x="0.0" y="549" width="600" height="2"/>
                                 <animations/>
                             </progressView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z3w-Hl-U8s">
@@ -741,7 +742,7 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="41" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mYa-UX-201">
-                                <rect key="frame" x="0.0" y="52" width="600" height="496"/>
+                                <rect key="frame" x="0.0" y="52" width="600" height="497"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -763,8 +764,8 @@
                         <constraints>
                             <constraint firstItem="Z3w-Hl-U8s" firstAttribute="leading" secondItem="Jf1-Ql-xr0" secondAttribute="leading" id="0w3-I5-Tg9"/>
                             <constraint firstItem="pmI-Qv-e0Z" firstAttribute="leading" secondItem="Jf1-Ql-xr0" secondAttribute="leadingMargin" constant="-20" id="8es-Ak-r7b"/>
-                            <constraint firstItem="Nsk-GZ-TeF" firstAttribute="top" secondItem="mYa-UX-201" secondAttribute="bottom" constant="3" id="HMO-oh-nbE"/>
-                            <constraint firstItem="Nsk-GZ-TeF" firstAttribute="top" secondItem="pmI-Qv-e0Z" secondAttribute="bottom" constant="1" id="N52-Jh-h9Y"/>
+                            <constraint firstItem="Nsk-GZ-TeF" firstAttribute="top" secondItem="mYa-UX-201" secondAttribute="bottom" constant="2" id="HMO-oh-nbE"/>
+                            <constraint firstItem="Nsk-GZ-TeF" firstAttribute="top" secondItem="pmI-Qv-e0Z" secondAttribute="bottom" id="N52-Jh-h9Y"/>
                             <constraint firstAttribute="trailing" secondItem="mYa-UX-201" secondAttribute="trailing" id="OhY-Qj-gX1"/>
                             <constraint firstItem="mYa-UX-201" firstAttribute="leading" secondItem="Jf1-Ql-xr0" secondAttribute="leading" id="SyP-id-udD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pmI-Qv-e0Z" secondAttribute="trailing" constant="-20" id="UBz-1b-B2i"/>
@@ -774,7 +775,7 @@
                             <constraint firstItem="Z3w-Hl-U8s" firstAttribute="top" secondItem="KcY-NK-Odc" secondAttribute="bottom" id="y0C-NE-MiV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Downloads" id="564-4g-niV"/>
+                    <tabBarItem key="tabBarItem" title="Downloads" image="downloads.png" id="564-4g-niV"/>
                     <connections>
                         <outlet property="progressView" destination="pmI-Qv-e0Z" id="7NO-0y-dCI"/>
                         <outlet property="searchBox" destination="Z3w-Hl-U8s" id="INQ-3W-Kq2"/>
@@ -786,4 +787,11 @@
             <point key="canvasLocation" x="-750" y="1101"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="downloads.png" width="25" height="25"/>
+        <image name="equ.png" width="25" height="25"/>
+        <image name="player.png" width="25" height="25"/>
+        <image name="settings.png" width="25" height="25"/>
+        <image name="songs.png" width="25" height="25"/>
+    </resources>
 </document>

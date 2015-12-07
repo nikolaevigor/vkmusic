@@ -6,13 +6,15 @@
 //  Copyright © 2015 Igor Nikolaev. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
+#import "AppDelegate.h"
 #import "VKMDownloadViewController.h"
 #import "VKSdk.h"
 #import "AFNetworking.h"
 #import "VKManager.h"
 #import "VKMAudioNodeDownloader.h"
 
-@interface VKMDownloadViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, VKSdkDelegate>
+@interface VKMDownloadViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *searchBox;
@@ -34,9 +36,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self.progressView setProgress:0];
     [self.progressView setHidden:YES];
-    [VKSdk initializeWithDelegate:self andAppId:@"5152277"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
