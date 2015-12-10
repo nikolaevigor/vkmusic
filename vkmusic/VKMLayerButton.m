@@ -18,20 +18,17 @@
 
 - (id)initWithCoder:(NSCoder *)coder
 {
-    // Call the parent implementation of initWithCoder
     self = [super initWithCoder:coder];
     
-    // Custom drawing methods
     if (self)
     {
-      		[self drawButton];
+        [self drawButton];
         [self drawInnerGlow];
         
         
-        if (_highlightBackgroundLayer.hidden == YES);
-        else
-            
+        if (!_highlightBackgroundLayer.hidden) {
             [self drawBackgroundLayer];
+        }
         
         [self drawHighlightBackgroundLayer];
         
