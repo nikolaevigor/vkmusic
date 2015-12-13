@@ -15,7 +15,7 @@
 
 + (void)downloadNode:(VKMAudioNode *)node
                store:(NSString *)path
-     withProgressBar:(UIProgressView *)progressBar
+            progress:(void (^) (float))progress
           completion:(void (^) (BOOL))completion;
 
 @end

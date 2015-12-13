@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "playerDelegate.h"
 
-@interface VKMSongsViewController : UIViewController
+@interface VKMSongsViewController : UIViewController <playerDelegate>
 
 @end

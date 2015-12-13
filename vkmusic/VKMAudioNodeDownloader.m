@@ -15,7 +15,7 @@
 
 + (void)downloadNode:(VKMAudioNode *)node
                store:(NSString *)path
-     withProgressBar:(UIProgressView *)progressBar
+     progress:(void (^) (float))progress
           completion:(void (^) (BOOL))completion
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -26,28 +26,26 @@
         return;
     };
     
-    [progressBar setHidden:NO];
-    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer.timeoutInterval = 5.0;
     AFHTTPRequestOperation *operation = [manager GET:[node url]
                                    parameters:nil
                                       success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                           NSLog(@"successful download to %@", path);
-                                          [progressBar setHidden:YES];
-                                          [progressBar setProgress:0];
                                           [node setIsDownloaded:YES];
                                           [node setPath:[path copy]];
                                           [self saveNode:node toEntity:@"Track"];
                                           completion(YES);
                                       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                           NSLog(@"Error: %@", error);
-                                          [progressBar setHidden:YES];
-                                          [progressBar setProgress:0];
                                           completion(NO);
                                       }];
     
-    [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) { float progress = totalBytesRead / (float)totalBytesExpectedToRead; progressBar.progress = progress;}];
+    [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+        float progressValue = totalBytesRead / (float)totalBytesExpectedToRead;
+        progress(progressValue);
+    }
+     ];
     operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
 }
 

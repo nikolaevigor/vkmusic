@@ -10,10 +10,4 @@
 
 @interface VKMPlayerViewController : UIViewController
 
-- (IBAction)playPressed:(id)sender;
-- (IBAction)stopPressed:(id)sender;
-- (IBAction)previousPressed:(id)sender;
-- (IBAction)nextPressed:(id)sender;
-- (IBAction)downloadPressed:(id)sender;
-
 @end

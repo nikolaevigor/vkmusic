@@ -23,7 +23,7 @@ PODS:
   - VK-ios-sdk (1.2.2)
 
 DEPENDENCIES:
-  - AFNetworking
+  - AFNetworking (~> 2.0)
   - VK-ios-sdk
 
 SPEC CHECKSUMS:

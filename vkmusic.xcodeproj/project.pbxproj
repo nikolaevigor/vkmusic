@@ -22,17 +22,15 @@
 		4221E3C91BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
 		4221E3CA1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
 		4221E3CB1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
+		422D11941C1CC25B0050283A /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 422D11921C1CC25B0050283A /* DownloadTableViewCell.m */; };
+		422D11951C1CC25B0050283A /* DownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 422D11931C1CC25B0050283A /* DownloadTableViewCell.xib */; };
 		423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 423BCC901C04FD7900B495D9 /* VKMLayerButton.m */; };
 		4242A7691C04AC9800AF8509 /* VKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4242A7681C04AC9800AF8509 /* VKManager.m */; };
+		42618A4F1C1C9D4200ED7FBE /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */; };
 		42787A0C1C14810A005D00BC /* VKMAudioNodeDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */; };
 		42787A101C14C511005D00BC /* VKMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0F1C14C511005D00BC /* VKMFileManager.m */; };
 		429475811C15AFB400690083 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429475801C15AFB400690083 /* CoreData.framework */; };
 		429475841C15B02600690083 /* tracksModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 429475821C15B02600690083 /* tracksModel.xcdatamodeld */; };
-		42AA467A1C15F45E00122352 /* songs.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA46751C15F45E00122352 /* songs.png */; };
-		42AA467B1C15F45E00122352 /* equ.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA46761C15F45E00122352 /* equ.png */; };
-		42AA467C1C15F45E00122352 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA46771C15F45E00122352 /* player.png */; };
-		42AA467D1C15F45E00122352 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA46781C15F45E00122352 /* settings.png */; };
-		42AA467E1C15F45E00122352 /* downloads.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA46791C15F45E00122352 /* downloads.png */; };
 		42B330701C138A9600779F69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B3306E1C138A9600779F69 /* AVFoundation.framework */; };
 		42B330711C138A9600779F69 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B3306F1C138A9600779F69 /* AVKit.framework */; };
 		42C85F371BFBC775009F6E1D /* libVK-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */; };
@@ -88,21 +86,21 @@
 		4221E3C31BCB14A1003F384F /* VKMMediaNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMMediaNode.m; sourceTree = "<group>"; };
 		4221E3C71BCB14C3003F384F /* VKMAudioNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNode.h; sourceTree = "<group>"; };
 		4221E3C81BCB14C3003F384F /* VKMAudioNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNode.m; sourceTree = "<group>"; };
+		422D11911C1CC25B0050283A /* DownloadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewCell.h; sourceTree = "<group>"; };
+		422D11921C1CC25B0050283A /* DownloadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewCell.m; sourceTree = "<group>"; };
+		422D11931C1CC25B0050283A /* DownloadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadTableViewCell.xib; sourceTree = "<group>"; };
+		422D11961C1CE8950050283A /* playerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playerDelegate.h; sourceTree = "<group>"; };
 		423BCC8F1C04FD7900B495D9 /* VKMLayerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMLayerButton.h; sourceTree = "<group>"; };
 		423BCC901C04FD7900B495D9 /* VKMLayerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMLayerButton.m; sourceTree = "<group>"; };
 		4242A7671C04AC9800AF8509 /* VKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKManager.h; sourceTree = "<group>"; };
 		4242A7681C04AC9800AF8509 /* VKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKManager.m; sourceTree = "<group>"; };
+		42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		42787A0A1C14810A005D00BC /* VKMAudioNodeDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNodeDownloader.h; sourceTree = "<group>"; };
 		42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNodeDownloader.m; sourceTree = "<group>"; };
 		42787A0E1C14C511005D00BC /* VKMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMFileManager.h; sourceTree = "<group>"; };
 		42787A0F1C14C511005D00BC /* VKMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMFileManager.m; sourceTree = "<group>"; };
 		429475801C15AFB400690083 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		429475831C15B02600690083 /* tracksModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tracksModel.xcdatamodel; sourceTree = "<group>"; };
-		42AA46751C15F45E00122352 /* songs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = songs.png; sourceTree = "<group>"; };
-		42AA46761C15F45E00122352 /* equ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equ.png; sourceTree = "<group>"; };
-		42AA46771C15F45E00122352 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
-		42AA46781C15F45E00122352 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		42AA46791C15F45E00122352 /* downloads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downloads.png; sourceTree = "<group>"; };
 		42B3306E1C138A9600779F69 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		42B3306F1C138A9600779F69 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libVK-ios-sdk.a"; path = "Pods/../build/Debug-iphoneos/libVK-ios-sdk.a"; sourceTree = "<group>"; };
@@ -125,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42618A4F1C1C9D4200ED7FBE /* libAFNetworking.a in Frameworks */,
 				429475811C15AFB400690083 /* CoreData.framework in Frameworks */,
 				42B330701C138A9600779F69 /* AVFoundation.framework in Frameworks */,
 				42B330711C138A9600779F69 /* AVKit.framework in Frameworks */,
@@ -153,6 +152,7 @@
 		41A9A946192CDB1229D7E139 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */,
 				429475801C15AFB400690083 /* CoreData.framework */,
 				42B3306E1C138A9600779F69 /* AVFoundation.framework */,
 				42B3306F1C138A9600779F69 /* AVKit.framework */,
@@ -204,7 +204,6 @@
 				4221E38C1BCB12DF003F384F /* AppDelegate.h */,
 				4221E38D1BCB12DF003F384F /* AppDelegate.m */,
 				429475821C15B02600690083 /* tracksModel.xcdatamodeld */,
-				42AA46741C15F3EC00122352 /* Icons */,
 				4221E3951BCB12DF003F384F /* Assets.xcassets */,
 				4221E3971BCB12DF003F384F /* LaunchScreen.storyboard */,
 				4221E39A1BCB12DF003F384F /* Info.plist */,
@@ -256,20 +255,9 @@
 				42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */,
 				42787A0E1C14C511005D00BC /* VKMFileManager.h */,
 				42787A0F1C14C511005D00BC /* VKMFileManager.m */,
+				422D11961C1CE8950050283A /* playerDelegate.h */,
 			);
 			name = Infrastructure;
-			sourceTree = "<group>";
-		};
-		42AA46741C15F3EC00122352 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				42AA46751C15F45E00122352 /* songs.png */,
-				42AA46761C15F45E00122352 /* equ.png */,
-				42AA46771C15F45E00122352 /* player.png */,
-				42AA46781C15F45E00122352 /* settings.png */,
-				42AA46791C15F45E00122352 /* downloads.png */,
-			);
-			name = Icons;
 			sourceTree = "<group>";
 		};
 		42AEBF2E1BEFA3F800496850 /* Controllers */ = {
@@ -287,6 +275,9 @@
 				42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */,
 				423BCC8F1C04FD7900B495D9 /* VKMLayerButton.h */,
 				423BCC901C04FD7900B495D9 /* VKMLayerButton.m */,
+				422D11911C1CC25B0050283A /* DownloadTableViewCell.h */,
+				422D11921C1CC25B0050283A /* DownloadTableViewCell.m */,
+				422D11931C1CC25B0050283A /* DownloadTableViewCell.xib */,
 				42DA13EB1BE187330033D115 /* Main.storyboard */,
 			);
 			name = Controllers;
@@ -413,13 +404,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42DA13EC1BE187330033D115 /* Main.storyboard in Resources */,
-				42AA467D1C15F45E00122352 /* settings.png in Resources */,
+				422D11951C1CC25B0050283A /* DownloadTableViewCell.xib in Resources */,
 				4221E3991BCB12DF003F384F /* LaunchScreen.storyboard in Resources */,
-				42AA467E1C15F45E00122352 /* downloads.png in Resources */,
-				42AA467C1C15F45E00122352 /* player.png in Resources */,
-				42AA467A1C15F45E00122352 /* songs.png in Resources */,
 				4221E3961BCB12DF003F384F /* Assets.xcassets in Resources */,
-				42AA467B1C15F45E00122352 /* equ.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +494,7 @@
 				42DA13F61BE18D010033D115 /* VKMSongsViewController.m in Sources */,
 				42DA13FB1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */,
 				4221E38E1BCB12DF003F384F /* AppDelegate.m in Sources */,
+				422D11941C1CC25B0050283A /* DownloadTableViewCell.m in Sources */,
 				42DA13F11BE18A820033D115 /* VKMEqualizerViewController.m in Sources */,
 				4221E38B1BCB12DF003F384F /* main.m in Sources */,
 			);
