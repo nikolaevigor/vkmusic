@@ -31,6 +31,7 @@
 		42787A101C14C511005D00BC /* VKMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0F1C14C511005D00BC /* VKMFileManager.m */; };
 		429475811C15AFB400690083 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429475801C15AFB400690083 /* CoreData.framework */; };
 		429475841C15B02600690083 /* tracksModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 429475821C15B02600690083 /* tracksModel.xcdatamodeld */; };
+		42B0B5571C243E9600679650 /* VKMTracklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B5561C243E9600679650 /* VKMTracklist.m */; };
 		42B330701C138A9600779F69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B3306E1C138A9600779F69 /* AVFoundation.framework */; };
 		42B330711C138A9600779F69 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B3306F1C138A9600779F69 /* AVKit.framework */; };
 		42C85F371BFBC775009F6E1D /* libVK-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */; };
@@ -101,6 +102,8 @@
 		42787A0F1C14C511005D00BC /* VKMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMFileManager.m; sourceTree = "<group>"; };
 		429475801C15AFB400690083 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		429475831C15B02600690083 /* tracksModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tracksModel.xcdatamodel; sourceTree = "<group>"; };
+		42B0B5551C243E9600679650 /* VKMTracklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMTracklist.h; sourceTree = "<group>"; };
+		42B0B5561C243E9600679650 /* VKMTracklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMTracklist.m; sourceTree = "<group>"; };
 		42B3306E1C138A9600779F69 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		42B3306F1C138A9600779F69 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libVK-ios-sdk.a"; path = "Pods/../build/Debug-iphoneos/libVK-ios-sdk.a"; sourceTree = "<group>"; };
@@ -292,6 +295,8 @@
 				4221E3C31BCB14A1003F384F /* VKMMediaNode.m */,
 				4221E3C71BCB14C3003F384F /* VKMAudioNode.h */,
 				4221E3C81BCB14C3003F384F /* VKMAudioNode.m */,
+				42B0B5551C243E9600679650 /* VKMTracklist.h */,
+				42B0B5561C243E9600679650 /* VKMTracklist.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -487,6 +492,7 @@
 				4221E3C41BCB14A1003F384F /* VKMMediaNode.m in Sources */,
 				42787A101C14C511005D00BC /* VKMFileManager.m in Sources */,
 				423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */,
+				42B0B5571C243E9600679650 /* VKMTracklist.m in Sources */,
 				42DA140A1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */,
 				42DA14001BE190CC0033D115 /* VKMPlayerViewController.m in Sources */,
 				429475841C15B02600690083 /* tracksModel.xcdatamodeld in Sources */,

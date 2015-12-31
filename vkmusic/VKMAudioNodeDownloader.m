@@ -15,7 +15,7 @@
 
 + (void)downloadNode:(VKMAudioNode *)node
                store:(NSString *)path
-     progress:(void (^) (float))progress
+     progress:(void (^) (double))progress
           completion:(void (^) (BOOL))completion
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -26,27 +26,31 @@
         return;
     };
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer.timeoutInterval = 5.0;
-    AFHTTPRequestOperation *operation = [manager GET:[node url]
-                                   parameters:nil
-                                      success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                          NSLog(@"successful download to %@", path);
-                                          [node setIsDownloaded:YES];
-                                          [node setPath:[path copy]];
-                                          [self saveNode:node toEntity:@"Track"];
-                                          completion(YES);
-                                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                          NSLog(@"Error: %@", error);
-                                          completion(NO);
-                                      }];
     
-    [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
-        float progressValue = totalBytesRead / (float)totalBytesExpectedToRead;
-        progress(progressValue);
-    }
-     ];
-    operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
+    NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[node url]]]
+                                                             progress:^(NSProgress * _Nonnull downloadProgress) {
+                                                                 dispatch_async(dispatch_get_main_queue(), ^{
+                                                                     progress(downloadProgress.fractionCompleted);
+                                                                 });
+                                                             } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+                                                                 return [NSURL fileURLWithPath:path];
+                                                             } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+                                                                 if (!error) {
+                                                                     [node setIsDownloaded:YES];
+                                                                     [node setPath:[path copy]];
+                                                                     [self saveNode:node toEntity:@"Track"];
+                                                                     completion(YES);
+                                                                 }
+                                                                 else
+                                                                 {
+                                                                     NSLog(@"Error: %@", error);
+                                                                     completion(NO);
+                                                                 }
+                                                             }];
+    
+    [task resume];
 }
 
 + (void)saveNode:(VKMAudioNode *)node toEntity:(NSString *)entityName

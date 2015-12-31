@@ -15,7 +15,7 @@
 
 + (void)downloadNode:(VKMAudioNode *)node
                store:(NSString *)path
-            progress:(void (^) (float))progress
+            progress:(void (^) (double))progress
           completion:(void (^) (BOOL))completion;
 
 @end

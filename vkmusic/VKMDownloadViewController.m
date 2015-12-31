@@ -91,8 +91,8 @@
     {
         [VKMAudioNodeDownloader downloadNode:node
                                        store:documentsDirectory
-                                    progress:^void (float progressValue) {
-                                        cell.progressBar.progress = progressValue;
+                                    progress:^void (double progressValue) {
+                                        cell.progressBar.progress = (double)progressValue;
                                     }
                                   completion:^void (BOOL result) {
                                       [self paintCell:cell inColor:[UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1] if:result];
