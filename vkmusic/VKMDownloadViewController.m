@@ -25,14 +25,6 @@
 
 @implementation VKMDownloadViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 - (void)viewDidAppear:(BOOL)animated {
     if (![VKSdk wakeUpSession])
     {
@@ -100,6 +92,11 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
 - (void)paintCell:(UITableViewCell *)cell inColor:(UIColor *)color if:(BOOL)condition
 {
     if (condition) {
@@ -121,38 +118,5 @@
     [textField resignFirstResponder];
     return YES;
 }
-
-#pragma mark - VKSdk Delegate methods
-
-- (void)vkSdkShouldPresentViewController:(UIViewController *)controller
-{
-    NSLog(@"Should present view controller");
-    [self presentViewController:controller animated:YES completion:nil];
-}
-
-- (void)vkSdkNeedCaptchaEnter:(VKError *)captchaError
-{
-    NSLog(@"Need captcha enter");
-}
-
-- (void)vkSdkUserDeniedAccess:(VKError *)authorizationError
-{
-    NSLog(@"User denied access");
-}
-
-- (void)vkSdkTokenHasExpired:(VKAccessToken *)expiredToken
-{
-    NSLog(@"Token expired");
-    VKAccessToken *token = [VKSdk getAccessToken];
-    [VKSdk setAccessToken:token];
-    [token saveTokenToDefaults:@"token"];
-}
-
-- (void)vkSdkReceivedNewToken:(VKAccessToken *)newToken
-{
-    NSLog(@"Received new token");
-    [newToken saveTokenToDefaults:@"token"];
-}
-
 
 @end

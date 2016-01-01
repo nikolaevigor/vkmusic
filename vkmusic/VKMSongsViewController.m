@@ -10,10 +10,11 @@
 #import "VKMFileManager.h"
 #import "AVFoundation/AVFoundation.h"
 #import "VKMAudioNode.h"
+#import "SongsTableViewCell.h"
 
-@interface VKMSongsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+@interface VKMSongsViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBox;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *tracks;
 @property (strong, nonatomic) AVAudioPlayer *player;
@@ -21,6 +22,10 @@
 @end
 
 @implementation VKMSongsViewController
+{
+    BOOL isFiltered;
+    NSMutableArray *searchResults;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,19 +40,42 @@
 
 - (NSInteger)tableView:(UITableView*) tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.tracks count];
+    if (isFiltered)
+    {
+        return searchResults.count;
+    }
+    else
+    {
+        return [self.tracks count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    static NSString *const CellID = @"ReuseID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+    SongsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReuseID2"];
+    if (!cell)
+    {
+        [tableView registerNib:[UINib nibWithNibName:@"SongsTableViewCell" bundle:nil] forCellReuseIdentifier:@"ReuseID2"];
+        cell = (SongsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ReuseID2"];
+    }
+    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    cell.textLabel.text = [self.tracks[indexPath.row] name];
+    VKMAudioNode *node;
+    if (isFiltered)
+    {
+        node = searchResults[indexPath.row];
+    }
+    else
+    {
+        node = self.tracks[indexPath.row];
+    }
+    [(SongsTableViewCell *)cell titleLabel].text = [node name];
+    [(SongsTableViewCell *)cell artistLabel].text = [node artist];
+    [(SongsTableViewCell *)cell durationLabel].text = [self timeFormatted:(int)[node duration]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,14 +88,13 @@
     [self.player play];
 }
 
-#pragma mark - Text Field Events methods
-
-- (IBAction)searchBoxEditingDidBegin:(id)sender {
-    self.searchTextField.text = @"";
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
 }
 
-- (IBAction)searchBoxEditingDidEnd:(id)sender {
-    
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.view endEditing:YES];
 }
 
 #pragma mark - Text Field methods
@@ -90,6 +117,56 @@
 
 - (void)pause{
     [self.player pause];
+}
+
+#pragma mark - Search Bar methods
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if (searchText.length == 0)
+    {
+        isFiltered = NO;
+    }
+    else
+    {
+        isFiltered = YES;
+        
+        searchResults = [[NSMutableArray alloc] init];
+        
+        for (VKMAudioNode *track in self.tracks)
+        {
+            NSRange trackRange = [track.name rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if (trackRange.location != NSNotFound)
+            {
+                [searchResults addObject:track];
+            }
+        }
+    }
+    [self.tableView reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self.searchBox resignFirstResponder];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    [self.searchBox resignFirstResponder];
+}
+
+- (NSString *)timeFormatted:(int)totalSeconds
+{
+    
+    int seconds = totalSeconds % 60;
+    int minutes = (totalSeconds / 60) % 60;
+    int hours = totalSeconds / 3600;
+    
+    if (hours == 0) {
+        return [NSString stringWithFormat:@"%02d:%02d", minutes, seconds];
+    }
+    else {
+        return [NSString stringWithFormat:@"%02d:%02d:%02d",hours, minutes, seconds];
+    }
 }
 
 @end

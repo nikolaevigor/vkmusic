@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="je6-7P-KhJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="je6-7P-KhJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -328,18 +328,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xM-Tk-lyi">
-                                <rect key="frame" x="0.0" y="20" width="600" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="searchBoxEditingDidBegin:" destination="sS5-48-3oh" eventType="editingDidBegin" id="cKe-WP-83Q"/>
-                                    <action selector="searchBoxEditingDidEnd:" destination="sS5-48-3oh" eventType="editingDidEnd" id="TkQ-9u-8k4"/>
-                                    <outlet property="delegate" destination="sS5-48-3oh" id="aqS-tx-LYG"/>
-                                </connections>
-                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FpU-Ih-Jjo">
-                                <rect key="frame" x="0.0" y="50" width="600" height="501"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReuseID" rowHeight="39" id="9qY-u4-EDN">
@@ -356,27 +346,34 @@
                                     <outlet property="delegate" destination="sS5-48-3oh" id="qUK-Rk-dbP"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="RBU-T8-aMo">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sS5-48-3oh" id="dxg-on-kRy"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4RG-iW-xFS" firstAttribute="top" secondItem="FpU-Ih-Jjo" secondAttribute="bottom" id="8nb-7J-cJ0"/>
-                            <constraint firstAttribute="trailing" secondItem="2xM-Tk-lyi" secondAttribute="trailing" id="BFE-Mp-mlj"/>
-                            <constraint firstItem="FpU-Ih-Jjo" firstAttribute="leading" secondItem="iMy-U0-eTf" secondAttribute="leading" id="Iks-Kh-mEF"/>
-                            <constraint firstItem="FpU-Ih-Jjo" firstAttribute="top" secondItem="2xM-Tk-lyi" secondAttribute="bottom" id="jqc-Ep-Ptp"/>
-                            <constraint firstAttribute="trailing" secondItem="FpU-Ih-Jjo" secondAttribute="trailing" id="pPf-ay-KQZ"/>
-                            <constraint firstItem="2xM-Tk-lyi" firstAttribute="leading" secondItem="iMy-U0-eTf" secondAttribute="leading" id="rfA-OD-73o"/>
-                            <constraint firstItem="2xM-Tk-lyi" firstAttribute="top" secondItem="tDk-9v-Nqs" secondAttribute="bottom" id="uRK-Pm-w08"/>
+                            <constraint firstItem="RBU-T8-aMo" firstAttribute="top" secondItem="tDk-9v-Nqs" secondAttribute="bottom" id="01O-w1-vsJ"/>
+                            <constraint firstItem="FpU-Ih-Jjo" firstAttribute="leading" secondItem="iMy-U0-eTf" secondAttribute="leading" id="EuE-CV-UQs"/>
+                            <constraint firstItem="RBU-T8-aMo" firstAttribute="leading" secondItem="iMy-U0-eTf" secondAttribute="leading" id="JfW-f1-wEn"/>
+                            <constraint firstAttribute="trailing" secondItem="FpU-Ih-Jjo" secondAttribute="trailing" id="Mv1-fa-zAJ"/>
+                            <constraint firstItem="4RG-iW-xFS" firstAttribute="top" secondItem="FpU-Ih-Jjo" secondAttribute="bottom" id="bmF-Us-ltX"/>
+                            <constraint firstItem="FpU-Ih-Jjo" firstAttribute="top" secondItem="RBU-T8-aMo" secondAttribute="bottom" id="gZY-16-dfO"/>
+                            <constraint firstAttribute="trailing" secondItem="RBU-T8-aMo" secondAttribute="trailing" id="wnI-P4-3H7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Songs" image="songs.png" id="0li-gc-pAB" userLabel="Songs"/>
                     <connections>
-                        <outlet property="searchTextField" destination="2xM-Tk-lyi" id="l2R-k0-Kpv"/>
+                        <outlet property="searchBox" destination="RBU-T8-aMo" id="TXv-zv-UR2"/>
                         <outlet property="tableView" destination="FpU-Ih-Jjo" id="a1M-qq-OUZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHd-BE-66W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63" y="1101"/>
+            <point key="canvasLocation" x="-66" y="1101"/>
         </scene>
         <!--VKMSettingsController-->
         <scene sceneID="r9v-Mz-PKd">
@@ -687,7 +684,7 @@
                                     <outlet property="delegate" destination="4E5-QL-Bss" id="exx-pT-DaY"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="41" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mYa-UX-201">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="41" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mYa-UX-201">
                                 <rect key="frame" x="0.0" y="52" width="600" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -695,7 +692,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DV6-tO-DMq" id="Ljs-eS-ZL8">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="41"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

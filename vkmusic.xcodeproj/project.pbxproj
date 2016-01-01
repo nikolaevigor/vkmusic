@@ -29,6 +29,8 @@
 		42618A4F1C1C9D4200ED7FBE /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */; };
 		42787A0C1C14810A005D00BC /* VKMAudioNodeDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */; };
 		42787A101C14C511005D00BC /* VKMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0F1C14C511005D00BC /* VKMFileManager.m */; };
+		4278B2961C36AB3D0002402C /* SongsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B2941C36AB3D0002402C /* SongsTableViewCell.m */; };
+		4278B2971C36AB3D0002402C /* SongsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4278B2951C36AB3D0002402C /* SongsTableViewCell.xib */; };
 		429475811C15AFB400690083 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429475801C15AFB400690083 /* CoreData.framework */; };
 		429475841C15B02600690083 /* tracksModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 429475821C15B02600690083 /* tracksModel.xcdatamodeld */; };
 		42B0B5571C243E9600679650 /* VKMTracklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B5561C243E9600679650 /* VKMTracklist.m */; };
@@ -100,6 +102,9 @@
 		42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNodeDownloader.m; sourceTree = "<group>"; };
 		42787A0E1C14C511005D00BC /* VKMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMFileManager.h; sourceTree = "<group>"; };
 		42787A0F1C14C511005D00BC /* VKMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMFileManager.m; sourceTree = "<group>"; };
+		4278B2931C36AB3D0002402C /* SongsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongsTableViewCell.h; path = ../SongsTableViewCell.h; sourceTree = "<group>"; };
+		4278B2941C36AB3D0002402C /* SongsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongsTableViewCell.m; path = ../SongsTableViewCell.m; sourceTree = "<group>"; };
+		4278B2951C36AB3D0002402C /* SongsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SongsTableViewCell.xib; path = ../SongsTableViewCell.xib; sourceTree = "<group>"; };
 		429475801C15AFB400690083 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		429475831C15B02600690083 /* tracksModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tracksModel.xcdatamodel; sourceTree = "<group>"; };
 		42B0B5551C243E9600679650 /* VKMTracklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMTracklist.h; sourceTree = "<group>"; };
@@ -281,6 +286,9 @@
 				422D11911C1CC25B0050283A /* DownloadTableViewCell.h */,
 				422D11921C1CC25B0050283A /* DownloadTableViewCell.m */,
 				422D11931C1CC25B0050283A /* DownloadTableViewCell.xib */,
+				4278B2931C36AB3D0002402C /* SongsTableViewCell.h */,
+				4278B2941C36AB3D0002402C /* SongsTableViewCell.m */,
+				4278B2951C36AB3D0002402C /* SongsTableViewCell.xib */,
 				42DA13EB1BE187330033D115 /* Main.storyboard */,
 			);
 			name = Controllers;
@@ -412,6 +420,7 @@
 				422D11951C1CC25B0050283A /* DownloadTableViewCell.xib in Resources */,
 				4221E3991BCB12DF003F384F /* LaunchScreen.storyboard in Resources */,
 				4221E3961BCB12DF003F384F /* Assets.xcassets in Resources */,
+				4278B2971C36AB3D0002402C /* SongsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +503,7 @@
 				423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */,
 				42B0B5571C243E9600679650 /* VKMTracklist.m in Sources */,
 				42DA140A1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */,
+				4278B2961C36AB3D0002402C /* SongsTableViewCell.m in Sources */,
 				42DA14001BE190CC0033D115 /* VKMPlayerViewController.m in Sources */,
 				429475841C15B02600690083 /* tracksModel.xcdatamodeld in Sources */,
 				4221E3C91BCB14C3003F384F /* VKMAudioNode.m in Sources */,
