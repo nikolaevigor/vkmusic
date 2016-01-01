@@ -102,8 +102,9 @@
             node = tracks[indexPath.row];
             [tracks removeObjectAtIndex:indexPath.row];
         }
+        [self removeItem:indexPath];
+        [VKMFileManager deleteFileForNode:node];
         [VKMFileManager deleteNode:node forEntity:@"Track"];
-        [self.tableView reloadData];
     }
 }
 
@@ -173,6 +174,8 @@
     [self.searchBox resignFirstResponder];
 }
 
+#pragma mark - "Nice snippets"
+
 - (NSString *)timeFormatted:(int)totalSeconds
 {
     
@@ -186,6 +189,13 @@
     else {
         return [NSString stringWithFormat:@"%02d:%02d:%02d",hours, minutes, seconds];
     }
+}
+
+- (void)removeItem:(NSIndexPath *)indexPath {
+    [self.tableView beginUpdates];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                          withRowAnimation:UITableViewRowAnimationRight];
+    [self.tableView endUpdates];
 }
 
 @end

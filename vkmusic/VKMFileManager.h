@@ -14,6 +14,7 @@
 + (void)saveNode:(VKMAudioNode *)node forEntity:(NSString *)entityName;
 + (void)deleteNode:(VKMAudioNode *)node forEntity:(NSString *)entityName;
 + (NSArray *)loadTracksFromEntity:(NSString *)entityName;
++ (void)deleteFileForNode:(VKMAudioNode *)node;
 + (void)deleteAllItemsForEntity:(NSString *)entityName;
 + (void)deleteAllFilesForEntity:(NSString *)entityName;
 + (void)emptyDocumentsFolder;

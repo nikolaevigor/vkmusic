@@ -32,6 +32,11 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+}
+
 #pragma mark - Text Field Events methods
 
 - (IBAction)searchBoxEditingDidBegin:(id)sender {
@@ -67,7 +72,18 @@
     VKMAudioNode *node = self.tracks[indexPath.row];
     [(DownloadTableViewCell *)cell titleLabel].text = [node name];
     [(DownloadTableViewCell *)cell artistLabel].text = [node artist];
-    [self paintCell:cell inColor:[UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1] if:[node isDownloaded]];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[node path]])
+    {
+        cell.backgroundColor = [UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1];
+        node.isDownloaded = YES;
+    }
+    else
+    {
+        cell.backgroundColor = [UIColor whiteColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+        [(DownloadTableViewCell *)cell progressBar].progress = 0.0;
+        node.isDownloaded = NO;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

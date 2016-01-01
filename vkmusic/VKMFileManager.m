@@ -31,16 +31,22 @@
 + (void)deleteNode:(VKMAudioNode *)node forEntity:(NSString *)entityName
 {
     NSManagedObjectContext *mainContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:[NSEntityDescription entityForName:entityName inManagedObjectContext:mainContext]];
     
-    NSManagedObject *track = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:mainContext];
-    [track setValue:[node name] forKey:@"name"];
-    [track setValue:[node artist] forKey:@"artist"];
-    [track setValue:[NSNumber numberWithDouble:[node duration]] forKey:@"duration"];
-    [track setValue:[node url] forKey:@"url"];
-    [track setValue:[node path] forKey:@"path"];
-    [track setValue:[NSNumber numberWithBool:[node isDownloaded]] forKey:@"isDownloaded"];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name == %@ AND artist == %@ AND url == %@ AND path == %@", [node name], [node artist], [node url], [node path]]];
     
-    [mainContext deleteObject:track];
+    NSArray* results = [mainContext executeFetchRequest:fetchRequest error:nil];
+    
+    if (results.count > 0) {
+        [mainContext deleteObject:results[0]];
+        [mainContext save:nil];
+    }
+    else
+    {
+        NSLog(@"Did not deleted");
+    }
 }
 
 + (NSArray *)loadTracksFromEntity:(NSString *)entityName
@@ -72,6 +78,11 @@
     }
     
     return tracks;
+}
+
++ (void)deleteFileForNode:(VKMAudioNode *)node
+{
+    [[NSFileManager defaultManager] removeItemAtPath:[node path] error: nil];
 }
 
 + (void)deleteAllItemsForEntity:(NSString *)entityName
