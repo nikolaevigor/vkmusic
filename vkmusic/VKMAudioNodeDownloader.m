@@ -11,6 +11,8 @@
 #import <CoreData/CoreData.h>
 #import "AppDelegate.h"
 
+#import "VKMFileManager.h"
+
 @implementation VKMAudioNodeDownloader
 
 + (void)downloadNode:(VKMAudioNode *)node
@@ -40,7 +42,7 @@
                                                                  if (!error) {
                                                                      [node setIsDownloaded:YES];
                                                                      [node setPath:[path copy]];
-                                                                     [self saveNode:node toEntity:@"Track"];
+                                                                     [VKMFileManager saveNode:node forEntity:@"Track"];
                                                                      completion(YES);
                                                                  }
                                                                  else
@@ -51,21 +53,6 @@
                                                              }];
     
     [task resume];
-}
-
-+ (void)saveNode:(VKMAudioNode *)node toEntity:(NSString *)entityName
-{
-    NSManagedObjectContext *mainContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-    
-    NSManagedObject *track = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:mainContext];
-    [track setValue:[node name] forKey:@"name"];
-    [track setValue:[node artist] forKey:@"artist"];
-    [track setValue:[NSNumber numberWithDouble:[node duration]] forKey:@"duration"];
-    [track setValue:[node url] forKey:@"url"];
-    [track setValue:[node path] forKey:@"path"];
-    [track setValue:[NSNumber numberWithBool:[node isDownloaded]] forKey:@"isDownloaded"];
-    
-    [mainContext save:nil];
 }
 
 @end

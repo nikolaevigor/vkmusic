@@ -13,8 +13,8 @@
 
 @property (nonatomic, strong, nonnull) NSArray *tracklist;
 
-- (nonnull instancetype)initWithNode:(VKMAudioNode *)node;
-- (nonnull instancetype)initWithNodes:(NSArray *)nodes;
+- (nonnull instancetype)initWithNode:(nonnull VKMAudioNode *)node;
+- (nonnull instancetype)initWithNodes:(nonnull NSArray *)nodes;
 
 // Prohibited
 - (nonnull instancetype)init __unavailable;

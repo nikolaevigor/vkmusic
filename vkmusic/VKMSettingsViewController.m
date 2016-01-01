@@ -70,8 +70,8 @@
     
     UIAlertAction *firstAction = [UIAlertAction actionWithTitle:@"Yes"
                                                           style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-                                                              [VKMFileManager deleteAllEntities:@"Track"];
-                                                              [VKMFileManager emptyDocumentsFolder];
+                                                              [VKMFileManager deleteAllFilesForEntity:@"Track"];
+                                                              [VKMFileManager deleteAllItemsForEntity:@"Track"];
                                                           }];
     
     UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"

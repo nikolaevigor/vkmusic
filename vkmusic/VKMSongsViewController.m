@@ -16,7 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBox;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSArray *tracks;
 @property (strong, nonatomic) AVAudioPlayer *player;
 
 @end
@@ -25,6 +24,7 @@
 {
     BOOL isFiltered;
     NSMutableArray *searchResults;
+    NSMutableArray *tracks;
 }
 
 - (void)viewDidLoad {
@@ -32,7 +32,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    self.tracks = [VKMFileManager loadTracksFromEntity:@"Track"];
+    tracks = [[VKMFileManager loadTracksFromEntity:@"Track"] mutableCopy];
     [self.tableView reloadData];
 }
 
@@ -46,7 +46,7 @@
     }
     else
     {
-        return [self.tracks count];
+        return [tracks count];
     }
 }
 
@@ -71,7 +71,7 @@
     }
     else
     {
-        node = self.tracks[indexPath.row];
+        node = tracks[indexPath.row];
     }
     [(SongsTableViewCell *)cell titleLabel].text = [node name];
     [(SongsTableViewCell *)cell artistLabel].text = [node artist];
@@ -80,12 +80,31 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    VKMAudioNode *node = [self.tracks objectAtIndex:indexPath.row];
+    VKMAudioNode *node = [tracks objectAtIndex:indexPath.row];
     
     [self.player stop];
     NSURL *url = [NSURL fileURLWithPath:[node path]];
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     [self.player play];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        VKMAudioNode *node;
+        if (isFiltered)
+        {
+            node = searchResults[indexPath.row];
+            [searchResults removeObjectAtIndex:indexPath.row];
+        }
+        else
+        {
+            node = tracks[indexPath.row];
+            [tracks removeObjectAtIndex:indexPath.row];
+        }
+        [VKMFileManager deleteNode:node forEntity:@"Track"];
+        [self.tableView reloadData];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -133,7 +152,7 @@
         
         searchResults = [[NSMutableArray alloc] init];
         
-        for (VKMAudioNode *track in self.tracks)
+        for (VKMAudioNode *track in tracks)
         {
             NSRange trackRange = [track.name rangeOfString:searchText options:NSCaseInsensitiveSearch];
             if (trackRange.location != NSNotFound)

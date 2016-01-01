@@ -10,9 +10,38 @@
 
 #import <CoreData/CoreData.h>
 #import "AppDelegate.h"
-#import "VKMAudioNode.h"
 
 @implementation VKMFileManager
+
++ (void)saveNode:(VKMAudioNode *)node forEntity:(NSString *)entityName
+{
+    NSManagedObjectContext *mainContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    NSManagedObject *track = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:mainContext];
+    [track setValue:[node name] forKey:@"name"];
+    [track setValue:[node artist] forKey:@"artist"];
+    [track setValue:[NSNumber numberWithDouble:[node duration]] forKey:@"duration"];
+    [track setValue:[node url] forKey:@"url"];
+    [track setValue:[node path] forKey:@"path"];
+    [track setValue:[NSNumber numberWithBool:[node isDownloaded]] forKey:@"isDownloaded"];
+    
+    [mainContext save:nil];
+}
+
++ (void)deleteNode:(VKMAudioNode *)node forEntity:(NSString *)entityName
+{
+    NSManagedObjectContext *mainContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    NSManagedObject *track = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:mainContext];
+    [track setValue:[node name] forKey:@"name"];
+    [track setValue:[node artist] forKey:@"artist"];
+    [track setValue:[NSNumber numberWithDouble:[node duration]] forKey:@"duration"];
+    [track setValue:[node url] forKey:@"url"];
+    [track setValue:[node path] forKey:@"path"];
+    [track setValue:[NSNumber numberWithBool:[node isDownloaded]] forKey:@"isDownloaded"];
+    
+    [mainContext deleteObject:track];
+}
 
 + (NSArray *)loadTracksFromEntity:(NSString *)entityName
 {
@@ -45,7 +74,7 @@
     return tracks;
 }
 
-+ (void)deleteAllEntities:(NSString *)entityName
++ (void)deleteAllItemsForEntity:(NSString *)entityName
 {
     NSManagedObjectContext *mainContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
@@ -63,6 +92,18 @@
     [mainContext save:&error];
 }
 
+//delete tracks only; does not delete sqlite files
++ (void)deleteAllFilesForEntity:(NSString *)entityName
+{
+    NSArray *tracks = [self loadTracksFromEntity:entityName];
+    for (VKMAudioNode *node in tracks)
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:[node path] error: nil];
+    }
+    
+}
+
+// delete all files
 + (void)emptyDocumentsFolder
 {
     NSFileManager *fileMgr = [[NSFileManager alloc] init];
