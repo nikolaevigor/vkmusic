@@ -75,6 +75,7 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:[node path]])
     {
         cell.backgroundColor = [UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1];
+        [(DownloadTableViewCell *)cell progressBar].progress = 1.0;
         node.isDownloaded = YES;
     }
     else

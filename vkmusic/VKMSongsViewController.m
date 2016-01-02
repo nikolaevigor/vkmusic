@@ -27,10 +27,6 @@
     NSMutableArray *tracks;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 - (void)viewWillAppear:(BOOL)animated{
     tracks = [[VKMFileManager loadTracksFromEntity:@"Track"] mutableCopy];
     [self.tableView reloadData];
@@ -106,6 +102,33 @@
         [VKMFileManager deleteFileForNode:node];
         [VKMFileManager deleteNode:node forEntity:@"Track"];
     }
+}
+
+-(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Add" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        NSLog(@"add");
+    }];
+    editAction.backgroundColor = [UIColor blueColor];
+    
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        VKMAudioNode *node;
+        if (isFiltered)
+        {
+            node = searchResults[indexPath.row];
+            [searchResults removeObjectAtIndex:indexPath.row];
+        }
+        else
+        {
+            node = tracks[indexPath.row];
+            [tracks removeObjectAtIndex:indexPath.row];
+        }
+        [self removeItem:indexPath];
+        [VKMFileManager deleteFileForNode:node];
+        [VKMFileManager deleteNode:node forEntity:@"Track"];
+    }];
+    deleteAction.backgroundColor = [UIColor redColor];
+    return @[deleteAction,editAction];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
