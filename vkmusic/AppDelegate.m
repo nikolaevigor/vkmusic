@@ -8,8 +8,13 @@
 
 #import "AppDelegate.h"
 #import <CoreData/CoreData.h>
+#import "VKMPlayer.h"
+
+@class VKMAudioNode;
 
 @interface AppDelegate () <VKSdkDelegate>
+
+@property (strong, nonatomic) VKMPlayer *player;
 
 @end
 
@@ -22,6 +27,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [VKSdk initializeWithDelegate:self andAppId:@"5152277"];
+    self.player = [[VKMPlayer alloc] init];
     return YES;
 }
 
@@ -153,6 +159,38 @@
 {
     NSLog(@"Received new token");
     [newToken saveTokenToDefaults:@"token"];
+}
+
+#pragma mark - Player Delegate
+
+- (void)play:(NSArray *)tracks startingFrom:(NSInteger)initialTrack
+{
+    [self.player play:tracks startingFrom:initialTrack];
+}
+
+- (void)stop
+{
+    [self.player stop];
+}
+
+- (void)pause
+{
+    [self.player pause];
+}
+
+- (void)resume
+{
+    [self.player resume];
+}
+
+- (void)playNext
+{
+    [self.player playNext];
+}
+
+- (void)playPrevious
+{
+    [self.player playPrevious];
 }
 
 @end

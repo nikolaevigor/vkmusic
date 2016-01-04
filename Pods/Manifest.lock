@@ -14,14 +14,17 @@ PODS:
   - AFNetworking/Serialization (3.0.2)
   - AFNetworking/UIKit (3.0.2):
     - AFNetworking/NSURLSession
+  - StreamingKit (0.1.28)
   - VK-ios-sdk (1.2.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - StreamingKit
   - VK-ios-sdk
 
 SPEC CHECKSUMS:
   AFNetworking: 2f30b7db399a405b12b24e049c654f108fc8c54d
+  StreamingKit: 3b9c78009275ef1caf198bae44cfb982fee65d4d
   VK-ios-sdk: f4b7df0d4e277e06d60fef6dc472be4260eeda6d
 
 COCOAPODS: 0.39.0

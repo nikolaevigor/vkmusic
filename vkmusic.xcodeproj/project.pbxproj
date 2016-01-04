@@ -25,7 +25,9 @@
 		422D11941C1CC25B0050283A /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 422D11921C1CC25B0050283A /* DownloadTableViewCell.m */; };
 		422D11951C1CC25B0050283A /* DownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 422D11931C1CC25B0050283A /* DownloadTableViewCell.xib */; };
 		423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 423BCC901C04FD7900B495D9 /* VKMLayerButton.m */; };
+		423C6C861C39AA6A0010012F /* libStreamingKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 423C6C851C39AA6A0010012F /* libStreamingKit.a */; };
 		4242A7691C04AC9800AF8509 /* VKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4242A7681C04AC9800AF8509 /* VKManager.m */; };
+		424FB7DD1C37F62F00263A5E /* VKMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 424FB7DC1C37F62F00263A5E /* VKMPlayer.m */; };
 		42618A4F1C1C9D4200ED7FBE /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */; };
 		42787A0C1C14810A005D00BC /* VKMAudioNodeDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */; };
 		42787A101C14C511005D00BC /* VKMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0F1C14C511005D00BC /* VKMFileManager.m */; };
@@ -95,8 +97,11 @@
 		422D11961C1CE8950050283A /* playerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playerDelegate.h; sourceTree = "<group>"; };
 		423BCC8F1C04FD7900B495D9 /* VKMLayerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMLayerButton.h; sourceTree = "<group>"; };
 		423BCC901C04FD7900B495D9 /* VKMLayerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMLayerButton.m; sourceTree = "<group>"; };
+		423C6C851C39AA6A0010012F /* libStreamingKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libStreamingKit.a; path = "Pods/../build/Debug-iphoneos/libStreamingKit.a"; sourceTree = "<group>"; };
 		4242A7671C04AC9800AF8509 /* VKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKManager.h; sourceTree = "<group>"; };
 		4242A7681C04AC9800AF8509 /* VKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKManager.m; sourceTree = "<group>"; };
+		424FB7DB1C37F62F00263A5E /* VKMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMPlayer.h; sourceTree = "<group>"; };
+		424FB7DC1C37F62F00263A5E /* VKMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMPlayer.m; sourceTree = "<group>"; };
 		42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		426C5CB11C3744BA00FBBA28 /* libSWTableViewCell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSWTableViewCell.a; path = "Pods/../build/Debug-iphoneos/libSWTableViewCell.a"; sourceTree = "<group>"; };
 		42787A0A1C14810A005D00BC /* VKMAudioNodeDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNodeDownloader.h; sourceTree = "<group>"; };
@@ -132,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423C6C861C39AA6A0010012F /* libStreamingKit.a in Frameworks */,
 				42618A4F1C1C9D4200ED7FBE /* libAFNetworking.a in Frameworks */,
 				429475811C15AFB400690083 /* CoreData.framework in Frameworks */,
 				42B330701C138A9600779F69 /* AVFoundation.framework in Frameworks */,
@@ -161,6 +167,7 @@
 		41A9A946192CDB1229D7E139 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				423C6C851C39AA6A0010012F /* libStreamingKit.a */,
 				426C5CB11C3744BA00FBBA28 /* libSWTableViewCell.a */,
 				42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */,
 				429475801C15AFB400690083 /* CoreData.framework */,
@@ -265,6 +272,8 @@
 				42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */,
 				42787A0E1C14C511005D00BC /* VKMFileManager.h */,
 				42787A0F1C14C511005D00BC /* VKMFileManager.m */,
+				424FB7DB1C37F62F00263A5E /* VKMPlayer.h */,
+				424FB7DC1C37F62F00263A5E /* VKMPlayer.m */,
 				422D11961C1CE8950050283A /* playerDelegate.h */,
 			);
 			name = Infrastructure;
@@ -508,6 +517,7 @@
 				4278B2961C36AB3D0002402C /* SongsTableViewCell.m in Sources */,
 				42DA14001BE190CC0033D115 /* VKMPlayerViewController.m in Sources */,
 				429475841C15B02600690083 /* tracksModel.xcdatamodeld in Sources */,
+				424FB7DD1C37F62F00263A5E /* VKMPlayer.m in Sources */,
 				4221E3C91BCB14C3003F384F /* VKMAudioNode.m in Sources */,
 				42DA13F61BE18D010033D115 /* VKMSongsViewController.m in Sources */,
 				42DA13FB1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */,
@@ -659,6 +669,10 @@
 				INFOPLIST_FILE = vkmusic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = VKM.vkmusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -675,6 +689,10 @@
 				INFOPLIST_FILE = vkmusic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = VKM.vkmusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

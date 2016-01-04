@@ -9,6 +9,7 @@
 #import "VKMPlayerViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "playerDelegate.h"
+#import "AppDelegate.h"
 
 @interface VKMPlayerViewController ()
 
@@ -26,11 +27,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.delegate = [(UITabBarController *)[[UIApplication sharedApplication] keyWindow].rootViewController viewControllers][1];
+    self.delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 - (IBAction)playPressed:(id)sender {
-    [self.delegate play];
+    [self.delegate resume];
 }
 
 - (IBAction)pauseButton:(id)sender {
@@ -42,11 +43,11 @@
 }
 
 - (IBAction)previousPressed:(id)sender {
-    NSLog(@"Pressed");
+    [self.delegate playPrevious];
 }
 
 - (IBAction)nextPressed:(id)sender {
-    NSLog(@"Pressed");
+    [self.delegate playNext];
 }
 
 

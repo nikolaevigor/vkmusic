@@ -11,12 +11,15 @@
 #import "AVFoundation/AVFoundation.h"
 #import "VKMAudioNode.h"
 #import "SongsTableViewCell.h"
+#import "playerDelegate.h"
+#import "VKMPlayer.h"
+#import "AppDelegate.h"
 
 @interface VKMSongsViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBox;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) AVAudioPlayer *player;
+@property (weak, nonatomic) id <playerDelegate> delegate;
 
 @end
 
@@ -25,6 +28,12 @@
     BOOL isFiltered;
     NSMutableArray *searchResults;
     NSMutableArray *tracks;
+}
+
+- (void)viewDidLoad
+{
+    self.delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -76,38 +85,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    VKMAudioNode *node = [tracks objectAtIndex:indexPath.row];
-    
-    [self.player stop];
-    NSURL *url = [NSURL fileURLWithPath:[node path]];
-    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-    [self.player play];
+    [self.delegate play:tracks startingFrom:indexPath.row];
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete)
-    {
-        VKMAudioNode *node;
-        if (isFiltered)
-        {
-            node = searchResults[indexPath.row];
-            [searchResults removeObjectAtIndex:indexPath.row];
-        }
-        else
-        {
-            node = tracks[indexPath.row];
-            [tracks removeObjectAtIndex:indexPath.row];
-        }
-        [self removeItem:indexPath];
-        [VKMFileManager deleteFileForNode:node];
-        [VKMFileManager deleteNode:node forEntity:@"Track"];
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[tableView indexPathForSelectedRow] isEqual:indexPath]) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        [self.delegate pause];
+        return nil;
     }
+    return indexPath;
 }
 
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Add" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-        NSLog(@"add");
+    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Fav" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        NSLog(@"Fav");
     }];
     editAction.backgroundColor = [UIColor blueColor];
     
@@ -145,21 +139,6 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
-}
-
-#pragma mark - Player Delegate methods
-
-- (void)play{
-    [self.player play];
-}
-
-- (void)stop{
-    [self.player stop];
-    [self.player setCurrentTime:0.0];
-}
-
-- (void)pause{
-    [self.player pause];
 }
 
 #pragma mark - Search Bar methods

@@ -16,38 +16,34 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slZ-Dq-1p7">
-                        <rect key="frame" x="8" y="8" width="242" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="25" id="PoW-VY-u1t"/>
-                        </constraints>
+                        <rect key="frame" x="8" y="8" width="32" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REy-mc-UXr">
-                        <rect key="frame" x="8" y="41" width="242" height="15"/>
+                        <rect key="frame" x="8" y="41" width="32" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2v-v3-kAL">
-                        <rect key="frame" x="276" y="19" width="36" height="21"/>
+                        <rect key="frame" x="48" y="19" width="264" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="slZ-Dq-1p7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0ML-I5-hux"/>
-                    <constraint firstItem="slZ-Dq-1p7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6OV-3X-1Za"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="REy-mc-UXr" secondAttribute="bottom" constant="-5" id="Kfc-UB-UV8"/>
-                    <constraint firstAttribute="bottom" secondItem="REy-mc-UXr" secondAttribute="bottom" constant="3" id="Kum-hx-wfv"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="REy-mc-UXr" secondAttribute="trailing" constant="62" id="NKC-vb-VOD"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="O2v-v3-kAL" secondAttribute="bottom" constant="11" id="W1J-qU-YA6"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="slZ-Dq-1p7" secondAttribute="trailing" constant="62" id="XqA-Vs-OG8"/>
-                    <constraint firstItem="O2v-v3-kAL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="bao-Zi-vIq"/>
-                    <constraint firstItem="REy-mc-UXr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="n6S-s0-V9F"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="O2v-v3-kAL" secondAttribute="trailing" id="ojo-UW-kA5"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="slZ-Dq-1p7" secondAttribute="leading" id="EFo-ys-0y5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="REy-mc-UXr" secondAttribute="bottom" constant="-5" id="G8e-HC-taH"/>
+                    <constraint firstItem="O2v-v3-kAL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="KGL-Is-VQE"/>
+                    <constraint firstItem="O2v-v3-kAL" firstAttribute="leading" secondItem="REy-mc-UXr" secondAttribute="trailing" constant="8" id="OLe-Ge-BYm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="O2v-v3-kAL" secondAttribute="bottom" constant="11" id="RrR-pW-M5s"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="REy-mc-UXr" secondAttribute="leading" id="XBH-jP-kx7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="O2v-v3-kAL" secondAttribute="trailing" id="ekR-hN-iDJ"/>
+                    <constraint firstAttribute="topMargin" secondItem="slZ-Dq-1p7" secondAttribute="top" id="m2p-4k-M8p"/>
+                    <constraint firstItem="O2v-v3-kAL" firstAttribute="leading" secondItem="slZ-Dq-1p7" secondAttribute="trailing" constant="8" id="pob-NE-gTS"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -55,7 +51,7 @@
                 <outlet property="durationLabel" destination="O2v-v3-kAL" id="xzO-K6-2om"/>
                 <outlet property="titleLabel" destination="slZ-Dq-1p7" id="XGY-mL-CIq"/>
             </connections>
-            <point key="canvasLocation" x="377" y="595"/>
+            <point key="canvasLocation" x="398" y="629"/>
         </tableViewCell>
     </objects>
 </document>

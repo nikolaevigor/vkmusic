@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "VKSdk.h"
+#import "playerDelegate.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, playerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -17,7 +18,7 @@
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (NSURL *)applicationDocumentsDirectory; // nice to have to reference files for core data
+- (NSURL *)applicationDocumentsDirectory;
 
 @end
 

@@ -50,7 +50,7 @@
 
 #pragma mark - Table View methods
 
-- (NSInteger)tableView:(UITableView*) tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.tracks count];
 }
@@ -75,6 +75,7 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:[node path]])
     {
         cell.backgroundColor = [UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [(DownloadTableViewCell *)cell progressBar].progress = 1.0;
         node.isDownloaded = YES;
     }
@@ -107,6 +108,8 @@
                                       [self paintCell:cell inColor:[UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1] if:result];
                                   }];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

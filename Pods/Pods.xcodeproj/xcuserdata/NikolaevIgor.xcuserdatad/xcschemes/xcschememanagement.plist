@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>StreamingKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>VK-ios-sdk.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +27,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>37999206CDAC0EB25BF13233D3AD2FA7</key>
+		<key>3DE727D0E7CD19403D8B1DAA2F63E220</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>463A4B1E9D4623BDAE2FE98860280F80</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB3E3E5D93A5820A3E021797B4388A55</key>
+		<key>BC041A238E71DD1838870BCC76FA05F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "playerDelegate.h"
 
 @interface VKMPlayerViewController : UIViewController
 

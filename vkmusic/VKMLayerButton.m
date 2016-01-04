@@ -122,7 +122,7 @@
                                                  @0.0f,
                                                  @1.0f
                                                  ]);
-        _highlightBackgroundLayer.cornerRadius = 20;
+        _highlightBackgroundLayer.cornerRadius = 0;
         
         [self.layer insertSublayer:_highlightBackgroundLayer atIndex:1];
     }

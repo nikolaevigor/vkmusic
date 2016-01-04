@@ -6,12 +6,17 @@
 //  Copyright © 2015 Igor Nikolaev. All rights reserved.
 //
 
+@class VKMAudioNode;
+
 @protocol playerDelegate <NSObject>
 
 @required
 
-- (void)play;
+- (void)play:(NSArray *)tracks startingFrom:(NSInteger)initialTrack;
 - (void)stop;
 - (void)pause;
+- (void)resume;
+- (void)playNext;
+- (void)playPrevious;
 
 @end
