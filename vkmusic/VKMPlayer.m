@@ -136,6 +136,19 @@
     self.frequenciesSet[band] = [NSNumber numberWithFloat:gain];
 }
 
+- (void)resetEQU
+{
+    for (int i = 0; i < self.frequenciesSet.count; i++) {
+        [self.player setGain:0.0 forEqualizerBand:i];
+    }
+    self.frequenciesSet = [NSMutableArray arrayWithArray:@[@0, @0, @0, @0, @0, @0]];
+}
+
+- (NSArray *)getCurrentEQUFrequenciesSet
+{
+    return [NSArray arrayWithArray:self.frequenciesSet];
+}
+
 - (void)setupPlayer
 {
     self.player = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){.equalizerBandFrequencies = {50, 100, 400, 800, 1600, 2600}}];

@@ -18,5 +18,7 @@
 - (void)playNext;
 - (void)playPrevious;
 - (void)setEqualizerWithGain:(float)gain forBand:(int)band;
+- (void)resetEQU;
+- (NSArray *)getCurrentEQUFrequenciesSet;
 
 @end

@@ -442,14 +442,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXB-5W-zg4">
-                                <rect key="frame" x="246" y="154" width="109" height="30"/>
+                                <rect key="frame" x="246" y="108" width="109" height="30"/>
                                 <state key="normal" title="Delete all songs"/>
                                 <connections>
                                     <action selector="deletePressed:" destination="lDZ-pW-T2Z" eventType="touchUpInside" id="Bl4-eJ-Tn9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjG-cZ-Esq">
-                                <rect key="frame" x="246" y="337" width="109" height="30"/>
+                                <rect key="frame" x="246" y="246" width="109" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="QHo-qe-6jG"/>
                                 </constraints>
@@ -458,13 +458,25 @@
                                     <action selector="logoutPressed:" destination="lDZ-pW-T2Z" eventType="touchUpInside" id="wgQ-Ju-Cgp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSp-ko-AOH">
+                                <rect key="frame" x="263" y="383" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="ild-yQ-orf"/>
+                                </constraints>
+                                <state key="normal" title="Reset EQU"/>
+                                <connections>
+                                    <action selector="resetEQUPressed:" destination="lDZ-pW-T2Z" eventType="touchUpInside" id="fgX-9Q-Jln"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="o0o-cj-chO" firstAttribute="top" secondItem="JXB-5W-zg4" secondAttribute="bottom" multiplier="3:1" id="292-ma-YMa"/>
+                            <constraint firstItem="o0o-cj-chO" firstAttribute="top" secondItem="JXB-5W-zg4" secondAttribute="bottom" multiplier="4:1" id="292-ma-YMa"/>
+                            <constraint firstItem="o0o-cj-chO" firstAttribute="top" secondItem="gSp-ko-AOH" secondAttribute="bottom" multiplier="4:3" id="5pu-96-THx"/>
+                            <constraint firstItem="gSp-ko-AOH" firstAttribute="centerX" secondItem="0Fn-4u-Bg7" secondAttribute="centerX" id="Ljl-6t-3iT"/>
                             <constraint firstItem="JXB-5W-zg4" firstAttribute="centerX" secondItem="0Fn-4u-Bg7" secondAttribute="centerX" id="RDC-Jb-X7M"/>
                             <constraint firstItem="bjG-cZ-Esq" firstAttribute="centerX" secondItem="0Fn-4u-Bg7" secondAttribute="centerX" id="ahU-IU-Rxc"/>
-                            <constraint firstItem="o0o-cj-chO" firstAttribute="top" secondItem="bjG-cZ-Esq" secondAttribute="bottom" multiplier="3:2" id="y8q-se-gBH"/>
+                            <constraint firstItem="o0o-cj-chO" firstAttribute="top" secondItem="bjG-cZ-Esq" secondAttribute="bottom" multiplier="4:2" id="y8q-se-gBH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings.png" id="InA-3n-62b"/>

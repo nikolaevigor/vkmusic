@@ -201,4 +201,13 @@
     [self.player setEqualizerWithGain:gain forBand:band];
 }
 
+- (void)resetEQU
+{
+    [self.player resetEQU];
+}
+- (NSArray *)getCurrentEQUFrequenciesSet
+{
+    return [self.player getCurrentEQUFrequenciesSet];
+}
+
 @end

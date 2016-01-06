@@ -9,15 +9,25 @@
 #import "VKMSettingsViewController.h"
 #import "VKSdk.h"
 #import "VKMFileManager.h"
+#import "playerDelegate.h"
+#import "AppDelegate.h"
+
 
 @interface VKMSettingsViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteSongsButton;
 
+@property (weak, nonatomic) id <playerDelegate> delegate;
+
 @end
 
 @implementation VKMSettingsViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 - (IBAction)logoutPressed:(id)sender {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Confirmation"
@@ -69,5 +79,9 @@
     [alert addAction:secondAction];
     
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (IBAction)resetEQUPressed:(id)sender {
+    [self.delegate resetEQU];
 }
 @end
