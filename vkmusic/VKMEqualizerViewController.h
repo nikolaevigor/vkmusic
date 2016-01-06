@@ -10,10 +10,4 @@
 
 @interface VKMEqualizerViewController : UIViewController
 
-- (IBAction)lowPassValueChanged:(id)sender;
-- (IBAction)highPassValueChanged:(id)sender;
-- (IBAction)peakingValueChanged:(id)sender;
-- (IBAction)lowShelfValueChanged:(id)sender;
-- (IBAction)highShelfValueChanged:(id)sender;
-
 @end

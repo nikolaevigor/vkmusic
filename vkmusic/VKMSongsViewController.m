@@ -33,7 +33,6 @@
 - (void)viewDidLoad
 {
     self.delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated{

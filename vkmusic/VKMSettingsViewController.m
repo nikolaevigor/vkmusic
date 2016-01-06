@@ -13,26 +13,11 @@
 @interface VKMSettingsViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
-@property (weak, nonatomic) IBOutlet UISwitch *equTrigger;
-@property (weak, nonatomic) IBOutlet UISwitch *cacheTrigger;
 @property (weak, nonatomic) IBOutlet UIButton *deleteSongsButton;
 
 @end
 
 @implementation VKMSettingsViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (IBAction)equTriggerd:(id)sender {
-    NSLog(@"equ");
-}
-
-- (IBAction)cacheTriggered:(id)sender {
-    NSLog(@"cache");
-}
 
 - (IBAction)logoutPressed:(id)sender {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Confirmation"
@@ -72,6 +57,7 @@
                                                           style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
                                                               [VKMFileManager deleteAllFilesForEntity:@"Track"];
                                                               [VKMFileManager deleteAllItemsForEntity:@"Track"];
+                                                              //[VKMFileManager emptyDocumentsFolder];
                                                           }];
     
     UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"

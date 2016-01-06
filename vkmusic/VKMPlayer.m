@@ -17,6 +17,7 @@
 @property (strong, nonatomic) STKAudioPlayer *player;
 @property (strong, nonatomic) VKMAudioNode *currentNode;
 @property (strong, nonatomic) NSArray *tracks;
+@property (strong, nonatomic) NSMutableArray *frequenciesSet;
 
 @end
 
@@ -27,6 +28,7 @@
     if (self = [super init]) {
         self.player = [[STKAudioPlayer alloc] init];
         self.player.delegate = self;
+        self.frequenciesSet = [NSMutableArray arrayWithArray:@[@0, @0, @0, @0, @0, @0]];
     }
     return self;
 }
@@ -63,6 +65,11 @@
             [self setupPlayer];
             break;
             
+        case STKAudioPlayerStateError:
+            self.currentNode = tracks[initialTrack];
+            [self setupPlayer];
+            break;
+            
         default:
             NSLog(@"It's a trap!");
             break;
@@ -88,6 +95,9 @@
 - (void)playNext
 {
     self.tracks = [VKMFileManager loadTracksFromEntity:@"Track"];
+    if (self.tracks.count == 0) {
+        return;
+    }
     NSUInteger currentNodeIndex = [self getIndexOfCurrentNode];
     if (currentNodeIndex+1 < self.tracks.count)
     {
@@ -104,6 +114,9 @@
 - (void)playPrevious
 {
     self.tracks = [VKMFileManager loadTracksFromEntity:@"Track"];
+    if (self.tracks.count == 0) {
+        return;
+    }
     NSInteger currentNodeIndex = [self getIndexOfCurrentNode];
     if (currentNodeIndex-1 >= 0)
     {
@@ -117,10 +130,20 @@
     [self setupPlayer];
 }
 
+- (void)setEqualizerWithGain:(float)gain forBand:(int)band
+{
+    [self.player setGain:gain forEqualizerBand:band];
+    self.frequenciesSet[band] = [NSNumber numberWithFloat:gain];
+}
+
 - (void)setupPlayer
 {
-    self.player = [[STKAudioPlayer alloc] init];
+    self.player = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){.equalizerBandFrequencies = {50, 100, 400, 800, 1600, 2600}}];
     self.player.delegate = self;
+    self.player.equalizerEnabled = YES;
+    for (int i = 0; i < self.frequenciesSet.count; i++) {
+        [self.player setGain:[self.frequenciesSet[i] floatValue] forEqualizerBand:i];
+    }
     STKLocalFileDataSource *localDataSource = [[STKLocalFileDataSource alloc] initWithFilePath:[self.currentNode path]];
     
     [self.player playDataSource:localDataSource withQueueItemID:[self.currentNode name]];
@@ -140,29 +163,32 @@
 #pragma mark - STKAudioPlayerDelegate methods
 
 /// Raised when an item has started playing
--(void) audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId
+- (void)audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId
 {
     
 }
 /// Raised when an item has finished buffering (may or may not be the currently playing item)
 /// This event may be raised multiple times for the same item if seek is invoked on the player
--(void) audioPlayer:(STKAudioPlayer*)audioPlayer didFinishBufferingSourceWithQueueItemId:(NSObject*)queueItemId
+- (void)audioPlayer:(STKAudioPlayer*)audioPlayer didFinishBufferingSourceWithQueueItemId:(NSObject*)queueItemId
 {
     
 }
 /// Raised when the state of the player has changed
--(void) audioPlayer:(STKAudioPlayer*)audioPlayer stateChanged:(STKAudioPlayerState)state previousState:(STKAudioPlayerState)previousState
+- (void)audioPlayer:(STKAudioPlayer*)audioPlayer stateChanged:(STKAudioPlayerState)state previousState:(STKAudioPlayerState)previousState
 {
     
 }
 /// Raised when an item has finished playing
--(void) audioPlayer:(STKAudioPlayer*)audioPlayer didFinishPlayingQueueItemId:(NSObject*)queueItemId withReason:(STKAudioPlayerStopReason)stopReason andProgress:(double)progress andDuration:(double)duration
+- (void)audioPlayer:(STKAudioPlayer*)audioPlayer didFinishPlayingQueueItemId:(NSObject*)queueItemId withReason:(STKAudioPlayerStopReason)stopReason andProgress:(double)progress andDuration:(double)duration
 {
     //здесь исходя из стейта плеера надо условие намутить
-    [self playNext];
+    if (stopReason == STKAudioPlayerStopReasonEof)
+    {
+        [self playNext];
+    }
 }
 /// Raised when an unexpected and possibly unrecoverable error has occured (usually best to recreate the STKAudioPlauyer)
--(void) audioPlayer:(STKAudioPlayer*)audioPlayer unexpectedError:(STKAudioPlayerErrorCode)errorCode
+- (void)audioPlayer:(STKAudioPlayer*)audioPlayer unexpectedError:(STKAudioPlayerErrorCode)errorCode
 {
     
 }

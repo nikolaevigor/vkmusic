@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <CoreData/CoreData.h>
 #import "VKMPlayer.h"
+#import <AVFoundation/AVFoundation.h>
 
 @class VKMAudioNode;
 
@@ -27,6 +28,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [VKSdk initializeWithDelegate:self andAppId:@"5152277"];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];//play in background
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     self.player = [[VKMPlayer alloc] init];
     return YES;
 }
@@ -191,6 +194,11 @@
 - (void)playPrevious
 {
     [self.player playPrevious];
+}
+
+- (void)setEqualizerWithGain:(float)gain forBand:(int)band
+{
+    [self.player setEqualizerWithGain:gain forBand:band];
 }
 
 @end

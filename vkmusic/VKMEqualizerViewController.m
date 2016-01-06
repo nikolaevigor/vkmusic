@@ -7,14 +7,19 @@
 //
 
 #import "VKMEqualizerViewController.h"
+#import "playerDelegate.h"
+#import "AppDelegate.h"
 
 @interface VKMEqualizerViewController ()
 
-@property (weak, nonatomic) IBOutlet UISlider *lowPassSlider;
-@property (weak, nonatomic) IBOutlet UISlider *highPassSlider;
-@property (weak, nonatomic) IBOutlet UISlider *peakingSlider;
-@property (weak, nonatomic) IBOutlet UISlider *lowShelfSlider;
-@property (weak, nonatomic) IBOutlet UISlider *highShelfSlider;
+@property (weak, nonatomic) IBOutlet UISlider *firstSlider;
+@property (weak, nonatomic) IBOutlet UISlider *secondSlider;
+@property (weak, nonatomic) IBOutlet UISlider *thirdSlider;
+@property (weak, nonatomic) IBOutlet UISlider *forthSlider;
+@property (weak, nonatomic) IBOutlet UISlider *fifthSlider;
+@property (weak, nonatomic) IBOutlet UISlider *sixthSlider;
+
+@property (weak, nonatomic) id <playerDelegate> delegate;
 
 @end
 
@@ -22,31 +27,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)firstSliderValueChanged:(id)sender {
+    [self.delegate setEqualizerWithGain:self.firstSlider.value forBand:0];
 }
-
-- (IBAction)lowPassValueChanged:(id)sender {
-    NSLog(@"Value changed for lowPassSlider");
+- (IBAction)secondSliderValueChanged:(id)sender {
+    [self.delegate setEqualizerWithGain:self.secondSlider.value forBand:1];
 }
-
-- (IBAction)highPassValueChanged:(id)sender {
-    NSLog(@"Value changed for highPassSlider");
+- (IBAction)thirdSliderValueChanged:(id)sender {
+    [self.delegate setEqualizerWithGain:self.thirdSlider.value forBand:2];
 }
-
-- (IBAction)peakingValueChanged:(id)sender {
-    NSLog(@"Value changed for peakingSlider");
+- (IBAction)forthSliderValueChanged:(id)sender {
+    [self.delegate setEqualizerWithGain:self.forthSlider.value forBand:3];
 }
-
-- (IBAction)lowShelfValueChanged:(id)sender {
-    NSLog(@"Value changed for lowShelfSlider");
+- (IBAction)fifthSliderValueChanged:(id)sender {
+    [self.delegate setEqualizerWithGain:self.fifthSlider.value forBand:4];
 }
-
-- (IBAction)highShelfValueChanged:(id)sender {
-    NSLog(@"Value changed for highPassSlider");
+- (IBAction)sixthSliderValueChanged:(id)sender {
+    [self.delegate setEqualizerWithGain:self.sixthSlider.value forBand:5];
 }
 @end

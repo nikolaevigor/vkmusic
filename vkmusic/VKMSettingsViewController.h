@@ -11,9 +11,4 @@
 
 @interface VKMSettingsViewController : UIViewController
 
-- (IBAction)equTriggerd:(id)sender;
-- (IBAction)cacheTriggered:(id)sender;
-- (IBAction)logoutPressed:(id)sender;
-- (IBAction)deletePressed:(id)sender;
-
 @end

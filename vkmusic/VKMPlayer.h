@@ -17,5 +17,6 @@
 - (void)resume;
 - (void)playNext;
 - (void)playPrevious;
+- (void)setEqualizerWithGain:(float)gain forBand:(int)band;
 
 @end
