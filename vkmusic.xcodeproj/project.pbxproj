@@ -28,6 +28,7 @@
 		423C6C861C39AA6A0010012F /* libStreamingKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 423C6C851C39AA6A0010012F /* libStreamingKit.a */; };
 		4242A7691C04AC9800AF8509 /* VKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4242A7681C04AC9800AF8509 /* VKManager.m */; };
 		424FB7DD1C37F62F00263A5E /* VKMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 424FB7DC1C37F62F00263A5E /* VKMPlayer.m */; };
+		424FB9F71C427B1800710C62 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424FB9F61C427B1800710C62 /* MediaPlayer.framework */; };
 		42618A4F1C1C9D4200ED7FBE /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */; };
 		42787A0C1C14810A005D00BC /* VKMAudioNodeDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */; };
 		42787A101C14C511005D00BC /* VKMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0F1C14C511005D00BC /* VKMFileManager.m */; };
@@ -102,15 +103,16 @@
 		4242A7681C04AC9800AF8509 /* VKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKManager.m; sourceTree = "<group>"; };
 		424FB7DB1C37F62F00263A5E /* VKMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMPlayer.h; sourceTree = "<group>"; };
 		424FB7DC1C37F62F00263A5E /* VKMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMPlayer.m; sourceTree = "<group>"; };
+		424FB9F61C427B1800710C62 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		426C5CB11C3744BA00FBBA28 /* libSWTableViewCell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSWTableViewCell.a; path = "Pods/../build/Debug-iphoneos/libSWTableViewCell.a"; sourceTree = "<group>"; };
 		42787A0A1C14810A005D00BC /* VKMAudioNodeDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNodeDownloader.h; sourceTree = "<group>"; };
 		42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNodeDownloader.m; sourceTree = "<group>"; };
 		42787A0E1C14C511005D00BC /* VKMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMFileManager.h; sourceTree = "<group>"; };
 		42787A0F1C14C511005D00BC /* VKMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMFileManager.m; sourceTree = "<group>"; };
-		4278B2931C36AB3D0002402C /* SongsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongsTableViewCell.h; path = ../SongsTableViewCell.h; sourceTree = "<group>"; };
-		4278B2941C36AB3D0002402C /* SongsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongsTableViewCell.m; path = ../SongsTableViewCell.m; sourceTree = "<group>"; };
-		4278B2951C36AB3D0002402C /* SongsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SongsTableViewCell.xib; path = ../SongsTableViewCell.xib; sourceTree = "<group>"; };
+		4278B2931C36AB3D0002402C /* SongsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsTableViewCell.h; sourceTree = "<group>"; };
+		4278B2941C36AB3D0002402C /* SongsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsTableViewCell.m; sourceTree = "<group>"; };
+		4278B2951C36AB3D0002402C /* SongsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongsTableViewCell.xib; sourceTree = "<group>"; };
 		429475801C15AFB400690083 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		429475831C15B02600690083 /* tracksModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tracksModel.xcdatamodel; sourceTree = "<group>"; };
 		42B0B5551C243E9600679650 /* VKMTracklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMTracklist.h; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424FB9F71C427B1800710C62 /* MediaPlayer.framework in Frameworks */,
 				423C6C861C39AA6A0010012F /* libStreamingKit.a in Frameworks */,
 				42618A4F1C1C9D4200ED7FBE /* libAFNetworking.a in Frameworks */,
 				429475811C15AFB400690083 /* CoreData.framework in Frameworks */,
@@ -167,6 +170,7 @@
 		41A9A946192CDB1229D7E139 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				424FB9F61C427B1800710C62 /* MediaPlayer.framework */,
 				423C6C851C39AA6A0010012F /* libStreamingKit.a */,
 				426C5CB11C3744BA00FBBA28 /* libSWTableViewCell.a */,
 				42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */,

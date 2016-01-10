@@ -30,7 +30,36 @@
     [VKSdk initializeWithDelegate:self andAppId:@"5152277"];
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];//play in background
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    //[self becomeFirstResponder];
     self.player = [[VKMPlayer alloc] init];
+    return YES;
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)theEvent
+{
+    switch (theEvent.subtype) {
+        case UIEventSubtypeRemoteControlNextTrack:
+            [self.player playNext];
+            break;
+            
+        case UIEventSubtypeRemoteControlPreviousTrack:
+            [self.player playPrevious];
+            break;
+            
+        case UIEventSubtypeRemoteControlPlay:
+            [self.player resume];
+            break;
+        
+        case UIEventSubtypeRemoteControlPause:
+            [self.player pause];
+        
+        default:
+            NSLog(@"Not tracked Event: %ld", (long)theEvent.subtype);
+            break;
+    }
+}
+
+- (BOOL)canBecomeFirstResponder {
     return YES;
 }
 

@@ -11,6 +11,7 @@
 #import "VKMFileManager.h"
 #import "STKAudioPlayer.h"
 #import "STKLocalFileDataSource.h"
+#import "MediaPlayer/Mediaplayer.h"
 
 @interface VKMPlayer() <STKAudioPlayerDelegate>
 
@@ -160,6 +161,7 @@
     STKLocalFileDataSource *localDataSource = [[STKLocalFileDataSource alloc] initWithFilePath:[self.currentNode path]];
     
     [self.player playDataSource:localDataSource withQueueItemID:[self.currentNode name]];
+    [self setInfoCenter:self.currentNode];
 }
 
 - (NSInteger)getIndexOfCurrentNode
@@ -173,6 +175,14 @@
     return NSNotFound;
 }
 
+- (void)setInfoCenter:(VKMAudioNode *)node
+{
+    NSMutableDictionary *songInfo = [[NSMutableDictionary alloc] init];
+    [songInfo setObject:[self.currentNode name] forKey:MPMediaItemPropertyTitle];
+    [songInfo setObject:[self.currentNode artist] forKey:MPMediaItemPropertyArtist];
+    [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:songInfo];
+}
+
 #pragma mark - STKAudioPlayerDelegate methods
 
 /// Raised when an item has started playing
@@ -180,17 +190,20 @@
 {
     
 }
+
 /// Raised when an item has finished buffering (may or may not be the currently playing item)
 /// This event may be raised multiple times for the same item if seek is invoked on the player
 - (void)audioPlayer:(STKAudioPlayer*)audioPlayer didFinishBufferingSourceWithQueueItemId:(NSObject*)queueItemId
 {
     
 }
+
 /// Raised when the state of the player has changed
 - (void)audioPlayer:(STKAudioPlayer*)audioPlayer stateChanged:(STKAudioPlayerState)state previousState:(STKAudioPlayerState)previousState
 {
     
 }
+
 /// Raised when an item has finished playing
 - (void)audioPlayer:(STKAudioPlayer*)audioPlayer didFinishPlayingQueueItemId:(NSObject*)queueItemId withReason:(STKAudioPlayerStopReason)stopReason andProgress:(double)progress andDuration:(double)duration
 {
@@ -200,6 +213,7 @@
         [self playNext];
     }
 }
+
 /// Raised when an unexpected and possibly unrecoverable error has occured (usually best to recreate the STKAudioPlauyer)
 - (void)audioPlayer:(STKAudioPlayer*)audioPlayer unexpectedError:(STKAudioPlayerErrorCode)errorCode
 {
