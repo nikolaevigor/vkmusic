@@ -207,9 +207,7 @@
 /// Raised when an item has finished playing
 - (void)audioPlayer:(STKAudioPlayer*)audioPlayer didFinishPlayingQueueItemId:(NSObject*)queueItemId withReason:(STKAudioPlayerStopReason)stopReason andProgress:(double)progress andDuration:(double)duration
 {
-    //здесь исходя из стейта плеера надо условие намутить
-    if (stopReason == STKAudioPlayerStopReasonEof)
-    {
+    if (stopReason != STKAudioPlayerStopReasonUserAction) {
         [self playNext];
     }
 }

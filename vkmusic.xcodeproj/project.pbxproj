@@ -10,7 +10,6 @@
 		4221E38B1BCB12DF003F384F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E38A1BCB12DF003F384F /* main.m */; };
 		4221E38E1BCB12DF003F384F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E38D1BCB12DF003F384F /* AppDelegate.m */; };
 		4221E3961BCB12DF003F384F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4221E3951BCB12DF003F384F /* Assets.xcassets */; };
-		4221E3991BCB12DF003F384F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4221E3971BCB12DF003F384F /* LaunchScreen.storyboard */; };
 		4221E3A41BCB12DF003F384F /* vkmusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3A31BCB12DF003F384F /* vkmusicTests.m */; };
 		4221E3AF1BCB12DF003F384F /* vkmusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3AE1BCB12DF003F384F /* vkmusicUITests.m */; };
 		4221E3BF1BCB148C003F384F /* VKMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3BE1BCB148C003F384F /* VKMNode.m */; };
@@ -78,7 +77,6 @@
 		4221E38C1BCB12DF003F384F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4221E38D1BCB12DF003F384F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4221E3951BCB12DF003F384F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4221E3981BCB12DF003F384F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4221E39A1BCB12DF003F384F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4221E39F1BCB12DF003F384F /* vkmusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vkmusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4221E3A31BCB12DF003F384F /* vkmusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vkmusicTests.m; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 				4221E38D1BCB12DF003F384F /* AppDelegate.m */,
 				429475821C15B02600690083 /* tracksModel.xcdatamodeld */,
 				4221E3951BCB12DF003F384F /* Assets.xcassets */,
-				4221E3971BCB12DF003F384F /* LaunchScreen.storyboard */,
 				4221E39A1BCB12DF003F384F /* Info.plist */,
 				4221E3891BCB12DF003F384F /* Supporting Files */,
 			);
@@ -438,7 +435,6 @@
 			files = (
 				42DA13EC1BE187330033D115 /* Main.storyboard in Resources */,
 				422D11951C1CC25B0050283A /* DownloadTableViewCell.xib in Resources */,
-				4221E3991BCB12DF003F384F /* LaunchScreen.storyboard in Resources */,
 				4221E3961BCB12DF003F384F /* Assets.xcassets in Resources */,
 				4278B2971C36AB3D0002402C /* SongsTableViewCell.xib in Resources */,
 			);
@@ -574,17 +570,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		4221E3971BCB12DF003F384F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4221E3981BCB12DF003F384F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		4221E3B11BCB12DF003F384F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -673,6 +658,7 @@
 			baseConfigurationReference = 240B660B6D2478B0EAE88D1C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = vkmusic/Info.plist;
@@ -689,6 +675,7 @@
 			baseConfigurationReference = 1C295B23B087D39745DDA61B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = vkmusic/Info.plist;
