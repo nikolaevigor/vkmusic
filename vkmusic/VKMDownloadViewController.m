@@ -25,7 +25,8 @@
 
 @implementation VKMDownloadViewController
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     if (![VKSdk wakeUpSession])
     {
         [VKSdk authorize:@[@"friends", @"audio"]];
@@ -39,11 +40,13 @@
 
 #pragma mark - Text Field Events methods
 
-- (IBAction)searchBoxEditingDidBegin:(id)sender {
+- (IBAction)searchBoxEditingDidBegin:(id)sender
+{
     self.searchBox.text = @"";
 }
 
-- (IBAction)searchBoxEditingDidEnd:(id)sender {
+- (IBAction)searchBoxEditingDidEnd:(id)sender
+{
     __block void (^completion) (NSMutableArray *) = ^(NSMutableArray * tracks){self.tracks = tracks; [self.tableView reloadData];};
     [VKManager getTitlesForSearchQuery:self.searchBox.text completion:completion];
 }
@@ -61,6 +64,9 @@
     if (!cell)
     {
         [tableView registerNib:[UINib nibWithNibName:@"DownloadTableViewCell" bundle:nil] forCellReuseIdentifier:@"ReuseID"];
+        cell = (DownloadTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ReuseID"];
+    }
+    if ([(DownloadTableViewCell *)cell isDownloading]) {
         cell = (DownloadTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ReuseID"];
     }
     
@@ -106,8 +112,10 @@
                                     }
                                   completion:^void (BOOL result) {
                                       [self paintCell:cell inColor:[UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1] if:result];
+                                      cell.isDownloading = NO;
                                   }];
     }
+    cell.isDownloading = YES;
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -134,7 +142,8 @@
 
 #pragma mark - Text Field methods
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField {
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
     [textField resignFirstResponder];
     return YES;
 }
