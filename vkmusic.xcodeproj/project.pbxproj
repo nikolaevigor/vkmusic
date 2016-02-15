@@ -29,6 +29,7 @@
 		424FB7DD1C37F62F00263A5E /* VKMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 424FB7DC1C37F62F00263A5E /* VKMPlayer.m */; };
 		424FB9F71C427B1800710C62 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424FB9F61C427B1800710C62 /* MediaPlayer.framework */; };
 		42618A4F1C1C9D4200ED7FBE /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */; };
+		426355E51C71E00A001EDF5E /* VKMAudioDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 426355E41C71E00A001EDF5E /* VKMAudioDownloader.m */; };
 		42787A0C1C14810A005D00BC /* VKMAudioNodeDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */; };
 		42787A101C14C511005D00BC /* VKMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0F1C14C511005D00BC /* VKMFileManager.m */; };
 		4278B2961C36AB3D0002402C /* SongsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B2941C36AB3D0002402C /* SongsTableViewCell.m */; };
@@ -102,6 +103,8 @@
 		424FB7DC1C37F62F00263A5E /* VKMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMPlayer.m; sourceTree = "<group>"; };
 		424FB9F61C427B1800710C62 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
+		426355E31C71E00A001EDF5E /* VKMAudioDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioDownloader.h; sourceTree = "<group>"; };
+		426355E41C71E00A001EDF5E /* VKMAudioDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioDownloader.m; sourceTree = "<group>"; };
 		426C5CB11C3744BA00FBBA28 /* libSWTableViewCell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSWTableViewCell.a; path = "Pods/../build/Debug-iphoneos/libSWTableViewCell.a"; sourceTree = "<group>"; };
 		42787A0A1C14810A005D00BC /* VKMAudioNodeDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNodeDownloader.h; sourceTree = "<group>"; };
 		42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNodeDownloader.m; sourceTree = "<group>"; };
@@ -257,22 +260,32 @@
 			isa = PBXGroup;
 			children = (
 				42C85F2E1BFB8E26009F6E1D /* Entities */,
+				426355E61C71E2D2001EDF5E /* Services */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
 		};
-		42787A0D1C14B648005D00BC /* Infrastructure */ = {
+		426355E61C71E2D2001EDF5E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				4242A7671C04AC9800AF8509 /* VKManager.h */,
-				4242A7681C04AC9800AF8509 /* VKManager.m */,
 				42787A0A1C14810A005D00BC /* VKMAudioNodeDownloader.h */,
 				42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */,
+				4242A7671C04AC9800AF8509 /* VKManager.h */,
+				4242A7681C04AC9800AF8509 /* VKManager.m */,
 				42787A0E1C14C511005D00BC /* VKMFileManager.h */,
 				42787A0F1C14C511005D00BC /* VKMFileManager.m */,
 				424FB7DB1C37F62F00263A5E /* VKMPlayer.h */,
 				424FB7DC1C37F62F00263A5E /* VKMPlayer.m */,
 				422D11961C1CE8950050283A /* playerDelegate.h */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		42787A0D1C14B648005D00BC /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				426355E31C71E00A001EDF5E /* VKMAudioDownloader.h */,
+				426355E41C71E00A001EDF5E /* VKMAudioDownloader.m */,
 			);
 			name = Infrastructure;
 			sourceTree = "<group>";
@@ -521,6 +534,7 @@
 				42DA13F61BE18D010033D115 /* VKMSongsViewController.m in Sources */,
 				42DA13FB1BE18DBA0033D115 /* VKMSettingsViewController.m in Sources */,
 				4221E38E1BCB12DF003F384F /* AppDelegate.m in Sources */,
+				426355E51C71E00A001EDF5E /* VKMAudioDownloader.m in Sources */,
 				422D11941C1CC25B0050283A /* DownloadTableViewCell.m in Sources */,
 				42DA13F11BE18A820033D115 /* VKMEqualizerViewController.m in Sources */,
 				4221E38B1BCB12DF003F384F /* main.m in Sources */,

@@ -8,16 +8,14 @@
 
 #import "VKMAudioNodeDownloader.h"
 
-#import <CoreData/CoreData.h>
-#import "AppDelegate.h"
-
 #import "VKMFileManager.h"
+#import "VKMAudioDownloader.h"
 
 @implementation VKMAudioNodeDownloader
 
 + (void)downloadNode:(VKMAudioNode *)node
                store:(NSString *)path
-     progress:(void (^) (double))progress
+            progress:(void (^) (double))progress
           completion:(void (^) (BOOL))completion
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -28,31 +26,17 @@
         return;
     };
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer.timeoutInterval = 5.0;
-    
-    NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[node url]]]
-                                                             progress:^(NSProgress * _Nonnull downloadProgress) {
-                                                                 dispatch_async(dispatch_get_main_queue(), ^{
-                                                                     progress(downloadProgress.fractionCompleted);
-                                                                 });
-                                                             } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-                                                                 return [NSURL fileURLWithPath:path];
-                                                             } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-                                                                 if (!error) {
-                                                                     [node setIsDownloaded:YES];
-                                                                     [node setPath:[path copy]];
-                                                                     [VKMFileManager saveNode:node forEntity:@"Track"];
-                                                                     completion(YES);
-                                                                 }
-                                                                 else
-                                                                 {
-                                                                     NSLog(@"Error: %@", error);
-                                                                     completion(NO);
-                                                                 }
-                                                             }];
-    
-    [task resume];
+    [VKMAudioDownloader downloadSong:[node url]
+                               store:path
+                            progress:progress
+                          completion:^void (BOOL result)
+     {
+         [node setIsDownloaded:YES];
+         [node setPath:[path copy]];
+         [VKMFileManager saveNode:node forEntity:@"Track"];
+         completion(result);
+     }
+     ];
 }
 
 @end

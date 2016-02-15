@@ -7,9 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
 #import "VKMAudioNode.h"
-#import "AFNetworking.h"
 
 @interface VKMAudioNodeDownloader : NSObject
 
