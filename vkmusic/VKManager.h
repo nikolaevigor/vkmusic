@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VKSdk.h"
-#import "VKMAudioNode.h"
 
 @interface VKManager : NSObject
 

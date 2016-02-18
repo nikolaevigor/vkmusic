@@ -11,7 +11,7 @@
 #import "VKMFileManager.h"
 #import "STKAudioPlayer.h"
 #import "STKLocalFileDataSource.h"
-#import "MediaPlayer/Mediaplayer.h"
+#import "MediaPlayer/MediaPlayer.h"
 
 @interface VKMPlayer() <STKAudioPlayerDelegate>
 

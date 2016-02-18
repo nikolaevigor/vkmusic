@@ -21,13 +21,13 @@
 		4221E3C91BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
 		4221E3CA1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
 		4221E3CB1BCB14C3003F384F /* VKMAudioNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221E3C81BCB14C3003F384F /* VKMAudioNode.m */; };
+		422506351C74DF1C00FED0DF /* VKMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 422506341C74DF1C00FED0DF /* VKMRequest.m */; };
 		422D11941C1CC25B0050283A /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 422D11921C1CC25B0050283A /* DownloadTableViewCell.m */; };
 		422D11951C1CC25B0050283A /* DownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 422D11931C1CC25B0050283A /* DownloadTableViewCell.xib */; };
 		423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 423BCC901C04FD7900B495D9 /* VKMLayerButton.m */; };
 		423C6C861C39AA6A0010012F /* libStreamingKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 423C6C851C39AA6A0010012F /* libStreamingKit.a */; };
 		4242A7691C04AC9800AF8509 /* VKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4242A7681C04AC9800AF8509 /* VKManager.m */; };
 		424FB7DD1C37F62F00263A5E /* VKMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 424FB7DC1C37F62F00263A5E /* VKMPlayer.m */; };
-		424FB9F71C427B1800710C62 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424FB9F61C427B1800710C62 /* MediaPlayer.framework */; };
 		42618A4F1C1C9D4200ED7FBE /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42618A4E1C1C9D4200ED7FBE /* libAFNetworking.a */; };
 		426355E51C71E00A001EDF5E /* VKMAudioDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 426355E41C71E00A001EDF5E /* VKMAudioDownloader.m */; };
 		42787A0C1C14810A005D00BC /* VKMAudioNodeDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 42787A0B1C14810A005D00BC /* VKMAudioNodeDownloader.m */; };
@@ -38,6 +38,7 @@
 		429475841C15B02600690083 /* tracksModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 429475821C15B02600690083 /* tracksModel.xcdatamodeld */; };
 		42B330701C138A9600779F69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B3306E1C138A9600779F69 /* AVFoundation.framework */; };
 		42B330711C138A9600779F69 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B3306F1C138A9600779F69 /* AVKit.framework */; };
+		42C4D59A1C76519900609138 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424FB9F61C427B1800710C62 /* MediaPlayer.framework */; };
 		42C85F371BFBC775009F6E1D /* libVK-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C85F361BFBC775009F6E1D /* libVK-ios-sdk.a */; };
 		42DA13EC1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
 		42DA13ED1BE187330033D115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DA13EB1BE187330033D115 /* Main.storyboard */; };
@@ -90,6 +91,8 @@
 		4221E3C31BCB14A1003F384F /* VKMMediaNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMMediaNode.m; sourceTree = "<group>"; };
 		4221E3C71BCB14C3003F384F /* VKMAudioNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMAudioNode.h; sourceTree = "<group>"; };
 		4221E3C81BCB14C3003F384F /* VKMAudioNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMAudioNode.m; sourceTree = "<group>"; };
+		422506331C74DF1C00FED0DF /* VKMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMRequest.h; sourceTree = "<group>"; };
+		422506341C74DF1C00FED0DF /* VKMRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMRequest.m; sourceTree = "<group>"; };
 		422D11911C1CC25B0050283A /* DownloadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewCell.h; sourceTree = "<group>"; };
 		422D11921C1CC25B0050283A /* DownloadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewCell.m; sourceTree = "<group>"; };
 		422D11931C1CC25B0050283A /* DownloadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadTableViewCell.xib; sourceTree = "<group>"; };
@@ -137,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				424FB9F71C427B1800710C62 /* MediaPlayer.framework in Frameworks */,
+				42C4D59A1C76519900609138 /* MediaPlayer.framework in Frameworks */,
 				423C6C861C39AA6A0010012F /* libStreamingKit.a in Frameworks */,
 				42618A4F1C1C9D4200ED7FBE /* libAFNetworking.a in Frameworks */,
 				429475811C15AFB400690083 /* CoreData.framework in Frameworks */,
@@ -286,6 +289,8 @@
 			children = (
 				426355E31C71E00A001EDF5E /* VKMAudioDownloader.h */,
 				426355E41C71E00A001EDF5E /* VKMAudioDownloader.m */,
+				422506331C74DF1C00FED0DF /* VKMRequest.h */,
+				422506341C74DF1C00FED0DF /* VKMRequest.m */,
 			);
 			name = Infrastructure;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				4221E3C41BCB14A1003F384F /* VKMMediaNode.m in Sources */,
 				42787A101C14C511005D00BC /* VKMFileManager.m in Sources */,
 				423BCC911C04FD7900B495D9 /* VKMLayerButton.m in Sources */,
+				422506351C74DF1C00FED0DF /* VKMRequest.m in Sources */,
 				42DA140A1BE192AC0033D115 /* VKMDownloadViewController.m in Sources */,
 				4278B2961C36AB3D0002402C /* SongsTableViewCell.m in Sources */,
 				42DA14001BE190CC0033D115 /* VKMPlayerViewController.m in Sources */,

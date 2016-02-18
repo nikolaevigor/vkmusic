@@ -8,27 +8,27 @@
 
 #import "VKManager.h"
 
+#import "VKMAudioNode.h"
+#import "VKMRequest.h"
+
 @implementation VKManager
 
 + (void)getTitlesForSearchQuery:(NSString *)query completion:(void (^) (NSMutableArray *))completion
 {
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setObject:query forKey:@"q"];
-    
     NSMutableArray *tracks = [[NSMutableArray alloc] init];
     
-    VKRequest *searchRequest = [VKApi requestWithMethod:@"audio.search" andParameters:params andHttpMethod:@"GET"];
-    [searchRequest executeWithResultBlock:^(VKResponse *response) {
-        NSArray *items = [response.json objectForKey:@"items"];
+    [VKMRequest sendAudioSearchRequestForKey:query completion:^void (id json)
+    {
+        NSArray *items = [json objectForKey:@"items"];
         for (id item in items)
         {
             @try {
                 __unused VKMAudioNode *node = [[VKMAudioNode alloc] initWithName:[item objectForKey:@"title"]
-                                                                   type:@".mp3"
-                                                                   size:2
-                                                                 artist:[item objectForKey:@"artist"]
-                                                                    url:[item objectForKey:@"url"]
-                                                               duration:[[item objectForKey:@"duration"] doubleValue]];
+                                                                            type:@".mp3"
+                                                                            size:2
+                                                                          artist:[item objectForKey:@"artist"]
+                                                                             url:[item objectForKey:@"url"]
+                                                                        duration:[[item objectForKey:@"duration"] doubleValue]];
             }
             @catch (NSException *exception) {
                 continue;
@@ -56,14 +56,8 @@
         {
             completion(tracks);
         }
-    } errorBlock:^(NSError *error){
-        if (error.code != VK_API_ERROR) {
-            [error.vkError.request repeat];
-        }
-        else {
-            NSLog(@"VK error: %@", error);
-        }
-    }];
+    }
+                                       error:nil];
 }
 
 @end
