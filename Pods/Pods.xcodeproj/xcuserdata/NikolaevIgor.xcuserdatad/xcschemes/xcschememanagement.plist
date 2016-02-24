@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>StreamingKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3DE727D0E7CD19403D8B1DAA2F63E220</key>
+		<key>092B7AEE2936EB71C5111C79CC8F3796</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>463A4B1E9D4623BDAE2FE98860280F80</key>
+		<key>17B2D29DF18768E24DECE3DFBF49DBCD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>89439ECDBE6E92E831C31635815A8619</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC041A238E71DD1838870BCC76FA05F3</key>
+		<key>AB9D31900E2A75EA3EE7750BE7841B11</key>
 		<dict>
 			<key>primary</key>
 			<true/>

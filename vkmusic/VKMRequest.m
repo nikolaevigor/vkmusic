@@ -58,7 +58,7 @@
 {
     [self sendAudioSearchRequestForKey:query
                                 offset:@"0"
-                                 count:@"50"
+                                 count:@"30"
                          auto_complete:@"1"
                                 lyrics:@"0"
                         performer_only:@"0"

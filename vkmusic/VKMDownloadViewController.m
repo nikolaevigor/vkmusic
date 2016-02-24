@@ -7,6 +7,7 @@
 //
 
 #import <CoreData/CoreData.h>
+#import "SVPullToRefresh.h"
 #import "AppDelegate.h"
 #import "VKMDownloadViewController.h"
 #import "VKSdk.h"
@@ -24,6 +25,41 @@
 @end
 
 @implementation VKMDownloadViewController
+
+- (void)viewDidLoad
+{
+    //setting infinite scrolling
+    __block NSString *queryText;
+    __block NSUInteger counter;
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        if (!queryText | ![queryText isEqualToString:self.searchBox.text]) {
+            queryText = self.searchBox.text;
+            counter = 1;
+        }
+        else
+        {
+            counter += 1;
+        }
+        int64_t delayInSeconds = 2.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self.tableView beginUpdates];
+            [VKManager getTitlesForSearchQuery:self.searchBox.text
+                                        offset:[NSString stringWithFormat:@"%lu", counter*2]
+                                         count:@"2"
+                                    completion:^void (NSMutableArray *tracks)
+            {
+                self.tracks = [self.tracks arrayByAddingObjectsFromArray:tracks];
+                [self.tableView reloadData];
+            }];
+            [self.tableView endUpdates];
+            
+            [self.tableView.infiniteScrollingView stopAnimating];
+        });
+    }];
+    
+    [self.tableView triggerPullToRefresh];
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -48,7 +84,8 @@
 - (IBAction)searchBoxEditingDidEnd:(id)sender
 {
     __block void (^completion) (NSMutableArray *) = ^(NSMutableArray * tracks){self.tracks = tracks; [self.tableView reloadData];};
-    [VKManager getTitlesForSearchQuery:self.searchBox.text completion:completion];
+    //[VKManager getTitlesForSearchQuery:self.searchBox.text completion:completion];
+    [VKManager getTitlesForSearchQuery:self.searchBox.text offset:@"0" count:@"2" completion:completion];
 }
 
 #pragma mark - Table View methods
@@ -68,6 +105,7 @@
     }
     if ([(DownloadTableViewCell *)cell isDownloading]) {
         cell = (DownloadTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ReuseID"];
+        cell.isDownloading = YES;
     }
     
     return cell;
@@ -107,13 +145,15 @@
     {
         [VKMAudioNodeDownloader downloadNode:node
                                        store:documentsDirectory
-                                    progress:^void (double progressValue) {
-                                        cell.progressBar.progress = (double)progressValue;
-                                    }
-                                  completion:^void (BOOL result) {
-                                      [self paintCell:cell inColor:[UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1] if:result];
-                                      cell.isDownloading = NO;
-                                  }];
+                                    progress:^void (double progressValue)
+         {
+             cell.progressBar.progress = (double)progressValue;
+         }
+                                  completion:^void (BOOL result)
+         {
+             [self paintCell:cell inColor:[UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1] if:result];
+             cell.isDownloading = NO;
+         }];
     }
     cell.isDownloading = YES;
     
