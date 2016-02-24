@@ -32,6 +32,7 @@
 
 - (void)viewDidLoad
 {
+    self.searchBox.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 

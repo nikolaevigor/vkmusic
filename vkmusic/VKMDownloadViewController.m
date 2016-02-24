@@ -16,10 +16,10 @@
 #import "VKMAudioNodeDownloader.h"
 #import "DownloadTableViewCell.h"
 
-@interface VKMDownloadViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+@interface VKMDownloadViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UITextField *searchBox;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBox;
 @property (strong, nonatomic) NSArray *tracks;
 
 @end
@@ -28,6 +28,8 @@
 
 - (void)viewDidLoad
 {
+    self.searchBox.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    
     //setting infinite scrolling
     __block NSString *queryText;
     __block NSUInteger counter;
@@ -45,8 +47,8 @@
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             [self.tableView beginUpdates];
             [VKManager getTitlesForSearchQuery:self.searchBox.text
-                                        offset:[NSString stringWithFormat:@"%lu", counter*2]
-                                         count:@"2"
+                                        offset:[NSString stringWithFormat:@"%lu", counter*30]
+                                         count:@"30"
                                     completion:^void (NSMutableArray *tracks)
             {
                 self.tracks = [self.tracks arrayByAddingObjectsFromArray:tracks];
@@ -74,18 +76,16 @@
     [self.tableView reloadData];
 }
 
-#pragma mark - Text Field Events methods
-
-- (IBAction)searchBoxEditingDidBegin:(id)sender
-{
-    self.searchBox.text = @"";
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.view endEditing:YES];
 }
 
-- (IBAction)searchBoxEditingDidEnd:(id)sender
+#pragma mark - Search Bar methods
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     __block void (^completion) (NSMutableArray *) = ^(NSMutableArray * tracks){self.tracks = tracks; [self.tableView reloadData];};
-    //[VKManager getTitlesForSearchQuery:self.searchBox.text completion:completion];
-    [VKManager getTitlesForSearchQuery:self.searchBox.text offset:@"0" count:@"2" completion:completion];
+    [VKManager getTitlesForSearchQuery:self.searchBox.text completion:completion];
 }
 
 #pragma mark - Table View methods

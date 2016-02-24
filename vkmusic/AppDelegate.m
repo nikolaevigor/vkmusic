@@ -172,6 +172,9 @@
 - (void)vkSdkNeedCaptchaEnter:(VKError *)captchaError
 {
     NSLog(@"Need captcha enter");
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    VKCaptchaViewController * vc = [VKCaptchaViewController captchaControllerWithError:captchaError];
+    [vc presentIn:window.rootViewController];
 }
 
 - (void)vkSdkUserDeniedAccess:(VKError *)authorizationError
