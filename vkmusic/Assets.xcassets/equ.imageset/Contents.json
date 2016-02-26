@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "equ.png",
+      "filename" : "vertical_settings_mixer-25.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "vertical_settings_mixer-50.png",
       "scale" : "2x"
     },
     {

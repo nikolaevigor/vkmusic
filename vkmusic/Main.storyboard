@@ -356,7 +356,7 @@
                             <constraint firstItem="VzA-yw-OPo" firstAttribute="leading" secondItem="qts-4f-jzS" secondAttribute="trailing" constant="8" id="zCm-2u-9vF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="EQU" image="equ.png" id="LjA-RV-NNQ"/>
+                    <tabBarItem key="tabBarItem" title="EQU" image="equ" id="LjA-RV-NNQ"/>
                     <connections>
                         <outlet property="fifthSlider" destination="ew1-b0-PhJ" id="QJN-EM-Wgl"/>
                         <outlet property="firstSlider" destination="z4C-1B-AC2" id="w2i-Dr-ASQ"/>
@@ -419,7 +419,7 @@
                             <constraint firstAttribute="trailing" secondItem="RBU-T8-aMo" secondAttribute="trailing" id="wnI-P4-3H7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Songs" image="songs.png" id="0li-gc-pAB" userLabel="Songs"/>
+                    <tabBarItem key="tabBarItem" title="Songs" image="songs" id="0li-gc-pAB" userLabel="Songs"/>
                     <connections>
                         <outlet property="searchBox" destination="RBU-T8-aMo" id="TXv-zv-UR2"/>
                         <outlet property="tableView" destination="FpU-Ih-Jjo" id="a1M-qq-OUZ"/>
@@ -479,7 +479,7 @@
                             <constraint firstItem="o0o-cj-chO" firstAttribute="top" secondItem="bjG-cZ-Esq" secondAttribute="bottom" multiplier="4:2" id="y8q-se-gBH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings.png" id="InA-3n-62b"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="InA-3n-62b"/>
                     <connections>
                         <outlet property="deleteSongsButton" destination="JXB-5W-zg4" id="4sn-v0-8rW"/>
                         <outlet property="logoutButton" destination="bjG-cZ-Esq" id="v3O-Fl-aKG"/>
@@ -502,10 +502,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucu-eM-VX8" customClass="VKMLayerButton">
-                                <rect key="frame" x="0.0" y="20" width="304" height="266"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.63960129310344827" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="20" width="305" height="267"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Play">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-34" y="1" width="200" height="300"/>
@@ -515,10 +515,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH9-Mg-TMV" customClass="VKMLayerButton">
-                                <rect key="frame" x="0.0" y="286" width="200" height="265"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.77693965517241381" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="286" width="201" height="265"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="&lt;&lt;">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-29" y="307" width="138" height="243.5"/>
@@ -529,9 +529,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-7A-gWy" customClass="VKMLayerButton">
                                 <rect key="frame" x="200" y="286" width="200" height="265"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.88442887931034486" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Stop">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="88" y="309" width="125" height="243"/>
@@ -541,10 +541,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRS-cG-a3c" customClass="VKMLayerButton">
-                                <rect key="frame" x="304" y="20" width="296" height="266"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.7352101293103448" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="304" y="20" width="296" height="267"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Pause">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="113" y="2" width="200" height="300"/>
@@ -554,10 +554,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyw-UW-9sK" customClass="VKMLayerButton">
-                                <rect key="frame" x="400" y="286" width="200" height="265"/>
-                                <color key="backgroundColor" red="0.12549019607843137" green="0.0" blue="1" alpha="0.93970905172413788" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="399" y="286" width="201" height="265"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="&gt;&gt;">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="200" y="310" width="151" height="242"/>
@@ -573,26 +573,26 @@
                             <constraint firstItem="Fyw-UW-9sK" firstAttribute="width" secondItem="xH9-Mg-TMV" secondAttribute="width" id="34h-vb-m2r"/>
                             <constraint firstItem="ucu-eM-VX8" firstAttribute="leading" secondItem="jEb-4M-Zaf" secondAttribute="leading" id="3LK-E6-dUH"/>
                             <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="Fyw-UW-9sK" secondAttribute="bottom" id="5Eo-ix-CaH"/>
-                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="width" secondItem="xH9-Mg-TMV" secondAttribute="width" id="70i-Rr-cpc"/>
+                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="width" secondItem="xH9-Mg-TMV" secondAttribute="width" constant="-1" id="70i-Rr-cpc"/>
                             <constraint firstItem="gRS-cG-a3c" firstAttribute="top" secondItem="JHa-Je-eaC" secondAttribute="bottom" id="931-V8-LxR"/>
-                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="leading" secondItem="UqJ-7A-gWy" secondAttribute="trailing" id="D66-k4-lwo"/>
+                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="leading" secondItem="UqJ-7A-gWy" secondAttribute="trailing" constant="-1" id="D66-k4-lwo"/>
                             <constraint firstItem="ucu-eM-VX8" firstAttribute="top" secondItem="jEb-4M-Zaf" secondAttribute="top" id="Fz5-iN-ecR"/>
-                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="height" secondItem="ucu-eM-VX8" secondAttribute="height" id="IZQ-2j-jWr"/>
-                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="leading" secondItem="xH9-Mg-TMV" secondAttribute="trailing" id="Jpy-o1-KU3"/>
-                            <constraint firstItem="xH9-Mg-TMV" firstAttribute="top" secondItem="ucu-eM-VX8" secondAttribute="bottom" id="Kmq-At-jp1"/>
+                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="height" secondItem="ucu-eM-VX8" secondAttribute="height" constant="-2" id="IZQ-2j-jWr"/>
+                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="leading" secondItem="xH9-Mg-TMV" secondAttribute="trailing" constant="-1" id="Jpy-o1-KU3"/>
+                            <constraint firstItem="xH9-Mg-TMV" firstAttribute="top" secondItem="ucu-eM-VX8" secondAttribute="bottom" constant="-1" id="Kmq-At-jp1"/>
                             <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="xH9-Mg-TMV" secondAttribute="bottom" id="LU3-ho-xfD"/>
-                            <constraint firstItem="xH9-Mg-TMV" firstAttribute="height" secondItem="ucu-eM-VX8" secondAttribute="height" id="MaR-hg-0yU"/>
+                            <constraint firstItem="xH9-Mg-TMV" firstAttribute="height" secondItem="ucu-eM-VX8" secondAttribute="height" constant="-2" id="MaR-hg-0yU"/>
                             <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="UqJ-7A-gWy" secondAttribute="bottom" id="MvZ-de-Y3W"/>
                             <constraint firstAttribute="trailing" secondItem="gRS-cG-a3c" secondAttribute="trailing" id="SaS-he-iai"/>
-                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="height" secondItem="gRS-cG-a3c" secondAttribute="height" id="TDP-iQ-zVv"/>
-                            <constraint firstItem="gRS-cG-a3c" firstAttribute="leading" secondItem="ucu-eM-VX8" secondAttribute="trailing" id="ThP-dY-1YR"/>
-                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="top" secondItem="ucu-eM-VX8" secondAttribute="bottom" id="eik-tg-iLC"/>
+                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="height" secondItem="gRS-cG-a3c" secondAttribute="height" constant="-2" id="TDP-iQ-zVv"/>
+                            <constraint firstItem="gRS-cG-a3c" firstAttribute="leading" secondItem="ucu-eM-VX8" secondAttribute="trailing" constant="-1" id="ThP-dY-1YR"/>
+                            <constraint firstItem="UqJ-7A-gWy" firstAttribute="top" secondItem="ucu-eM-VX8" secondAttribute="bottom" constant="-1" id="eik-tg-iLC"/>
                             <constraint firstAttribute="trailing" secondItem="Fyw-UW-9sK" secondAttribute="trailing" id="iK6-BC-doA"/>
-                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="top" secondItem="gRS-cG-a3c" secondAttribute="bottom" id="oCi-IQ-ATP"/>
+                            <constraint firstItem="Fyw-UW-9sK" firstAttribute="top" secondItem="gRS-cG-a3c" secondAttribute="bottom" constant="-1" id="oCi-IQ-ATP"/>
                             <constraint firstItem="UqJ-7A-gWy" firstAttribute="centerX" secondItem="jEb-4M-Zaf" secondAttribute="centerX" id="oLO-Iy-3sR"/>
                             <constraint firstItem="ucu-eM-VX8" firstAttribute="top" secondItem="JHa-Je-eaC" secondAttribute="bottom" id="qxd-L2-qxV"/>
                             <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="Fyw-UW-9sK" secondAttribute="bottom" id="tcx-I9-zc5"/>
-                            <constraint firstItem="gRS-cG-a3c" firstAttribute="width" secondItem="ucu-eM-VX8" secondAttribute="width" constant="-8" id="uBI-mj-ays"/>
+                            <constraint firstItem="gRS-cG-a3c" firstAttribute="width" secondItem="ucu-eM-VX8" secondAttribute="width" constant="-9" id="uBI-mj-ays"/>
                             <constraint firstItem="gRS-cG-a3c" firstAttribute="top" secondItem="jEb-4M-Zaf" secondAttribute="top" id="vNz-tw-MA1"/>
                             <constraint firstItem="SjG-Vh-oYj" firstAttribute="top" secondItem="xH9-Mg-TMV" secondAttribute="bottom" id="vz2-4w-TQn"/>
                         </constraints>
@@ -603,7 +603,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Player" image="player.png" id="fMT-5X-uio"/>
+                    <tabBarItem key="tabBarItem" title="Player" image="player" id="fMT-5X-uio"/>
                     <connections>
                         <outlet property="nextButton" destination="Fyw-UW-9sK" id="7xT-pU-eaZ"/>
                         <outlet property="pauseButton" destination="gRS-cG-a3c" id="qRY-Z4-Ukc"/>
@@ -665,7 +665,7 @@
                             <constraint firstItem="Nsk-GZ-TeF" firstAttribute="top" secondItem="mYa-UX-201" secondAttribute="bottom" id="ysf-g5-VZY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Downloads" image="downloads.png" id="564-4g-niV"/>
+                    <tabBarItem key="tabBarItem" title="Download" image="downloads" id="564-4g-niV"/>
                     <connections>
                         <outlet property="searchBox" destination="LxK-F3-VWc" id="B7z-OH-6VO"/>
                         <outlet property="tableView" destination="mYa-UX-201" id="m0A-QQ-ufF"/>
@@ -677,10 +677,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="downloads.png" width="25" height="25"/>
-        <image name="equ.png" width="25" height="25"/>
-        <image name="player.png" width="25" height="25"/>
-        <image name="settings.png" width="25" height="25"/>
-        <image name="songs.png" width="25" height="25"/>
+        <image name="downloads" width="25" height="25"/>
+        <image name="equ" width="25" height="25"/>
+        <image name="player" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
+        <image name="songs" width="25" height="25"/>
     </resources>
 </document>

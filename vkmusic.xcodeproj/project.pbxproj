@@ -298,24 +298,10 @@
 		42AEBF2E1BEFA3F800496850 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				42DA14081BE192AC0033D115 /* VKMDownloadViewController.h */,
-				42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */,
-				42DA13F41BE18D010033D115 /* VKMSongsViewController.h */,
-				42DA13F51BE18D010033D115 /* VKMSongsViewController.m */,
-				42DA13FE1BE190CC0033D115 /* VKMPlayerViewController.h */,
-				42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */,
-				42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */,
-				42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */,
-				42DA13F91BE18DBA0033D115 /* VKMSettingsViewController.h */,
-				42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */,
+				DB3BE15E1C806885006D24F6 /* View Controllers */,
+				DB3BE15F1C806893006D24F6 /* Custom Cells */,
 				423BCC8F1C04FD7900B495D9 /* VKMLayerButton.h */,
 				423BCC901C04FD7900B495D9 /* VKMLayerButton.m */,
-				422D11911C1CC25B0050283A /* DownloadTableViewCell.h */,
-				422D11921C1CC25B0050283A /* DownloadTableViewCell.m */,
-				422D11931C1CC25B0050283A /* DownloadTableViewCell.xib */,
-				4278B2931C36AB3D0002402C /* SongsTableViewCell.h */,
-				4278B2941C36AB3D0002402C /* SongsTableViewCell.m */,
-				4278B2951C36AB3D0002402C /* SongsTableViewCell.xib */,
 				42DA13EB1BE187330033D115 /* Main.storyboard */,
 			);
 			name = Controllers;
@@ -332,6 +318,36 @@
 				4221E3C81BCB14C3003F384F /* VKMAudioNode.m */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		DB3BE15E1C806885006D24F6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				42DA14081BE192AC0033D115 /* VKMDownloadViewController.h */,
+				42DA14091BE192AC0033D115 /* VKMDownloadViewController.m */,
+				42DA13F41BE18D010033D115 /* VKMSongsViewController.h */,
+				42DA13F51BE18D010033D115 /* VKMSongsViewController.m */,
+				42DA13FE1BE190CC0033D115 /* VKMPlayerViewController.h */,
+				42DA13FF1BE190CC0033D115 /* VKMPlayerViewController.m */,
+				42DA13EF1BE18A820033D115 /* VKMEqualizerViewController.h */,
+				42DA13F01BE18A820033D115 /* VKMEqualizerViewController.m */,
+				42DA13F91BE18DBA0033D115 /* VKMSettingsViewController.h */,
+				42DA13FA1BE18DBA0033D115 /* VKMSettingsViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DB3BE15F1C806893006D24F6 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				422D11911C1CC25B0050283A /* DownloadTableViewCell.h */,
+				422D11921C1CC25B0050283A /* DownloadTableViewCell.m */,
+				422D11931C1CC25B0050283A /* DownloadTableViewCell.xib */,
+				4278B2931C36AB3D0002402C /* SongsTableViewCell.h */,
+				4278B2941C36AB3D0002402C /* SongsTableViewCell.m */,
+				4278B2951C36AB3D0002402C /* SongsTableViewCell.xib */,
+			);
+			name = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
