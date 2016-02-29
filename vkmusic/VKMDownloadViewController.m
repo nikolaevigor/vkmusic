@@ -136,8 +136,11 @@
 {
     VKMAudioNode *node = (VKMAudioNode *)self.tracks[indexPath.row];
     
+    NSString *formattedArtist = [[node artist] stringByReplacingOccurrencesOfString:@"/" withString:@"-"];
+    NSString *formattedName = [[node name] stringByReplacingOccurrencesOfString:@"/" withString:@"-"];
+    
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [NSString stringWithFormat:@"%@/%@-%@", [paths objectAtIndex:0], [node artist], [node name]];
+    NSString *documentsDirectory = [NSString stringWithFormat:@"%@/%@-%@", [paths objectAtIndex:0], formattedArtist, formattedName];
     
     DownloadTableViewCell *cell = (DownloadTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     

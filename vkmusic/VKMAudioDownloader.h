@@ -11,7 +11,7 @@
 @interface VKMAudioDownloader : NSObject
 
 + (void)downloadSong:(NSString *)songURL
-               store:(NSString *)path
+               store:(NSString *)path //can't contain "/" symbol
             progress:(void (^) (double))progress
           completion:(void (^) (BOOL))completion;
 

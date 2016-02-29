@@ -27,7 +27,8 @@
                                                              } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
                                                                  return [NSURL fileURLWithPath:path];
                                                              } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-                                                                 if (!error) {
+                                                                 if (!error)
+                                                                 {
                                                                      completion(YES);
                                                                  }
                                                                  else
