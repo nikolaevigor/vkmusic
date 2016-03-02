@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBox;
 @property (strong, nonatomic) NSArray *tracks;
+@property (strong, nonatomic) NSMutableDictionary *downloadingCells;
 
 @end
 
@@ -28,6 +29,7 @@
 
 - (void)viewDidLoad
 {
+    self.downloadingCells = [[NSMutableDictionary alloc] init];
     self.searchBox.autocapitalizationType = UITextAutocapitalizationTypeNone;
     
     //setting infinite scrolling
@@ -98,13 +100,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     DownloadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReuseID"];
-    if (!cell)
+    if (!cell || cell.isDownloading)//return another instance of cell if this is downloading. Otherwise progressbar will be on inappropriate cell
     {
         [tableView registerNib:[UINib nibWithNibName:@"DownloadTableViewCell" bundle:nil] forCellReuseIdentifier:@"ReuseID"];
         cell = (DownloadTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ReuseID"];
     }
-    if ([(DownloadTableViewCell *)cell isDownloading]) {
-        cell = (DownloadTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ReuseID"];
+    if ([self.downloadingCells objectForKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]])
+    {
+        cell = [self.downloadingCells objectForKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]];
         cell.isDownloading = YES;
     }
     
@@ -127,7 +130,10 @@
     {
         cell.backgroundColor = [UIColor whiteColor];
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-        [(DownloadTableViewCell *)cell progressBar].progress = 0.0;
+        if (![(DownloadTableViewCell *)cell isDownloading])
+        {
+            [(DownloadTableViewCell *)cell progressBar].progress = 0.0;
+        }
         node.isDownloaded = NO;
     }
 }
@@ -156,9 +162,11 @@
          {
              [self paintCell:cell inColor:[UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1] if:result];
              cell.isDownloading = NO;
+             [self.downloadingCells removeObjectForKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]];
          }];
+        cell.isDownloading = YES;
+        [self.downloadingCells setObject:cell forKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]];
     }
-    cell.isDownloading = YES;
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
