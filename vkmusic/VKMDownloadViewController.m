@@ -167,6 +167,9 @@
         [self.downloadingCells setObject:cell forKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]];
     }
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.userInteractionEnabled = NO;
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
