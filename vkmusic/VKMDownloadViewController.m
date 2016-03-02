@@ -100,7 +100,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     DownloadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReuseID"];
-    if (!cell || cell.isDownloading)//return another instance of cell if this is downloading. Otherwise progressbar will be on inappropriate cell
+    if (!cell || cell.isDownloading)//return another instance of cell if this is downloading, otherwise progressbar will be on inappropriate cell
     {
         [tableView registerNib:[UINib nibWithNibName:@"DownloadTableViewCell" bundle:nil] forCellReuseIdentifier:@"ReuseID"];
         cell = (DownloadTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ReuseID"];
@@ -108,7 +108,6 @@
     if ([self.downloadingCells objectForKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]])
     {
         cell = [self.downloadingCells objectForKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]];
-        cell.isDownloading = YES;
     }
     
     return cell;
