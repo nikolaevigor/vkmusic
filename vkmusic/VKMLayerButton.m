@@ -78,7 +78,7 @@
     layer.cornerRadius = 0;
     layer.borderWidth = 1;
     layer.borderColor =(__bridge CGColorRef _Nullable)((id)[UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1.00f].CGColor);
-   // layer.borderColor = [UIColor colorWithRed:0.77f green:0.43f blue:0.00f alpha:1.00f].CGColor;
+    // layer.borderColor = [UIColor colorWithRed:0.77f green:0.43f blue:0.00f alpha:1.00f].CGColor;
 }
 
 - (void)drawBackgroundLayer
@@ -91,12 +91,12 @@
         
         
         // Set the colors
-//        _backgroundLayer.colors = (@[
-//                                     (id)[UIColor colorWithRed:0.94f green:0.82f blue:0.52f alpha:1.00f].CGColor,
-//                                     (id)[UIColor colorWithRed:0.91f green:0.55f blue:0.00f alpha:1.00f].CGColor
-//                                     
-//                                     
-//                                     ]);
+        //        _backgroundLayer.colors = (@[
+        //                                     (id)[UIColor colorWithRed:0.94f green:0.82f blue:0.52f alpha:1.00f].CGColor,
+        //                                     (id)[UIColor colorWithRed:0.91f green:0.55f blue:0.00f alpha:1.00f].CGColor
+        //
+        //
+        //                                     ]);
         
         // Set the stops
         _backgroundLayer.locations = (@[

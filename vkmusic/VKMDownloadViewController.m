@@ -162,13 +162,12 @@
              [self paintCell:cell inColor:[UIColor colorWithRed:118.0/255.0 green:234.0/255.0 blue:128.0/255.0 alpha:1] if:result];
              cell.isDownloading = NO;
              [self.downloadingCells removeObjectForKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]];
+             cell.userInteractionEnabled = YES;
          }];
         cell.isDownloading = YES;
+        cell.userInteractionEnabled = NO;
         [self.downloadingCells setObject:cell forKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]];
     }
-    
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.userInteractionEnabled = NO;
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
